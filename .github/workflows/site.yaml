@@ -43,4 +43,4 @@ jobs:
           echo '  whoami: asf-site' >> .asf.yaml
           git add .asf.yaml
           git commit -m '.asf.yaml'
-          git push
+          git push origin main
