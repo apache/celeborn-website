@@ -30,7 +30,6 @@ jobs:
         with:
           python-version: 3.x
       - run: |
-          rm docs/configuration/*
           wget https://github.com/apache/incubator-celeborn/archive/refs/heads/main.zip
           unzip main.zip
           cp incubator-celeborn-main/docs/configuration/* docs/configuration/
