@@ -35,7 +35,7 @@ jobs:
           cp incubator-celeborn-main/docs/configuration/* docs/configuration/
       - run: pip install -r requirements.txt
       - run: mkdocs gh-deploy --force --remote-branch asf-site
-      - run:
+      - run: |
           git checkout asf-site
           echo 'publish:' >> .asf.yaml
           echo '  whoami: asf-site' >> .asf.yaml
