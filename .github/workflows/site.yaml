@@ -24,9 +24,6 @@ on:
 jobs:
   run-tests:
     runs-on: ubuntu-22.04
-    env:
-      GIT_COMMITTER_NAME: celeborn
-      GIT_COMMITTER_EMAIL: dev@celeborn.apache.org
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
@@ -42,5 +39,5 @@ jobs:
           git checkout asf-site
           echo 'publish:' >> .asf.yaml
           echo '  whoami: asf-site' >> .asf.yaml
-          git commit -am '.asf.yaml'
+          git commit -am '.asf.yaml' --author 'Celeborn <dev@celeborn.apache.org>'
           git push
