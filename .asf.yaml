@@ -26,8 +26,3 @@ notifications:
   commits: commits@celeborn.apache.org
   issues: dev@celeborn.apache.org
   pullrequests: dev@celeborn.apache.org
-staging:
-  profile: ~
-  whoami: asf-site
-publish:
-  whoami: asf-site
