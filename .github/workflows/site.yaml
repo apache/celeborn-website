@@ -41,5 +41,6 @@ jobs:
           git checkout asf-site
           echo 'publish:'           >> .asf.yaml
           echo '  whoami: asf-site' >> .asf.yaml
-          git commit -am '.asf.yaml'
+          git add .asf.yaml
+          git commit -m '.asf.yaml'
           git push
