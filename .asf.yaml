@@ -24,8 +24,8 @@ github:
     rebase: false
 notifications:
   commits: commits@celeborn.apache.org
-  issues: notifications@celeborn.apache.org
-  pullrequests: notifications@celeborn.apache.org
+  issues: dev@celeborn.apache.org
+  pullrequests: dev@celeborn.apache.org
 staging:
   profile: ~
   whoami: asf-site
