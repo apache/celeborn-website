@@ -36,8 +36,10 @@ jobs:
       - run: pip install -r requirements.txt
       - run: mkdocs gh-deploy --force --remote-branch asf-site
       - run: |
+          git config --global user.name  "Celeborn"
+          git config --global user.email "dev@celeborn.apache.org"
           git checkout asf-site
-          echo 'publish:' >> .asf.yaml
+          echo 'publish:'           >> .asf.yaml
           echo '  whoami: asf-site' >> .asf.yaml
-          git commit -am '.asf.yaml' --author 'Celeborn <dev@celeborn.apache.org>'
+          git commit -am '.asf.yaml'
           git push
