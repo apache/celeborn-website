@@ -16,8 +16,8 @@
 #
 
 site_name: Apache Celeborn (Incubating)
-repo_name: apache/incubating-celeborn
-repo_url: https://github.com/apache/incubating-celeborn
+repo_name: apache/incubator-celeborn
+repo_url: https://github.com/apache/incubator-celeborn
 
 plugins:
   - search
@@ -47,6 +47,8 @@ extra:
   stable_version: 0.1.2
   social:
     - icon: fontawesome/brands/github
+
+copyright: Copyright © 2022 The Apache Software Foundation
 
 nav:
   - Home: index.md

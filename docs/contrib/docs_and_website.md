@@ -42,13 +42,13 @@ Install `virtualenv`
 
 ```bash
 pyenv install 3.9.13
-pyenv virtualenv 3.9.13 rss
+pyenv virtualenv 3.9.13 celeborn
 ```
 
 Localize `virtualenv`
 
 ```bash
-pyenv local rss
+pyenv local celeborn
 ```
 
 ## Install dependencies

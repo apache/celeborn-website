@@ -29,5 +29,10 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
+      - run: |
+          rm docs/configuration/*
+          wget https://github.com/apache/incubator-celeborn/archive/refs/heads/main.zip
+          unzip main.zip
+          cp incubator-celeborn-main/docs/configuration/* docs/configuration/
       - run: pip install -r requirements.txt
       - run: mkdocs gh-deploy --force --remote-branch asf-site
