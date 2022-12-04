@@ -14,42 +14,42 @@ license: |
   limitations under the License.
 ---
 
-Docs and Website
+Buiding Docs and Website
 ===
 
 ## Setup Python
 
-Follow the [Python official document](https://wiki.python.org/moin/BeginnersGuide) to install.
+Follow the [Python official document](https://wiki.python.org/moin/BeginnersGuide) to install Python 3.7 or above.
 
-## Setup `pyenv` on macOS (optional)
+??? note "(optional) use `pyenv` to manage Python virtualenv on macOS"
 
-Optionally, recommend to manage Python environments by [pyenv](https://github.com/pyenv/pyenv).
+    Optionally, [pyenv](https://github.com/pyenv/pyenv) is recommended to manage Python environments on macOS.
 
-Install from Homebrew
+    Install from Homebrew
 
-```bash
-brew install pyenv pyenv-virtualenv
-```
+    ```bash
+    brew install pyenv pyenv-virtualenv
+    ```
 
-Setup in `~/.zshrc`
+    Setup in `~/.zshrc`
 
-```bash
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-```
+    ```bash
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
+    ```
 
-Install `virtualenv`
+    Install `virtualenv`
 
-```bash
-pyenv install 3.9.13
-pyenv virtualenv 3.9.13 celeborn
-```
+    ```bash
+    pyenv install 3.9.13
+    pyenv virtualenv 3.9.13 celeborn
+    ```
 
-Localize `virtualenv`
+    Localize `virtualenv`
 
-```bash
-pyenv local celeborn
-```
+    ```bash
+    pyenv local celeborn
+    ```
 
 ## Install dependencies
 

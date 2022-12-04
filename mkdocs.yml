@@ -41,6 +41,9 @@ markdown_extensions:
   - attr_list
   - def_list
   - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
 
 extra:
   version: 0.2.0-SNAPSHOT
@@ -55,5 +58,6 @@ nav:
   - Download: download.md
   - Configuration:
       - configuration/index.md
-  - Contributor:
-      - Docs and Website: contrib/docs_and_website.md
+  - Developer Guide:
+      - Build and Test: developer_guide/build_and_test.md
+      - Docs and Website: developer_guide/docs_and_website.md
