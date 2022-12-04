@@ -49,4 +49,4 @@ Past celeborn releases are archived and can be found here:
 
 ## Security
 
-For security issues, please refer to https://www.apache.org/security/
+For security issues, please refer to [https://www.apache.org/security/](https://www.apache.org/security/)
