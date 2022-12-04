@@ -52,6 +52,7 @@ copyright: Copyright © 2022 The Apache Software Foundation
 
 nav:
   - Home: index.md
+  - Download: download.md
   - Configuration:
       - configuration/index.md
   - Contributor:
