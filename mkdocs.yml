@@ -78,3 +78,12 @@ nav:
   - Developer Guide:
       - Build and Test: developer_guide/build_and_test.md
       - Docs and Website: developer_guide/docs_and_website.md
+  - Apache Software Foundation:
+      - Foundation: asf/asf.md
+      - Disclaimer: asf/disclaimer.md
+      - License: https://www.apache.org/licenses/" target="_blank
+      - Events: https://www.apache.org/events/current-event" target="_blank
+      - Sponsorship: https://www.apache.org/foundation/sponsorship.html" target="_blank
+      - Thanks: https://www.apache.org/foundation/thanks.html" target="_blank
+      - Security: https://www.apache.org/security/" target="_blank
+      - Privacy: https://privacy.apache.org/policies/privacy-policy-public.html" target="_blank
