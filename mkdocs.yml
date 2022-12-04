@@ -27,6 +27,7 @@ plugins:
       closing_tag: "!}"
 
 theme:
+  font: false
   name: material
   language: en
   features:
