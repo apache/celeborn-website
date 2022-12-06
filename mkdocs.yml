@@ -79,6 +79,8 @@ nav:
   - Developer Guide:
       - Build and Test: developer_guide/build_and_test.md
       - Docs and Website: developer_guide/docs_and_website.md
+  - User Guide:
+      - Upgrade: user_guide/upgrade.md
   - Apache Software Foundation:
       - Foundation: asf/asf.md
       - Disclaimer: asf/disclaimer.md

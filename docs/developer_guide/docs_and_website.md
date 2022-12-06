@@ -14,7 +14,7 @@ license: |
   limitations under the License.
 ---
 
-Buiding Docs and Website
+Building Docs and Website
 ===
 
 ## Setup Python
