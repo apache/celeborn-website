@@ -36,7 +36,9 @@ Past celeborn releases are archived and can be found here:
 
 [Apache Archives](https://archive.apache.org/dist/incubator/celeborn/)
 
-### Old Remote Shuffle Service releases (Before entering Apache Incubator)
+### Old releases
+
+Before entering Apache Incubator, it was named as Remote Shuffle Service.
 
 [GitHub releases](https://github.com/apache/incubator-celeborn/releases)
 
