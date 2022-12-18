@@ -30,7 +30,7 @@ theme:
   font: false
   name: material
   language: en
-  favicon: https://www.apache.org/logos/res/celeborn/celeborn-1.png
+  favicon: https://www.apache.org/logos/res/celeborn/celeborn-2.png
   features:
     - navigation.indexes
     - navigation.tabs
