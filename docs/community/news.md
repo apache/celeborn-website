@@ -1,7 +1,4 @@
 ---
-hide:
-  - navigation
-
 license: |
   Licensed to the Apache Software Foundation (ASF) under one or more
   contributor license agreements.  See the NOTICE file distributed with
@@ -17,11 +14,9 @@ license: |
   limitations under the License.
 ---
 
-Overview
-===
+## Latest News
 
-Celeborn is dedicated to improving the efficiency and elasticity of
-different map-reduce engines. Celeborn provides an elastic and high efficient management service
-for shuffle data.
-
-The current stable version is {{ stable_version }}
+| Date            | Title                                 | Brief                                                                                                                           |
+|-----------------|---------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| 2022 Nov 30     | New Committer: Yifan Xia              | We are happy to announce Yifan Xia becomes a new Celeborn committer.                                                            |
+| 2022 October 18 | Accept Celeborn into Apache Incubator | Celeborn is accepted into Apache Incubator, see details in incubation [status](https://incubator.apache.org/projects/celeborn). |

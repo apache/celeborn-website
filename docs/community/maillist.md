@@ -1,7 +1,4 @@
 ---
-hide:
-  - navigation
-
 license: |
   Licensed to the Apache Software Foundation (ASF) under one or more
   contributor license agreements.  See the NOTICE file distributed with
@@ -17,11 +14,12 @@ license: |
   limitations under the License.
 ---
 
-Overview
-===
+## Celeborn Mailing Lists
 
-Celeborn is dedicated to improving the efficiency and elasticity of
-different map-reduce engines. Celeborn provides an elastic and high efficient management service
-for shuffle data.
+The Celeborn developer mailing list is the preferred means for all your questions when using Celeborn, which pushes your doubts out to the entire community. This is the best way to keep up-to-date with the community.
 
-The current stable version is {{ stable_version }}
+Before you post anything to the mailing lists, be sure that you already subscribe to them. The currently available lists are listed in the below table.
+
+| List Name | Address | Subscribe | Unsubscribe | Archive |
+| --- | ------- | ----------- | ----- | ------ |
+| Developer List | dev@celeborn.apache.org | [subscribe](mailto:dev-subscribe@celeborn.apache.org) | [unsubscribe](mailto:dev-unsubscribe@celeborn.apache.org) | [archive](https://lists.apache.org/list.html?dev@celeborn.apache.org) |

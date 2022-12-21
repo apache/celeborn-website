@@ -81,7 +81,11 @@ nav:
   - Configuration:
       - configuration/index.md
   - Community:
+      - Join the Mailing Lists: community/maillist.md
       - Project Management Committee: community/project_management_committee.md
+      - Become a Committer: community/committer.md
+      - Become a PPMC Member: community/ppmc.md
+      - Latest News: community/news.md
       - Contributor Guide:
           - Build and Test: community/contributor_guide/build_and_test.md
           - Docs and Website: community/contributor_guide/docs_and_website.md

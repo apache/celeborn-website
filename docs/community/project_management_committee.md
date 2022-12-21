@@ -32,6 +32,7 @@ Current Celeborn PMC members are as follows:
 | Kerwin Zhang | kerwin-zk    | kerwinzhang@apache.org  |
 | Keyong Zhou  | waitinfuture | zhouky@apache.org       |
 | Yi Zhu       | AngersZhuuuu | angerszhuuuu@apache.org |
+| Wei Wu       | powerwu      | powerwu@apache.org      |
 
 ## Mentors
 
@@ -52,7 +53,7 @@ A contributor who contributes enough code to Celeborn will be promoted to a comm
 
 Current Celeborn Committers are as follows:
 
-| Name         | GitHub ID    | Apache ID               |
-|:-------------|:-------------|:------------------------|
-| Xia Yifan    | nafiyAix     | nafiyaix@apache.org     |
+| Name      | GitHub ID    | Apache ID               |
+|:----------|:-------------|:------------------------|
+| Yifan Xia | nafiyAix     | nafiyaix@apache.org     |
 
