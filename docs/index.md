@@ -20,8 +20,6 @@ license: |
 Overview
 ===
 
-Celeborn is dedicated to improving the efficiency and elasticity of
-different map-reduce engines. Celeborn provides an elastic and high efficient management service
-for shuffle data.
+Celeborn is an intermediate data service for big data compute engines (i.e. ETL, OLAP, and Streaming engines) to boost performance, stability, and flexibility. Intermediate data typically include shuffle and spilled data.
 
 The current stable version is {{ stable_version }}
