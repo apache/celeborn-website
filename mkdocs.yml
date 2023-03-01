@@ -49,8 +49,8 @@ markdown_extensions:
   - pymdownx.superfences
 
 extra:
-  version: 0.2.0-SNAPSHOT
-  stable_version: 0.1.4
+  version: 0.3.0-SNAPSHOT
+  stable_version: 0.2.0
   social:
     - icon: fontawesome/brands/github
 
