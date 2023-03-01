@@ -18,7 +18,7 @@ license: |
 
 ## Highlight
 
-- Add load-aware slots allocation algorithm.
+- Support load-aware slots allocation strategy.
 
 - Support columnar shuffle.
 
