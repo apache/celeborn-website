@@ -66,4 +66,11 @@ license: |
 
 Thanks to the following contributors who helped to review and commit to Apache Celeborn(Incubating)
 0.2.0-incubating version, and the order is based on the commit time:
-zwangsheng,AngersZhuuuu,FMX,waitinfuture,dxheming,haiming,pan3793,lichaojacobs,liugs0213,nafiyAix,fanyilun,942011334,kerwin-zk,xunxunmimi5577,mcdull-zhang,wForget,RexXiong,leesf,zouxxyy,Gabriel39,zhongqiangczq,szyWilliam,boneanxs,jxysoft,cfmcgrady,zy-jordan,kaijchen,Rex(Hui) An,jiaoqingbo
+
+|              |                |               |              |            |           |
+|--------------|----------------|---------------|--------------|------------|-----------|
+| zwangsheng   | AngersZhuuuu   | FMX           | waitinfuture | dxheming   | haiming   |
+| pan3793      | lichaojacobs   | liugs0213     | nafiyAix     | fanyilun   | 942011334 |
+| kerwin-zk    | xunxunmimi5577 | mcdull-zhang  | wForget      | RexXiong   | leesf     |
+| zouxxyy      | Gabriel39      | zhongqiangczq | szyWilliam   | boneanxs   | jxysoft   |
+| cfmcgrady    | zy-jordan      | kaijchen      | Rex(Hui) An  | jiaoqingbo |           |
