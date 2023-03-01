@@ -23,11 +23,12 @@ The latest version is 0.2.0.
 
 ### 0.2.0-incubating (2023-03-01)
 
+[release note](community/releasenotes/releasenote-0.2.0.md)
+
 |             |                                                           Download from ASF                                                           |                                                                   Checksum                                                                    | Signature |
 |:-----------:|:-------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------:|:---------:|
 | Source Code | [src](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.2.0-incubating/apache-celeborn-0.2.0-incubating-source.tgz) | [sha512](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.2.0-incubating/apache-celeborn-0.2.0-incubating-src.tgz.sha512)  | [asc](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.2.0-incubating/apache-apache-celeborn-0.2.0-incubating-src.tgz.asc) |
 | Binary      | [bin](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.2.0-incubating/apache-celeborn-0.2.0-incubating-bin.tgz)    | [sha512](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.2.0-incubating/apache-celeborn-0.2.0-incubating-bin.tgz.sha512)  | [asc](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.2.0-incubating/apache-apache-celeborn-0.2.0-incubating-bin.tgz.asc) |
-
 ### Past releases
 
 Past celeborn releases are archived and can be found here:
