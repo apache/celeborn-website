@@ -18,9 +18,27 @@ limitations under the License.
 
 ## Highlight
 
+- Add load-aware slots allocation algorithm.
+
+- Support columnar shuffle.
+
+- Enhanced flow control.
+
+- Enhanced HA stability.
+
+- Enhanced disk management.
+
 - Support rolling upgrade.
 
 - Support quota management.
+
+- Support zstd compression.
+
+- Support spark 2.4 to 3.3.
+
+- Major improvements of Celeborn on Kubernetes, including documents and Helm Chart.
+
+- Code cleanup and refactor.
 
 - Shade netty completely.
 
@@ -28,31 +46,23 @@ limitations under the License.
 
 - Refactor configurations.
 
-- Remove log4j1.
-
-- Support spark 2.4 to 3.3.
-
-- Major improvements of Celeborn on Kubernetes, including documents and helm apps.
-
-- Add load-aware slots allocation algorithm.
-
-- Support columnar shuffle.
-
 - Support JDK11.
+
+- Remove log4j1.
 
 ### Performance
 
 - Add bitmap to filter unnecessary partition read.
 
-- Cache rpc to reduce driver memory pressure.
+- Cache RPC to reduce Spark driver memory pressure.
 
 ### Others
 
-- Various bugfix and improvements.
+- bugfixes and improvements.
 
 ## Credits
 
-Thanks to the following contributors who helped to review and commit to Apache Celeborn (Incubating)
+Thanks to the following contributors who helped to review and commit to Apache Celeborn(Incubating)
 0.2.0-incubating version, and the order is based on the commit time:
 zwangsheng,AngersZhuuuu,FMX,waitinfuture,dxheming,haiming,pan3793,lichaojacobs,liugs0213,nafiyAix,fanyilun,942011334,kerwin-zk,xunxunmimi5577,mcdull-zhang,wForget,RexXiong,leesf,zouxxyy,Gabriel39,zhongqiangczq,szyWilliam,boneanxs,jxysoft,cfmcgrady,zy-jordan,kaijchen,Rex(
 Hui) An,jiaoqingbo
