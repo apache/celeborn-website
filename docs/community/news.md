@@ -18,5 +18,6 @@ license: |
 
 | Date            | Title                                 | Brief                                                                                                                           |
 |-----------------|---------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| 2023 March 1    | Release 0.2.0-incubating              | Celeborn release 0.2.0-incubating as its first Apache release.                                                                  |
 | 2022 Nov 30     | New Committer: Yifan Xia              | We are happy to announce Yifan Xia becomes a new Celeborn committer.                                                            |
 | 2022 October 18 | Accept Celeborn into Apache Incubator | Celeborn is accepted into Apache Incubator, see details in incubation [status](https://incubator.apache.org/projects/celeborn). |
