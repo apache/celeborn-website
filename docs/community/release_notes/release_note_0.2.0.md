@@ -28,7 +28,7 @@ license: |
 
 - Enhanced disk management.
 
-- Support rolling upgrade.
+- Support graceful and fast upgrade.
 
 - Support quota management.
 
