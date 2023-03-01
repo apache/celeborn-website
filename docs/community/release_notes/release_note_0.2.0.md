@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ---
 
-# Apache Celeborn(Incubating) 0.2.0-incubating Release Notes
+# Apache Celeborn(Incubating) 0.2.0 Release Notes
 
 ## Highlight
 
