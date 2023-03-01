@@ -21,14 +21,12 @@ license: |
 
 No version avaiable yet.
 
-<!--
 ### 0.2.0-incubating (2022-12-15)
 
-|             | Download from ASF | Checksum | Signature |
-|:-----------:|:-----------------:|:--------:|:---------:|
-| Source Code | [src](https://www.apache.org/dyn/closer.lua/incubator/celeborn/0.2.0-incubating/apache-celeborn-0.2.0-incubating-src.tar.gz) | [sha512](https://downloads.apache.org/incubator/celeborn/0.2.0-incubating/apache-celeborn-0.2.0-incubating-src.tar.gz.sha512) | [asc](https://downloads.apache.org/incubator/celeborn/0.2.0-incubating/apache-celeborn-0.2.0-incubating-src.tar.gz.asc) |
-| Binary      | [bin](https://www.apache.org/dyn/closer.lua/incubator/celeborn/0.2.0-incubating/apache-celeborn-0.2.0-incubating-bin.tar.gz) | [sha512](https://downloads.apache.org/incubator/celeborn/0.2.0-incubating/apache-celeborn-0.2.0-incubating-bin.tar.gz.sha512) | [asc](https://downloads.apache.org/incubator/celeborn/0.2.0-incubating/apache-celeborn-0.2.0-incubating-bin.tar.gz.asc) |
--->
+|             |                                                           Download from ASF                                                           |                                                                   Checksum                                                                    | Signature |
+|:-----------:|:-------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------:|:---------:|
+| Source Code | [src](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.2.0-incubating/apache-celeborn-0.2.0-incubating-source.tgz) | [sha512](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.2.0-incubating/apache-celeborn-0.2.0-incubating-src.tgz.sha512)  | [asc](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.2.0-incubating/apache-apache-celeborn-0.2.0-incubating-src.tgz.asc) |
+| Binary      | [bin](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.2.0-incubating/apache-celeborn-0.2.0-incubating-bin.tgz)    | [sha512](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.2.0-incubating/apache-celeborn-0.2.0-incubating-bin.tgz.sha512)  | [asc](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.2.0-incubating/apache-apache-celeborn-0.2.0-incubating-bin.tgz.asc) |
 
 ### Past releases
 
