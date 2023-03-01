@@ -52,6 +52,8 @@ limitations under the License.
 
 ### Performance
 
+- Batch and parallelize RPC.
+
 - Add bitmap to filter unnecessary partition read.
 
 - Cache RPC to reduce Spark driver memory pressure.
