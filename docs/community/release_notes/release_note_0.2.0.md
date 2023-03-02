@@ -1,4 +1,7 @@
 ---
+hide:
+  - navigation
+
 license: |
   Licensed to the Apache Software Foundation (ASF) under one or more
   contributor license agreements.  See the NOTICE file distributed with
@@ -67,7 +70,7 @@ license: |
 Thanks to the following contributors who helped to review and commit to Apache Celeborn(Incubating)
 0.2.0-incubating version, and the order is based on the commit time:
 
-| Developers |                |               |              |            |           |
+| Contributors |                |               |              |            |           |
 |------------|----------------|---------------|--------------|------------|-----------|
 | zwangsheng | AngersZhuuuu   | FMX           | waitinfuture | dxheming   | haiming   |
 | pan3793    | lichaojacobs   | liugs0213     | nafiyAix     | fanyilun   | 942011334 |
