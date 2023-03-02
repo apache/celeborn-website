@@ -19,7 +19,7 @@ license: |
 
 ## Versions
 
-The latest version is 0.2.0.
+The latest version is {{ stable_version }}.
 
 ### 0.2.0-incubating (2023-03-01)
 
