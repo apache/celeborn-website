@@ -33,22 +33,21 @@ then it's convenient for Celeborn Admin to operate the master ratis service.
 
 ## Setting up the Celeborn ratis-shell
 
-Celeborn directly introduce the ratis-shell into the project, users don't need to set up ratis-shell env from ratis repo.
-Usr can directly download the Celeborn source tarball from [Download](https://celeborn.apache.org/download/#security) and
+Celeborn directly introduces the ratis-shell into the project, users don't need to set up ratis-shell env from ratis repo.
+User can directly download the Celeborn source tarball from [Download](https://celeborn.apache.org/download) and
 build the Celeborn accoriding to [build_and_test](https://celeborn.apache.org/community/contributor_guide/build_and_test/)
-or just down load the bin tarball from [Download](https://celeborn.apache.org/download/#security) to get the binary package `apache-celeborn-<VERSION>-bin.tgz`.
+or just down load the pre-built binary tarball from [Download](https://celeborn.apache.org/download)
+to get the binary package `apache-celeborn-<VERSION>-bin.tgz`.
 
-After get the binary package `apache-celeborn-<VERSION>-bin.tgz`:
+After getting the binary package `apache-celeborn-<VERSION>-bin.tgz`:
 ```
 $ tar -C <DST_DIR> -zxvf apache-celeborn-<VERSION>-bin.tgz
-$ mv <DST_DIR>/apache-celeborn-<VERSION>-bin <DST_DIR>/celeborn
+$ ln -s <DST_DIR>/apache-celeborn-<VERSION>-bin <DST_DIR>/celeborn
 ```
 
-Export the `CELEBORN_HOME`, `CELEBORN_CONF_DIR` and `CELEBORN_LOG_DIR` environment variable and add the bin directory to the `$PATH`.
+Export the following environment variable and add the bin directory to the `$PATH`.
 ```
 $ export CELEBORN_HOME=<DST_DIR>/celeborn
-$ export CELEBORN_CONF_DIR=$CELEBORN_HOME/conf
-$ export CELEBORN_LOG_DIR=$CELEBORN_HOME/logs
 $ export PATH=${CELEBORN_HOME}/bin:$PATH
 ```
 
