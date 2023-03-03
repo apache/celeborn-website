@@ -78,6 +78,7 @@ nav:
   - Download: download.md
   - User Guide:
       - Upgrade: user_guide/upgrade.md
+      - Ratis Shell: user_guide/celeborn_ratis_shell.md
   - Configuration:
       - configuration/index.md
   - Community:
