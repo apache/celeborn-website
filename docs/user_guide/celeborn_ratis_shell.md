@@ -18,7 +18,7 @@ license: |
 # Celeborn Ratis-shell
 
 [Ratis-shell](https://github.com/apache/ratis/blob/master/ratis-docs/src/site/markdown/cli.md) is the command line interface of Ratis.
-Since Celeborn uses Ratis to implement the HA function of the master, Celeborn directly introduces ratis-shell package into the project
+Celeborn uses Ratis to implement the HA function of the master, Celeborn directly introduces ratis-shell package into the project
 then it's convenient for Celeborn Admin to operate the master ratis service.
 
 > **Note**:
@@ -33,7 +33,7 @@ then it's convenient for Celeborn Admin to operate the master ratis service.
 
 ## Setting up the Celeborn ratis-shell
 
-Since Celeborn directly introduce the ratis-shell into the project, users don't need to set up ratis-shell env from ratis repo.
+Celeborn directly introduce the ratis-shell into the project, users don't need to set up ratis-shell env from ratis repo.
 Usr can directly download the Celeborn source tarball from [Download](https://celeborn.apache.org/download/#security) and
 build the Celeborn accoriding to [build_and_test](https://celeborn.apache.org/community/contributor_guide/build_and_test/)
 or just down load the bin tarball from [Download](https://celeborn.apache.org/download/#security) to get the binary package `apache-celeborn-<VERSION>-bin.tgz`.
