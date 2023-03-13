@@ -20,6 +20,7 @@ The Celeborn developer mailing list is the preferred means for all your question
 
 Before you post anything to the mailing lists, be sure that you already subscribe to them. The currently available lists are listed in the below table.
 
-| List Name | Address | Subscribe | Unsubscribe | Archive |
-| --- | ------- | ----------- | ----- | ------ |
-| Developer List | dev@celeborn.apache.org | [subscribe](mailto:dev-subscribe@celeborn.apache.org) | [unsubscribe](mailto:dev-unsubscribe@celeborn.apache.org) | [archive](https://lists.apache.org/list.html?dev@celeborn.apache.org) |
+| List Name      | Address                  | Subscribe                                              | Unsubscribe                                                | Archive                                                                 |
+|----------------|--------------------------|--------------------------------------------------------|------------------------------------------------------------|-------------------------------------------------------------------------|
+| Developer List | dev@celeborn.apache.org  | [subscribe](mailto:dev-subscribe@celeborn.apache.org)  | [unsubscribe](mailto:dev-unsubscribe@celeborn.apache.org)  | [archive](https://lists.apache.org/list.html?dev@celeborn.apache.org)   |
+| User List      | user@celeborn.apache.org | [subscribe](mailto:user-subscribe@celeborn.apache.org) | [unsubscribe](mailto:user-unsubscribe@celeborn.apache.org) | [archive](https://lists.apache.org/list.html?user@celeborn.apache.org)  |
