@@ -89,108 +89,108 @@ reported in the list.
 ### Component instance = Master
 These metrics are exposed by Celeborn master.
 
-- namespace=master
-  - WorkerCount
-  - LostWorkers
-  - BlacklistedWorkerCount
-  - RegisteredShuffleCount
-  - IsActiveMaster
-  - PartitionSize
-  - OfferSlotsTime
+  - namespace=master 
+    - WorkerCount
+    - LostWorkers
+    - BlacklistedWorkerCount
+    - RegisteredShuffleCount
+    - IsActiveMaster
+    - PartitionSize
+    - OfferSlotsTime
 
-- namespace=CPU
-  - JVMCPUTime
+  - namespace=CPU
+    - JVMCPUTime
 
-- namespace=JVM
-  - This source provides information on JVM metrics using the
+  - namespace=JVM
+    - This source provides information on JVM metrics using the
     [Dropwizard/Codahale Metric Sets for JVM instrumentation](https://metrics.dropwizard.io/4.2.0/manual/jvm.html)
     and in particular the metric sets BufferPoolMetricSet, GarbageCollectorMetricSet and MemoryUsageGaugeSet.
 
-- namespace=rpc
-  - RPCHeartbeatFromApplicationNum
-  - RPCHeartbeatFromWorkerNum
-  - RPCRegisterWorkerNum
-  - RPCRequestSlotsNum
-  - RPCReleaseSlotsNum
-  - RPCReleaseSlotsSize
-  - RPCUnregisterShuffleNum
-  - RPCGetBlacklistNum
-  - RPCReportWorkerUnavailableNum
-  - RPCReportWorkerUnavailableSize
-  - RPCCheckQuotaNum
+  - namespace=rpc
+    - RPCHeartbeatFromApplicationNum
+    - RPCHeartbeatFromWorkerNum
+    - RPCRegisterWorkerNum
+    - RPCRequestSlotsNum
+    - RPCReleaseSlotsNum
+    - RPCReleaseSlotsSize
+    - RPCUnregisterShuffleNum
+    - RPCGetBlacklistNum
+    - RPCReportWorkerUnavailableNum
+    - RPCReportWorkerUnavailableSize
+    - RPCCheckQuotaNum
 
-- namespace=ResourceConsumption
-  - **notes:**
-    - This merics data is generated for each user and they are identified using a metric tag. 
-  - diskFileCount
-  - diskBytesWritten
-  - hdfsFileCount
-  - hdfsBytesWritten
+    - namespace=ResourceConsumption
+      - **notes:**
+        - This merics data is generated for each user and they are identified using a metric tag. 
+      - diskFileCount
+      - diskBytesWritten
+      - hdfsFileCount
+      - hdfsBytesWritten
 
 ### Component instance = Worker
 These metrics are exposed by Celeborn worker.
 
-- namespace=worker
-  - CommitFilesTime
-  - ReserveSlotsTime
-  - FlushDataTime
-  - OpenStreamTime
-  - FetchChunkTime
-  - MasterPushDataTime
-  - SlavePushDataTime
-  - PushDataFailCount
-  - PushDataHandshakeFailCount
-  - RegionStartFailCount
-  - RegionFinishFailCount
-  - MasterPushDataHandshakeTime
-  - SlavePushDataHandshakeTime
-  - MasterRegionStartTime
-  - SlaveRegionStartTime
-  - MasterRegionFinishTime
-  - SlaveRegionFinishTime
-  - TakeBufferTime
-  - TakeBufferTimeIndex
-  - RegisteredShuffleCount
-  - SlotsAllocated
-  - NettyMemory
-  - SortTime
-  - SortMemory
-  - SortingFiles
-  - SortedFiles
-  - SortedFileSize
-  - DiskBuffer
-  - PausePushData
-  - PausePushDataAndReplicate
-  - BufferStreamReadBuffer
-  - ReadBufferDispatcherRequestsLength
-  - DeviceOSFreeCapacity(B)
-  - DeviceOSTotalCapacity(B)
-  - DeviceCelebornFreeCapacity(B)
-  - DeviceCelebornTotalCapacity(B)
-  - PotentialConsumeSpeed
-  - UserProduceSpeed
+  - namespace=worker
+    - CommitFilesTime
+    - ReserveSlotsTime
+    - FlushDataTime
+    - OpenStreamTime
+    - FetchChunkTime
+    - MasterPushDataTime
+    - SlavePushDataTime
+    - PushDataFailCount
+    - PushDataHandshakeFailCount
+    - RegionStartFailCount
+    - RegionFinishFailCount
+    - MasterPushDataHandshakeTime
+    - SlavePushDataHandshakeTime
+    - MasterRegionStartTime
+    - SlaveRegionStartTime
+    - MasterRegionFinishTime
+    - SlaveRegionFinishTime
+    - TakeBufferTime
+    - TakeBufferTimeIndex
+    - RegisteredShuffleCount
+    - SlotsAllocated
+    - NettyMemory
+    - SortTime
+    - SortMemory
+    - SortingFiles
+    - SortedFiles
+    - SortedFileSize
+    - DiskBuffer
+    - PausePushData
+    - PausePushDataAndReplicate
+    - BufferStreamReadBuffer
+    - ReadBufferDispatcherRequestsLength
+    - DeviceOSFreeCapacity(B)
+    - DeviceOSTotalCapacity(B)
+    - DeviceCelebornFreeCapacity(B)
+    - DeviceCelebornTotalCapacity(B)
+    - PotentialConsumeSpeed
+    - UserProduceSpeed
 
-- namespace=CPU
-  - JVMCPUTime
+  - namespace=CPU
+    - JVMCPUTime
 
-- namespace=JVM
-  - This source provides information on JVM metrics using the
-    [Dropwizard/Codahale Metric Sets for JVM instrumentation](https://metrics.dropwizard.io/4.2.0/manual/jvm.html)
-    and in particular the metric sets BufferPoolMetricSet, GarbageCollectorMetricSet and MemoryUsageGaugeSet.
+  - namespace=JVM
+    - This source provides information on JVM metrics using the
+      [Dropwizard/Codahale Metric Sets for JVM instrumentation](https://metrics.dropwizard.io/4.2.0/manual/jvm.html)
+      and in particular the metric sets BufferPoolMetricSet, GarbageCollectorMetricSet and MemoryUsageGaugeSet.
 
-- namespace=rpc
-  - RPCReserveSlotsNum
-  - RPCReserveSlotsSize
-  - RPCCommitFilesNum
-  - RPCCommitFilesSize
-  - RPCDestroyNum
-  - RPCDestroySize
-  - RPCPushDataNum
-  - RPCPushDataSize
-  - RPCPushMergedDataNum
-  - RPCPushMergedDataSize
-  - RPCOpenStreamNum
-  - RPCChunkFetchRequestNum
+  - namespace=rpc
+    - RPCReserveSlotsNum
+    - RPCReserveSlotsSize
+    - RPCCommitFilesNum
+    - RPCCommitFilesSize
+    - RPCDestroyNum
+    - RPCDestroySize
+    - RPCPushDataNum
+    - RPCPushDataSize
+    - RPCPushMergedDataNum
+    - RPCPushMergedDataSize
+    - RPCOpenStreamNum
+    - RPCChunkFetchRequestNum
 
 
 # REST API
@@ -206,7 +206,7 @@ for the worker, at `http://<worker-prometheus-host>:<worker-prometheus-port><pat
 The configuration of `<master-prometheus-host>`, `<master-prometheus-port>`, `<worker-prometheus-host>`, `<worker-prometheus-port>` as below:
 
 | Key                                     | Default | Description                | Since |
-|-----------------------------------------|---------|----------------------------| ----- |
+|-----------------------------------------|---------|----------------------------|-------|
 | celeborn.master.metrics.prometheus.host | 0.0.0.0 | Master's Prometheus host.  | 0.2.0 |
 | celeborn.master.metrics.prometheus.port | 9098    | Master's Prometheus port.  | 0.2.0 |
 | celeborn.worker.metrics.prometheus.host | 0.0.0.0 | Worker's Prometheus host.  | 0.2.0 |
