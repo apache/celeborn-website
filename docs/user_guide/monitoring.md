@@ -29,8 +29,8 @@ an easy way to create new visualizations and monitoring tools for Celeborn and
 also easy for users to get the running status of the service. The REST API is available for
 both master and worker. The endpoints are mounted at `host:port`. For example,
 for the master, they would typically be accessible
-at `http://<master-prometheus-host>:<master-prometheus-port>/<path>`, and
-for the worker, at `http://<worker-prometheus-host>:<worker-prometheus-port>/<path>`.
+at `http://<master-prometheus-host>:<master-prometheus-port><path>`, and
+for the worker, at `http://<worker-prometheus-host>:<worker-prometheus-port><path>`.
 
 The configuration of `<master-prometheus-host>`, `<master-prometheus-port>`, `<worker-prometheus-host>`, `<worker-prometheus-port>` as below:
 
