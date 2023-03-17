@@ -33,7 +33,7 @@ at `$CELEBORN_HOME/conf/metrics.properties`. A custom file location can be speci
 Instead of using the configuration file, a set of configuration parameters with prefix
 `celeborn.metrics.conf.` can be used.
 
-Celeborn's metrics are decoupled into wo
+Celeborn's metrics are decoupled into two
 _instances_ corresponding to Celeborn components.  The following instances are currently supported:
 
 * `master`: The Celeborn cluster master process.
@@ -54,7 +54,7 @@ When using Celeborn configuration parameters instead of the metrics configuratio
 parameter names are composed by the prefix `celeborn.metrics.conf.` followed by the configuration
 details, i.e. the parameters take the following form:
 `celeborn.metrics.conf.[instance|*].sink.[sink_name].[parameter_name]`.
-This example shows a list of Spark configuration parameters for a CSV sink:
+This example shows a list of Celeborn configuration parameters for a CSV sink:
 ```
 "celeborn.metrics.conf.*.sink.csv.class"="org.apache.celeborn.common.metrics.sink.GraphiteSink"
 "celeborn.metrics.conf.*.sink.csv.period"="1"
@@ -75,11 +75,11 @@ activates the Example source:
 
 ## List of available metrics providers
 
-Metrics used by Spark are of multiple types: gauge, counter, histogram, meter and timer,
+Metrics used by Celeborn are of multiple types: gauge, counter, histogram, meter and timer,
 see [Dropwizard library documentation for details](https://metrics.dropwizard.io/4.2.0/getting-started.html).
 The following list of components and metrics reports the name and some details about the available metrics,
 grouped per component instance and source namespace.
-The most common time of metrics used in Spark instrumentation are gauges and counters.
+The most common time of metrics used in Celeborn instrumentation are gauges and counters.
 Counters can be recognized as they have the `.count` suffix. Timers, meters and histograms are annotated
 in the list, the rest of the list elements are metrics of type gauge.
 The large majority of metrics are active as soon as their parent component instance is configured,
