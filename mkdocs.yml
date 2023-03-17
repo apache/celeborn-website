@@ -80,6 +80,7 @@ nav:
       - Deploy: user_guide/deploy.md
       - Upgrade: user_guide/upgrade.md
       - Ratis Shell: user_guide/celeborn_ratis_shell.md
+      - Monitoring: user_guide/monitoring.md
   - Configuration:
       - configuration/index.md
   - Community:
