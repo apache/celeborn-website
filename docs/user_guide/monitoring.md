@@ -29,8 +29,8 @@ an easy way to create new visualizations and monitoring tools for Celeborn and
 also easy for users to get the running status of the service. The REST API is available for
 both master and worker. The endpoints are mounted at `host:port`. For example,
 for the master, they would typically be accessible
-at `http://<master-prometheus-host>:<master-prometheus-port><endpoint>`, and
-for the worker, at `http://<worker-prometheus-host>:<worker-prometheus-port><endpoint>`.
+at `http://<master-prometheus-host>:<master-prometheus-port>/<path>`, and
+for the worker, at `http://<worker-prometheus-host>:<worker-prometheus-port>/<[path]>`.
 
 The configuration of `<master-prometheus-host>`, `<master-prometheus-port>`, `<worker-prometheus-host>`, `<worker-prometheus-port>` as below:
 
@@ -41,9 +41,9 @@ The configuration of `<master-prometheus-host>`, `<master-prometheus-port>`, `<w
 | celeborn.worker.metrics.prometheus.host | 0.0.0.0 | Worker's Prometheus host.  | 0.2.0 |
 | celeborn.worker.metrics.prometheus.port | 9096    | Worker's Prometheus port.  | 0.2.0 |
 
-API listed as below:
+API path listed as below:
 
-| Endpoint                   | Service        | Meaning                                                                                                                                                                              |
+| Path                       | Service        | Meaning                                                                                                                                                                              |
 |----------------------------|----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | /conf                      | master, worker | List the conf setting of the service.                                                                                                                                                |
 | /workerInfo                | master, worker | List worker information of the service. For the master, it will list all registered workers 's information.                                                                          |
