@@ -16,15 +16,18 @@ license: |
 
 ## Current committers
 
-| Name         |
-|--------------|
-| Cheng Pan    |
-| Ethan Feng   |
-| Kerwin Zhang |
-| Keyong Zhou  |
-| Yi Zhu       |
-| Yifan Xia    |
-| Wei Wu       |
+| Name            |
+|-----------------|
+| Binjie Yang     |
+| Cheng Pan       |
+| Ethan Feng      |
+| JiaShu Xiong    |
+| Kerwin Zhang    |
+| Keyong Zhou     |
+| Yi Zhu          |
+| Yifan Xia       |
+| Wei Wu          |
+| Zhongqiang Chen |
 
 
 ## Become A Committer of Apache Celeborn
