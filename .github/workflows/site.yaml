@@ -32,7 +32,12 @@ jobs:
       - run: |
           wget https://github.com/apache/incubator-celeborn/archive/refs/heads/main.zip
           unzip main.zip
-          cp incubator-celeborn-main/docs/configuration/* docs/configuration/
+          mkdir -p docs/docs/latest/configuration/
+          cp incubator-celeborn-main/docs/configuration/* docs/docs/latest/configuration/
+          wget https://github.com/apache/incubator-celeborn/archive/refs/tags/v0.2.1-incubating.zip
+          unzip v0.2.1-incubating.zip
+          mkdir -p docs/docs/0.2.1/configuration/
+          cp incubator-celeborn-0.2.1-incubating/docs/configuration/* docs/docs/0.2.1/configuration/
       - run: pip install -r requirements.txt
       - run: mkdocs gh-deploy --force --remote-branch asf-site
       - run: |
