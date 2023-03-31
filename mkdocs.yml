@@ -76,13 +76,33 @@ copyright: >
 nav:
   - Home: index.md
   - Download: download.md
-  - User Guide:
-      - Deploy: user_guide/deploy.md
-      - Upgrade: user_guide/upgrade.md
-      - Ratis Shell: user_guide/celeborn_ratis_shell.md
-      - Monitoring: user_guide/monitoring.md
-  - Configuration:
-      - configuration/index.md
+  - Documentation:
+      - Latest:
+          - Deploy: docs/latest/deploy.md
+          - Configuration:
+              - client: docs/latest/configuration/client.md
+              - master: docs/latest/configuration/master.md
+              - worker: docs/latest/configuration/worker.md
+              - metrics: docs/latest/configuration/metrics.md
+              - network: docs/latest/configuration/network.md
+              - quota: docs/latest/configuration/quota.md
+              - columnar-shuffle: docs/latest/configuration/columnar-shuffle.md
+          - Monitoring: docs/latest/monitoring.md
+          - Upgrade: docs/latest/upgrade.md
+          - Ratis Shell: docs/latest/celeborn_ratis_shell.md
+      - 0.2.1:
+          - Deploy: docs/0.2.1/deploy.md
+          - Configuration:
+              - client: docs/0.2.1/configuration/client.md
+              - master: docs/0.2.1/configuration/master.md
+              - worker: docs/0.2.1/configuration/worker.md
+              - metrics: docs/0.2.1/configuration/metrics.md
+              - network: docs/0.2.1/configuration/network.md
+              - quota: docs/0.2.1/configuration/quota.md
+              - columnar-shuffle: docs/0.2.1/configuration/columnar-shuffle.md
+          - Upgrade: docs/0.2.1/upgrade.md
+          - Ratis Shell: docs/0.2.1/celeborn_ratis_shell.md
+          - Monitoring: docs/0.2.1/monitoring.md
   - Community:
       - Join the Mailing Lists: community/maillist.md
       - Project Management Committee: community/project_management_committee.md
