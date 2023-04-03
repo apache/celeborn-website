@@ -20,6 +20,5 @@ license: |
 
 From 0.3.0 on the default value for `celeborn.push.replicate.enabled` is changed from `true` to `false`, users
 who want replication on should explicitly enable replication. For example, to enable replication for Spark
-users should add the spark config when submitting job:
-spark.celeborn.push.replicate.enabled=true
+users should add the spark config when submitting job: `spark.celeborn.push.replicate.enabled=true`
 
