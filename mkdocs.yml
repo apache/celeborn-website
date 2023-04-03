@@ -90,7 +90,7 @@ nav:
           - Monitoring: docs/latest/monitoring.md
           - Upgrade: docs/latest/upgrade.md
           - Ratis Shell: docs/latest/celeborn_ratis_shell.md
-          - Migration Guid: docs/latest/migration.md
+          - Migration Guide: docs/latest/migration.md
       - 0.2.1:
           - Deploy: docs/0.2.1/deploy.md
           - Configuration:
