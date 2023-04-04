@@ -54,7 +54,8 @@ The configuration in `./charts/celeborn/values.yaml` you should focus on modifyi
 
 ### [Optional] Build Celeborn Docker Image
 
-Maybe you want to make your own celeborn docker image, you can use `docker build . -f docker/Dockerfile` in Celeborn Binary.
+Maybe you want to make your own celeborn docker image, you can use `docker build . -f docker/Dockerfile` in Celeborn
+Binary.
 
 ### 3. Helm Install Celeborn Charts
 
@@ -121,7 +122,8 @@ configuration:
 spark.celeborn.master.endpoints: celeborn-master-0.celeborn-master-svc.<namespace>:9097,celeborn-master-1.celeborn-master-svc.<namespace>:9097,celeborn-master-2.celeborn-master-svc.<namespace>:9097
 ```
 
-You can find why config endpoints such way in [Kubernetes DNS for Service And Pods](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/) 
+You can find why config endpoints such way
+in [Kubernetes DNS for Service And Pods](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/)
 
 > Notice: You should ensure that Spark/Flink can find the Celeborn Master/Worker via IP or the Kubernetes DNS mentioned
 > above
