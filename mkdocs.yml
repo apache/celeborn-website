@@ -79,6 +79,7 @@ nav:
   - Documentation:
       - Latest:
           - Deploy: docs/latest/deploy.md
+          - Deploy On Kubernetes: docs/latest/deploy_on_k8s.md
           - Configuration:
               - client: docs/latest/configuration/client.md
               - master: docs/latest/configuration/master.md
