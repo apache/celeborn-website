@@ -52,6 +52,10 @@ The configuration in `./charts/celeborn/values.yaml` you should focus on modifyi
 * celeborn `celeborn.worker.storage.dirs` - which disk should be mounted for celeborn worker(For more
   information, [HostPath](https://kubernetes.io/docs/concepts/storage/volumes/#hostpath))
 
+### [Optional] Build Celeborn Docker Image
+
+Maybe you want to make your own celeborn docker image, you can use `docker build . -f docker/Dockerfile` in Celeborn Binary.
+
 ### 3. Helm Install Celeborn Charts
 
 More details in [Helm Install](https://helm.sh/docs/helm/helm_install/)
