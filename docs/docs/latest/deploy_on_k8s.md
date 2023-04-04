@@ -114,8 +114,10 @@ Here, without going into detail on how to configure spark/flink to find celeborn
 configuration:
 
 ```
-spark.celeborn.master.endpoints: celeborn-master-0.celeborn-master-svc.default:9097,celeborn-master-1.celeborn-master-svc.default:9097,celeborn-master-2.celeborn-master-svc.default:9097
+spark.celeborn.master.endpoints: celeborn-master-0.celeborn-master-svc.<namespace>:9097,celeborn-master-1.celeborn-master-svc.<namespace>:9097,celeborn-master-2.celeborn-master-svc.<namespace>:9097
 ```
+
+You can find why config endpoints such way in [Kubernetes DNS for Service And Pods](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/) 
 
 > Notice: You should ensure that Spark/Flink can find the Celeborn Master/Worker via IP or the Kubernetes DNS mentioned
 > above
