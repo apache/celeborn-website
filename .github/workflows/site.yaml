@@ -45,6 +45,7 @@ jobs:
           cd incubator-celeborn-main
           mkdocs build
           cd ..
+          mkdir -p docs
           if [ -d docs/latest ]; then rm -r docs/latest; fi
           mv incubator-celeborn-main/site docs/latest
           git add .
@@ -55,6 +56,7 @@ jobs:
           cd incubator-celeborn-0.2.1-incubating
           mkdocs build
           cd ..
+          mkdir -p docs
           if [ -d docs/0.2.1-incubating ]; then rm -r docs/0.2.1-incubating; fi
           mv incubator-celeborn-0.2.1-incubating/site docs/0.2.1-incubating
           git add .
