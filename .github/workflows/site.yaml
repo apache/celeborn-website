@@ -29,21 +29,37 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
-      - run: |
-          wget https://github.com/apache/incubator-celeborn/archive/refs/heads/main.zip
-          unzip main.zip
-          mkdir -p docs/docs/latest/configuration/
-          cp incubator-celeborn-main/docs/configuration/* docs/docs/latest/configuration/
-          wget https://github.com/apache/incubator-celeborn/archive/refs/tags/v0.2.1-incubating.zip
-          unzip v0.2.1-incubating.zip
-          mkdir -p docs/docs/0.2.1/configuration/
-          cp incubator-celeborn-0.2.1-incubating/docs/configuration/* docs/docs/0.2.1/configuration/
       - run: pip install -r requirements.txt
       - run: mkdocs gh-deploy --force --remote-branch asf-site
       - run: |
           git config --global user.name  "Celeborn"
           git config --global user.email "dev@celeborn.apache.org"
           git checkout asf-site
+      - run: |
+          git checkout main -- .gitignore
+          git add .gitignore
+          git commit -m 'gitignore'
+      - run: |
+          wget https://github.com/apache/incubator-celeborn/archive/refs/heads/main.tar.gz
+          tar -xzf main.tar.gz
+          cd incubator-celeborn-main
+          mkdocs build
+          cd ..
+          if [ -d docs/latest ]; then rm -r docs/latest; fi
+          mv incubator-celeborn-main/site docs/latest
+          git add .
+          git commit -m 'docs/main'
+      - run: |
+          wget https://github.com/apache/incubator-celeborn/archive/refs/tags/v0.2.1-incubating.tar.gz
+          tar -xzf v0.2.1-incubating.tar.gz
+          cd incubator-celeborn-0.2.1-incubating
+          mkdocs build
+          cd ..
+          if [ -d docs/0.2.1-incubating ]; then rm -r docs/0.2.1-incubating; fi
+          mv incubator-celeborn-0.2.1-incubating/site docs/0.2.1-incubating
+          git add .
+          git commit -m 'docs/0.2.1-incubating'
+      - run: |
           echo 'publish:'           >> .asf.yaml
           echo '  whoami: asf-site' >> .asf.yaml
           git add .asf.yaml
