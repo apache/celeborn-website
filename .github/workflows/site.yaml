@@ -20,6 +20,14 @@ on:
   push:
     branches:
       - "main"
+  workflow_dispatch:
+    inputs:
+      regression:
+        description: "deploy"
+        required: false
+        default: "deploy"
+
+
 
 jobs:
   run-tests:
