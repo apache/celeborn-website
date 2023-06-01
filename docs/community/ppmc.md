@@ -24,6 +24,11 @@ license: |
 | Keyong Zhou  |
 | Yi Zhu       |
 | Wei Wu       |
+| Becket Qin   |
+| Duo Zhang    |
+| Lidong Dai   |
+| Ning Jiang   |
+| Yu Li        |
 
 
 ## Become A Podling PMC member of Apache Celeborn
