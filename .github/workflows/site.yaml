@@ -17,6 +17,8 @@
 
 name: "Deploy Website"
 on:
+  schedule:
+    - cron: '45 0 * * *'
   push:
     branches:
       - "main"
@@ -26,8 +28,6 @@ on:
         description: "deploy"
         required: false
         default: "deploy"
-
-
 
 jobs:
   run-tests:
