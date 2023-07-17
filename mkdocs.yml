@@ -76,7 +76,7 @@ copyright: >
 nav:
   - Home: index.md
   - Download: download.md
-  - Documentation: https://celeborn.apache.org/docs/latest/
+  - Documentation: https://celeborn.apache.org/docs/latest/configuration/
   - Community:
       - Join the Mailing Lists: community/maillist.md
       - Project Management Committee: community/project_management_committee.md
