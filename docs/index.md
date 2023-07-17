@@ -1,4 +1,5 @@
 ---
+template: home.html
 hide:
   - navigation
 
@@ -17,9 +18,3 @@ license: |
   limitations under the License.
 ---
 
-Overview
-===
-
-Celeborn is an intermediate data service for big data compute engines (i.e. ETL, OLAP, and Streaming engines) to boost performance, stability, and flexibility. Intermediate data typically include shuffle and spilled data.
-
-The current stable version is {{ stable_version }}

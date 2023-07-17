@@ -29,6 +29,7 @@ plugins:
 theme:
   font: false
   name: material
+  custom_dir: docs/overrides
   language: en
   logo: assets/logo/celeborn-1.svg
   favicon: assets/logo/celeborn-2.svg
