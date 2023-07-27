@@ -98,7 +98,8 @@ license: |
 - revert Destroy Message rename for compatibility [CELEBORN-579]
 - Match TransportMessage type use number instead of enum [CELEBORN-745]
 - Support HDFS compatible file system [CELEBORN-442]
-- Stability and Bug Fix
+
+### Stability and Bug Fix
 - Immediate shutdown of server upon completion of unit test to prevent potential resource leakage [CELEBORN-805]
 - Add heartbeat from client to LifecycleManager to cleanup client [CELEBORN-798]
 - Increase default timeout for commit files [CELEBORN-803]
@@ -366,27 +367,3 @@ Thanks to the following contributors who helped to review and commit to Apache C
 | ulysses-you   |    kaijchen   | Radeity       |  boneanxs    |akpatnam25    | turboFei   |
 | xunxunmimi5577| CVEDetect     |every-breaking-wave     | lianneli      | tcodehuber  | hddong |
 | liugs0213    |boneanxs        | nafiyAix      | zy-jordan       |      |   |  |    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
