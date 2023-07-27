@@ -18,6 +18,7 @@ license: |
 
 | Date            | Title                                                   | Brief                                                                                           |
 |-----------------|---------------------------------------------------------|-------------------------------------------------------------------------------------------------|
+| 2023 July 29    | Release 0.3.0-incubating
 | 2023 March 29   | Release 0.2.1-incubating                                | Celeborn release 0.2.1-incubating.                                                              |
 | 2023 March 17   | New Committer: Binjie Yang,Zhongqiang Chen,Jiashu Xiong | We are happy to announce Binjie Yang,Zhongqiang Chen,Jiashu Xiong become new Celeborn committers. |
 | 2023 March 1    | Release 0.2.0-incubating                                | Celeborn release 0.2.0-incubating as its first Apache release.                                  |
