@@ -53,10 +53,11 @@ A contributor who contributes enough code to Celeborn will be promoted to a comm
 
 Current Celeborn Committers are as follows:
 
-| Name            | GitHub ID    | Apache ID                 |
-|:----------------|:-------------|:--------------------------|
-| Binjie Yang     | zwangsheng     | binjieyang@apache.org       |
-| Jiashu Xiong      | RexXiong     | rexxiong@apache.org       |
-| Yifan Xia       | nafiyAix     | nafiyaix@apache.org       |
-| Zhongqiang Chen | zhongqiangczq     | zhongqiangchen@apache.org |
+| Name            | GitHub ID     | Apache ID                 |
+|:----------------|:--------------|:--------------------------|
+| Binjie Yang     | zwangsheng    | binjieyang@apache.org     |
+| Fu Chen         | cfmcgrady     | fchen@apache.org          |
+| Jiashu Xiong    | RexXiong      | rexxiong@apache.org       |
+| Yifan Xia       | nafiyAix      | nafiyaix@apache.org       |
+| Zhongqiang Chen | zhongqiangczq | zhongqiangchen@apache.org |
 
