@@ -21,6 +21,7 @@ license: |
 | Binjie Yang     |
 | Cheng Pan       |
 | Ethan Feng      |
+| Fu Chen         |
 | JiaShu Xiong    |
 | Kerwin Zhang    |
 | Keyong Zhou     |

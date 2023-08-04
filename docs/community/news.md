@@ -18,6 +18,7 @@ license: |
 
 | Date            | Title                                                   | Brief                                                                                           |
 |-----------------|---------------------------------------------------------|-------------------------------------------------------------------------------------------------|
+| 2023 August 4   | New Committer: Fu chen                                  | We are happy to announce Fu Chen becomes a new Celeborn committer.                              |
 | 2023 July 27    | Release 0.3.0-incubating                                | Celeborn release 0.3.0-incubating.                                                              |
 | 2023 March 29   | Release 0.2.1-incubating                                | Celeborn release 0.2.1-incubating.                                                              |
 | 2023 March 17   | New Committer: Binjie Yang,Zhongqiang Chen,Jiashu Xiong | We are happy to announce Binjie Yang,Zhongqiang Chen,Jiashu Xiong become new Celeborn committers. |
