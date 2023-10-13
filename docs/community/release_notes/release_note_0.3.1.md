@@ -22,6 +22,7 @@ license: |
 ## Highlight
 
 - Flink supports split partitions
+- Spark supports read local shuffle data
 - Kubernetes deployment enhancements
 - Metrics and Grafana Dashboard improvements
 - Prefer to use jemalloc for memory allocation
