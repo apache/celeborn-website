@@ -70,16 +70,16 @@ jobs:
           git add .
           git commit -m 'docs/0.2.1-incubating'
       - run: |
-          wget https://github.com/apache/incubator-celeborn/archive/refs/tags/v0.3.0-incubating.tar.gz
-          tar -xzf v0.3.0-incubating.tar.gz
-          cd incubator-celeborn-0.3.0-incubating
+          wget https://github.com/apache/incubator-celeborn/archive/refs/tags/v0.3.1-incubating.tar.gz
+          tar -xzf v0.3.1-incubating.tar.gz
+          cd incubator-celeborn-0.3.1-incubating
           mkdocs build
           cd ..
           mkdir -p docs
-          if [ -d docs/0.3.0-incubating ]; then rm -r docs/0.3.0-incubating; fi
-          mv incubator-celeborn-0.3.0-incubating/site docs/0.3.0-incubating
+          if [ -d docs/0.3.1-incubating ]; then rm -r docs/0.3.1-incubating; fi
+          mv incubator-celeborn-0.3.1-incubating/site docs/0.3.1-incubating
           git add .
-          git commit -m 'docs/0.3.0-incubating'
+          git commit -m 'docs/0.3.1-incubating'
       - run: |
           echo 'publish:'           >> .asf.yaml
           echo '  whoami: asf-site' >> .asf.yaml
