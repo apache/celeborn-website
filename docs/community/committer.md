@@ -25,6 +25,7 @@ license: |
 | JiaShu Xiong    |
 | Kerwin Zhang    |
 | Keyong Zhou     |
+| Shaoyun Chen    |
 | Yi Zhu          |
 | Yifan Xia       |
 | Wei Wu          |
