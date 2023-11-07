@@ -18,6 +18,7 @@ license: |
 
 | Date            | Title                                                   | Brief                                                                                           |
 |-----------------|---------------------------------------------------------|-------------------------------------------------------------------------------------------------|
+| 2023 November 7 | New Committer: Shaoyun Chen                             | We are happy to announce Shaoyun Chen becomes a new Celeborn committer.                         |
 | 2023 October 13 | Release 0.3.1-incubating                                | Celeborn release 0.3.1-incubating.                                                              |
 | 2023 August 4   | New Committer: Fu chen                                  | We are happy to announce Fu Chen becomes a new Celeborn committer.                              |
 | 2023 July 27    | Release 0.3.0-incubating                                | Celeborn release 0.3.0-incubating.                                                              |
