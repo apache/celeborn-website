@@ -14,7 +14,7 @@ license: |
   limitations under the License.
 ---
 
-Buiding and Testing
+Building and Testing
 ===
 
 TODO
