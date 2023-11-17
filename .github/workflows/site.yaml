@@ -48,38 +48,11 @@ jobs:
           git add .gitignore
           git commit -m 'gitignore'
       - run: |
-          wget https://github.com/apache/incubator-celeborn/archive/refs/heads/main.tar.gz
-          tar -xzf main.tar.gz
-          cd incubator-celeborn-main
-          mkdocs build
-          cd ..
-          mkdir -p docs
-          if [ -d docs/latest ]; then rm -r docs/latest; fi
-          mv incubator-celeborn-main/site docs/latest
-          git add .
-          git commit -m 'docs/main'
+          ./dev/build_docs.sh 'heads/main.tar.gz'
       - run: |
-          wget https://github.com/apache/incubator-celeborn/archive/refs/tags/v0.2.1-incubating.tar.gz
-          tar -xzf v0.2.1-incubating.tar.gz
-          cd incubator-celeborn-0.2.1-incubating
-          mkdocs build
-          cd ..
-          mkdir -p docs
-          if [ -d docs/0.2.1-incubating ]; then rm -r docs/0.2.1-incubating; fi
-          mv incubator-celeborn-0.2.1-incubating/site docs/0.2.1-incubating
-          git add .
-          git commit -m 'docs/0.2.1-incubating'
+          ./dev/build_docs.sh 'tags/v0.2.1-incubating.tar.gz'
       - run: |
-          wget https://github.com/apache/incubator-celeborn/archive/refs/tags/v0.3.1-incubating.tar.gz
-          tar -xzf v0.3.1-incubating.tar.gz
-          cd incubator-celeborn-0.3.1-incubating
-          mkdocs build
-          cd ..
-          mkdir -p docs
-          if [ -d docs/0.3.1-incubating ]; then rm -r docs/0.3.1-incubating; fi
-          mv incubator-celeborn-0.3.1-incubating/site docs/0.3.1-incubating
-          git add .
-          git commit -m 'docs/0.3.1-incubating'
+          ./dev/build_docs.sh 'tags/v0.3.1-incubating.tar.gz'
       - run: |
           echo 'publish:'           >> .asf.yaml
           echo '  whoami: asf-site' >> .asf.yaml
