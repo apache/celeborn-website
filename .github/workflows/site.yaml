@@ -48,11 +48,11 @@ jobs:
           git add .gitignore
           git commit -m 'gitignore'
       - run: |
-          ./dev/build_docs.sh 'heads/main.tar.gz'
+          ./.github/bin/build_docs.sh 'heads/main.tar.gz' 'main'
       - run: |
-          ./dev/build_docs.sh 'tags/v0.2.1-incubating.tar.gz'
+          ./.github/bin/build_docs.sh 'tags/v0.2.1-incubating.tar.gz' '0.2.1-incubating'
       - run: |
-          ./dev/build_docs.sh 'tags/v0.3.1-incubating.tar.gz'
+          ./.github/bin/build_docs.sh 'tags/v0.3.1-incubating.tar.gz' '0.3.1-incubating'
       - run: |
           echo 'publish:'           >> .asf.yaml
           echo '  whoami: asf-site' >> .asf.yaml

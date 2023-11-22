@@ -20,15 +20,21 @@ set -o pipefail
 set -e
 set -x
 
+function exit_with_usage {
+  echo "./github/bin/build_docs.sh <ref_version_name> <doc_link_path>"
+  exit 1
+}
+
+if [ $# -ne 2 ]; then
+  exit_with_usage
+fi
+
 REF_VERSION_NAME="$1"
+DOC_LINK_PATH="$2"
+
 TAR_NAME=${REF_VERSION_NAME##*/}
 DIR_VERSION_NAME=$(echo "$TAR_NAME" | sed -r "s/v*(.*)\.tar\.gz/\1/g")
 TAR_DIR_NAME=incubator-celeborn-$DIR_VERSION_NAME
-if [[ $DIR_VERSION_NAME == "main" ]]; then
-    DOC_VERSION="latest"
-else
-    DOC_VERSION=$DIR_VERSION_NAME
-fi
 
 wget "https://github.com/apache/incubator-celeborn/archive/refs/${REF_VERSION_NAME}"
 tar -xzf $TAR_NAME
@@ -36,7 +42,7 @@ cd $TAR_DIR_NAME
 mkdocs build
 cd ..
 mkdir -p docs
-if [ -d docs/$DOC_VERSION ]; then rm -r docs/$DOC_VERSION; fi
-mv $TAR_DIR_NAME/site docs/$DOC_VERSION
+if [ -d docs/$DOC_LINK_PATH ]; then rm -r docs/$DOC_LINK_PATH; fi
+mv $TAR_DIR_NAME/site docs/$DOC_LINK_PATH
 git add .
-git commit -m "docs/$DOC_VERSION"
+git commit -m "docs/$DOC_LINK_PATH"
