@@ -52,7 +52,7 @@ jobs:
           git add '.github/bin/build_docs.sh'
           git commit -m '.github/bin/build_docs.sh'
       - run: |
-          ./.github/bin/build_docs.sh 'heads/main.tar.gz' 'main'
+          ./.github/bin/build_docs.sh 'heads/main.tar.gz' 'latest'
       - run: |
           ./.github/bin/build_docs.sh 'tags/v0.2.1-incubating.tar.gz' '0.2.1-incubating'
       - run: |
