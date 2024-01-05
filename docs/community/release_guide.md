@@ -263,7 +263,7 @@ After some time this will be synced to [Maven Central](https://search.maven.org/
 
 ### Update Website
 
-Fork and clone [Apache Celeborn website](https://github.com/apache/celeborn-website)
+Fork and clone [Apache Celeborn website](https://github.com/apache/incubator-celeborn-website)
 
 1. Add a new markdown file in `docs/community/release_notes/`
 2. Add a new segment in `docs/community/news.md`
