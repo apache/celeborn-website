@@ -166,7 +166,8 @@ After cutting release branch, don't forget bump version in `master` branch.
 - Set environment variables.
 
 ```shell
-export RELEASE_VERSION=<release version, e.g. 0.3.1-incubating>
+#Do not need to set RELEASE_VERSION manually, the release.sh script has done this.
+#RELEASE_VERSION=<release version, e.g. 0.3.1-incubating>
 export RELEASE_RC_NO=<RC number, e.g. 0>
 ```
 
