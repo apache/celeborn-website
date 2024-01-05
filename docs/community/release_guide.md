@@ -215,7 +215,7 @@ To make your release available in the staging repository, you must close the sta
 
 - Generate a pre-release note from GitHub for the subsequent voting.
 
-Goto the [release page](https://github.com/apache/celeborn/releases) and click the "Draft a new release" button, then it would jump to a new page to prepare the release.
+Goto the [release page](https://github.com/apache/incubator-celeborn/releases) and click the "Draft a new release" button, then it would jump to a new page to prepare the release.
 
 Filling in all the necessary information required by the form. And in the bottom of the form, choose the "This is a pre-release" checkbox. Finally, click the "Publish release" button to finish the step.
 
