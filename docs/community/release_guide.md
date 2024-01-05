@@ -20,7 +20,7 @@ Celeborn Release Guide
 
 ## Introduction
 
-The Apache Celeborn project periodically declares and publishes releases. A release is one or more packages
+The Apache Celeborn (Incubating) project periodically declares and publishes releases. A release is one or more packages
 of the project artifact(s) that are approved for general public distribution and use. They may come with various
 degrees of caveat regarding their perceived quality and potential for change, such as "alpha", "beta", "incubating",
 "stable", etc.
@@ -43,14 +43,13 @@ The release process consists of several steps:
 
 1. Decide to release
 2. Prepare for the release
-3. Cut branch off for __feature__ release
+3. Cut branch off for __major__ release
 4. Build a release candidate
 5. Vote on the release candidate
 6. If necessary, fix any issues and go back to step 3.
 7. Finalize the release
 8. Promote the release
 9. Remove the dist repo directories for deprecated release candidates
-10. Publish docker image
 
 ## Decide to release
 
@@ -146,17 +145,17 @@ svn checkout --depth=files "https://dist.apache.org/repos/dist/release/incubator
 svn commit --username "${ASF_USERNAME}" --password "${ASF_PASSWORD}" --message "Update KEYS" work/svn-celeborn
 ```
 
-## Cut branch if for feature release
+## Cut branch if for major release
 
-celeborn use version pattern `{MAJOR_VERSION}.{MINOR_VERSION}.{PATCH_VERSION}`, e.g. `0.3.1`.
-__Feature Release__ means `MAJOR_VERSION` or `MINOR_VERSION` changed, and __Patch Release__ means `PATCH_VERSION` changed.
+celeborn use version pattern `{MAJOR_VERSION}.{MINOR_VERSION}.{PATCH_VERSION}`, e.g. `0.3.1-incubating`.
+__Major Release__ means `MAJOR_VERSION` or `MINOR_VERSION` changed, and __Patch Release__ means `PATCH_VERSION` changed.
 
 The main step towards preparing a feature release is to create a release branch. This is done via standard Git branching
 mechanism and should be announced to the community once the branch is created.
 
 > Note: If you are releasing a patch version, you can ignore this step.
 
-The release branch pattern is `branch-{MAJOR_VERSION}.{MINOR_VERSION}`, e.g. `branch-1.7`.
+The release branch pattern is `branch-{MAJOR_VERSION}.{MINOR_VERSION}`, e.g. `branch-0.3`.
 
 After cutting release branch, don't forget bump version in `master` branch.
 
@@ -167,32 +166,26 @@ After cutting release branch, don't forget bump version in `master` branch.
 - Set environment variables.
 
 ```shell
-export RELEASE_VERSION=<release version, e.g. 0.3.1>
+export RELEASE_VERSION=<release version, e.g. 0.3.1-incubating>
 export RELEASE_RC_NO=<RC number, e.g. 0>
-export NEXT_VERSION=<e.g. 0.3.2>
 ```
 
-- Bump version, and create a git tag for the release candidate.
+- Bump version.
 
 Considering that other committers may merge PRs during your release period, you should accomplish the version change
 first, and then come back to the release candidate tag to continue the rest release process.
 
-The tag pattern is `v${RELEASE_VERSION}-rc${RELEASE_RC_NO}`, e.g. `v0.3.1-rc0`
+The tag pattern is `v${RELEASE_VERSION}-rc${RELEASE_RC_NO}`, e.g. `v0.3.1-incubating-rc0`
 
 > NOTE: After all the voting passed, be sure to create a final tag with the pattern: `v${RELEASE_VERSION}-incubating`
 
 ```shell
 # Bump to the release version
-build/mvn versions:set -DgenerateBackupPoms=false -DnewVersion="${RELEASE_VERSION}"
+# change the <project.version> in pom to ${RELEASE_VERSION}
 git commit -am "[RELEASE] Bump ${RELEASE_VERSION}"
 
 # Create tag
 git tag v${RELEASE_VERSION}-rc${RELEASE_RC_NO}
-
-# Prepare for the next development version
-build/mvn versions:set -DgenerateBackupPoms=false -DnewVersion="${NEXT_VERSION}-SNAPSHOT"
-(cd celeborn-server/web-ui && npm version "${NEXT_VERSION}-SNAPSHOT")
-git commit -am "[RELEASE] Bump ${NEXT_VERSION}-SNAPSHOT"
 
 # Push branch to apache remote repo
 git push apache
@@ -223,14 +216,14 @@ Filling in all the necessary information required by the form. And in the bottom
 
 ## Vote on the release candidate
 
-The release voting takes place on the Apache celeborn developers list.
+The release voting takes place on the Apache Celeborn (Incubating) developers list (the (P)PMC is voting).
 
 - If possible, attach a draft of the release notes with the email.
 - Recommend represent voting closing time in UTC format.
 - Make sure the email is in text format and the links are correct.
 
 Once the vote is done, you should also send out a summary email with the totals, with a subject that looks
-something like __[VOTE][RESULT] Release Apache celeborn ...__
+something like __[VOTE][RESULT] Release Apache celeborn(Incubating)  ...__
 
 ## Finalize the Release
 
@@ -241,7 +234,7 @@ __Once you move the artifacts into the release folder, they cannot be removed.__
 
 After the vote passes, to upload the binaries to Apache mirrors, you move the binaries from dev directory (this should
 be where they are voted) to release directory. This "moving" is the only way you can add stuff to the actual release
-directory. (Note: only PMC members can move to release directory)
+directory. (Note: only (P)PMC members can move to release directory)
 
 Move the subdirectory in "dev" to the corresponding directory in "release". If you've added your signing key to the
 KEYS file, also update the release copy.
@@ -250,7 +243,7 @@ KEYS file, also update the release copy.
 build/release/release.sh finalize
 ```
 
-Verify that the resources are present in https://downloads.apache.org/incubator/. It may take a while for them to be visible.
+Verify that the resources are present in https://www.apache.org/dist/incubator/incubator/. It may take a while for them to be visible.
 This will be mirrored throughout the Apache network.
 
 For Maven Central Repository, you can Release from the [Apache Nexus Repository Manager](https://repository.apache.org/).
@@ -263,7 +256,7 @@ After some time this will be synced to [Maven Central](https://search.maven.org/
 
 ### Update Website
 
-Fork and clone [Apache Celeborn website](https://github.com/apache/celeborn-website)
+Fork and clone [Apache Celeborn website](https://github.com/apache/incubator-celeborn-website)
 
 1. Add a new markdown file in `docs/community/release_notes/`
 2. Add a new segment in `docs/community/news.md`
@@ -272,7 +265,8 @@ Fork and clone [Apache Celeborn website](https://github.com/apache/celeborn-webs
 ### Create an Announcement
 
 Once everything is working, create an announcement and send an e-mail to the mailing list.
-The mailing list includes: `announce@apache.org`, `dev@celeborn.apache.org`, `user@spark.apache.org`,`user@flink.apache.org`,``.
+The mailing list includes: `general@incubator.apache.org`, `announce@apache.org`, 
+`dev@celeborn.apache.org`, `user@spark.apache.org`,`user@flink.apache.org`.
 
 Note that, you must use the apache.org email to send announce to `announce@apache.org`.
 
@@ -284,7 +278,7 @@ Remove the deprecated dist repo directories at last.
 
 ```shell
 cd work/svn-dev
-svn delete https://dist.apache.org/repos/dist/release/incubator/celeborn/{RELEASE_TAG} \
+svn delete https://dist.apache.org/repos/dist/dev/incubator/celeborn/{RELEASE_TAG} \
   --username "${ASF_USERNAME}" \
   --password "${ASF_PASSWORD}" \
   --message "Remove deprecated Apache Celeborn ${RELEASE_TAG}" 
