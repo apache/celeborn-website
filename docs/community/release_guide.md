@@ -157,7 +157,7 @@ mechanism and should be announced to the community once the branch is created.
 
 The release branch pattern is `branch-{MAJOR_VERSION}.{MINOR_VERSION}`, e.g. `branch-0.3`.
 
-After cutting release branch, don't forget bump version in `master` branch.
+After cutting release branch, don't forget bump version in `main` branch.
 
 ## Build a release candidate
 
