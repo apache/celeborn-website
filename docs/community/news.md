@@ -18,6 +18,7 @@ license: |
 
 | Date             | Title                                                   | Brief                                                                                                                           |
 |------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| 2024 January 8   | Release 0.3.2-incubating                                | Celeborn release 0.3.2-incubating.                                                                                              |
 | 2023 November 16 | New Committer: Yihe Li                                  | We are happy to announce Yihe Li becomes a new Celeborn committer.                                                              |
 | 2023 November 7  | New Committer: Shaoyun Chen                             | We are happy to announce Shaoyun Chen becomes a new Celeborn committer.                                                         |
 | 2023 October 13  | Release 0.3.1-incubating                                | Celeborn release 0.3.1-incubating.                                                                                              |
