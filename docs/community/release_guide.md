@@ -90,7 +90,9 @@ export ASF_PASSWORD=<your apache password>
 #### Java Home
 
 An available environment variable `JAVA_HOME`, you can do `echo $JAVA_HOME` to check it.
-Note that, the Java version should be 8.
+
+!!! note
+  the Java version should be 8.
 
 #### Subversion
 
@@ -117,8 +119,8 @@ pub   rsa4096/37356FA0 2022-10-27 [SC] [expires: 2028-10-27]
 uid         [ultimate] Ethan Feng <ethanfeng@apache.org>
 sub   rsa4096/D2ED4CBF 2022-10-27 [E] [expires: 2028-10-27]
 ```
-
-> Note: To follow the [Apache's release specification](https://infra.apache.org/release-signing.html#note), all new RSA keys generated should be at least 4096 bits. Do not generate new DSA keys.
+!!! note
+  To follow the [Apache's release specification](https://infra.apache.org/release-signing.html#note), all new RSA keys generated should be at least 4096 bits. Do not generate new DSA keys.
 
 Here, the key ID is the 8-digit hex string in the pub line: `37356FA0`.
 
@@ -153,7 +155,8 @@ __Major Release__ means `MAJOR_VERSION` or `MINOR_VERSION` changed, and __Patch 
 The main step towards preparing a feature release is to create a release branch. This is done via standard Git branching
 mechanism and should be announced to the community once the branch is created.
 
-> Note: If you are releasing a patch version, you can ignore this step.
+!!! note
+  If you are releasing a patch version, you can ignore this step.
 
 The release branch pattern is `branch-{MAJOR_VERSION}.{MINOR_VERSION}`, e.g. `branch-0.3`.
 
@@ -178,7 +181,8 @@ first, and then come back to the release candidate tag to continue the rest rele
 
 The tag pattern is `v${RELEASE_VERSION}-rc${RELEASE_RC_NO}`, e.g. `v0.3.1-incubating-rc0`
 
-> NOTE: After all the voting passed, be sure to create a final tag with the pattern: `v${RELEASE_VERSION}-incubating`
+!!! note
+  After all the voting passed, be sure to create a final tag with the pattern: `v${RELEASE_VERSION}-incubating`
 
 ```shell
 # Bump to the release version
@@ -213,7 +217,8 @@ Goto the [release page](https://github.com/apache/incubator-celeborn/releases) a
 
 Filling in all the necessary information required by the form. And in the bottom of the form, choose the "This is a pre-release" checkbox. Finally, click the "Publish release" button to finish the step.
 
-> Note: the pre-release note is used for voting purposes. It would be marked with a **Pre-release** tag. After all the voting works(dev and general) are finished, do not forget to inverse the "This is a pre-release" checkbox. The pre-release version comes from vx.y.z-rcN tags, and the final version should come from vx.y.z tags.
+!!! note
+  the pre-release note is used for voting purposes. It would be marked with a **Pre-release** tag. After all the voting works(dev and general) are finished, do not forget to inverse the "This is a pre-release" checkbox. The pre-release version comes from vx.y.z-rcN tags, and the final version should come from vx.y.z tags.
 
 ## Vote on the release candidate
 
@@ -228,7 +233,8 @@ something like __[VOTE][RESULT] Release Apache celeborn(Incubating)  ...__
 
 Then, you can move the release vote on the general incubator mailing list. Also, you should send out a summary email like dev ML voting.
 
-> Note, any reason causes voting cancel. You should re-vote on the dev ML firstly.
+!!! note
+  any reason causes voting cancel. You should re-vote on the dev ML firstly.
 
 ## Finalize the Release
 
@@ -275,7 +281,8 @@ Once everything is working, create an announcement and send an e-mail to the mai
 The mailing list includes: `general@incubator.apache.org`, `announce@apache.org`, 
 `dev@celeborn.apache.org`, `user@spark.apache.org`,`user@flink.apache.org`.
 
-Note that, you must use the apache.org email to send announce to `announce@apache.org`.
+!!! note
+  you must use the apache.org email to send announce to `announce@apache.org`.
 
 Enjoy an adult beverage of your choice, and congratulations on making a Celeborn release.
 
