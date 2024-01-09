@@ -147,7 +147,7 @@ svn commit --username "${ASF_USERNAME}" --password "${ASF_PASSWORD}" --message "
 
 ## Cut branch if for major release
 
-celeborn use version pattern `{MAJOR_VERSION}.{MINOR_VERSION}.{PATCH_VERSION}`, e.g. `0.3.1-incubating`.
+celeborn use version pattern `{MAJOR_VERSION}.{MINOR_VERSION}.{PATCH_VERSION}[-{OPTIONAL_SUFFIX}]`, e.g. `0.3.1-incubating`.
 __Major Release__ means `MAJOR_VERSION` or `MINOR_VERSION` changed, and __Patch Release__ means `PATCH_VERSION` changed.
 
 The main step towards preparing a feature release is to create a release branch. This is done via standard Git branching
