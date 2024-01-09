@@ -29,6 +29,7 @@ Current Celeborn PMC members are as follows:
 |:-------------|:-------------|:------------------------|
 | Cheng Pan    | pan3793      | chengpan@apache.org     |
 | Ethan Feng   | FMX          | ethanfeng@apache.org    |
+| Jiashu Xiong | RexXiong     | rexxiong@apache.org     |
 | Kerwin Zhang | kerwin-zk    | kerwinzhang@apache.org  |
 | Keyong Zhou  | waitinfuture | zhouky@apache.org       |
 | Yi Zhu       | AngersZhuuuu | angerszhuuuu@apache.org |
@@ -53,10 +54,12 @@ A contributor who contributes enough code to Celeborn will be promoted to a comm
 
 Current Celeborn Committers are as follows:
 
-| Name            | GitHub ID    | Apache ID                 |
-|:----------------|:-------------|:--------------------------|
-| Binjie Yang     | zwangsheng     | binjieyang@apache.org       |
-| Jiashu Xiong      | RexXiong     | rexxiong@apache.org       |
-| Yifan Xia       | nafiyAix     | nafiyaix@apache.org       |
-| Zhongqiang Chen | zhongqiangczq     | zhongqiangchen@apache.org |
+| Name            | GitHub ID     | Apache ID                 |
+|:----------------|:--------------|:--------------------------|
+| Binjie Yang     | zwangsheng    | binjieyang@apache.org     |
+| Fu Chen         | cfmcgrady     | fchen@apache.org          |
+| Shaoyun Chen    | cxzl25        | csy@apache.org            |
+| Yifan Xia       | nafiyAix      | nafiyaix@apache.org       |
+| Yihe Li         | onebox-li     | liyihe@apache.org         |
+| Zhongqiang Chen | zhongqiangczq | zhongqiangchen@apache.org |
 

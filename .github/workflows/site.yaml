@@ -17,9 +17,17 @@
 
 name: "Deploy Website"
 on:
+  schedule:
+    - cron: '45 0 * * *'
   push:
     branches:
       - "main"
+  workflow_dispatch:
+    inputs:
+      regression:
+        description: "deploy"
+        required: false
+        default: "deploy"
 
 jobs:
   run-tests:
@@ -28,7 +36,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
         with:
-          python-version: 3.x
+          python-version: 3.9
       - run: pip install -r requirements.txt
       - run: mkdocs gh-deploy --force --remote-branch asf-site
       - run: |
@@ -40,27 +48,15 @@ jobs:
           git add .gitignore
           git commit -m 'gitignore'
       - run: |
-          wget https://github.com/apache/incubator-celeborn/archive/refs/heads/main.tar.gz
-          tar -xzf main.tar.gz
-          cd incubator-celeborn-main
-          mkdocs build
-          cd ..
-          mkdir -p docs
-          if [ -d docs/latest ]; then rm -r docs/latest; fi
-          mv incubator-celeborn-main/site docs/latest
-          git add .
-          git commit -m 'docs/main'
+          git checkout main -- '.github/bin/build_docs.sh'
+          git add '.github/bin/build_docs.sh'
+          git commit -m '.github/bin/build_docs.sh'
       - run: |
-          wget https://github.com/apache/incubator-celeborn/archive/refs/tags/v0.2.1-incubating.tar.gz
-          tar -xzf v0.2.1-incubating.tar.gz
-          cd incubator-celeborn-0.2.1-incubating
-          mkdocs build
-          cd ..
-          mkdir -p docs
-          if [ -d docs/0.2.1-incubating ]; then rm -r docs/0.2.1-incubating; fi
-          mv incubator-celeborn-0.2.1-incubating/site docs/0.2.1-incubating
-          git add .
-          git commit -m 'docs/0.2.1-incubating'
+          ./.github/bin/build_docs.sh 'heads/main.tar.gz' 'latest'
+      - run: |
+          ./.github/bin/build_docs.sh 'tags/v0.2.1-incubating.tar.gz' '0.2.1-incubating'
+      - run: |
+          ./.github/bin/build_docs.sh 'tags/v0.3.1-incubating.tar.gz' '0.3.1-incubating'
       - run: |
           echo 'publish:'           >> .asf.yaml
           echo '  whoami: asf-site' >> .asf.yaml
