@@ -262,6 +262,7 @@ Fork and clone [Apache Celeborn website](https://github.com/apache/incubator-cel
 1. Add a new markdown file in `docs/community/release_notes/`
 2. Add a new segment in `docs/community/news.md`
 3. Update `releases` defined in `docs/download.md`
+4. Add the latest release version in `.github/workflows/site.yaml`
 
 ### Create an Announcement
 
