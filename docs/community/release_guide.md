@@ -226,6 +226,10 @@ The release voting takes place on the Apache Celeborn (Incubating) developers li
 Once the vote is done, you should also send out a summary email with the totals, with a subject that looks
 something like __[VOTE][RESULT] Release Apache celeborn(Incubating)  ...__
 
+Then, you can move the release vote on the general incubator mailing list. Also, you should send out a summary email like dev ML voting.
+
+> Note, any reason causes voting cancel. You should re-vote on the dev ML firstly.
+
 ## Finalize the Release
 
 __Be Careful!__
