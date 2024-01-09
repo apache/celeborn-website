@@ -238,10 +238,9 @@ Then, you can move the release vote on the general incubator mailing list. Also,
 
 ## Finalize the Release
 
-__Be Careful!__
-
-__THIS STEP IS IRREVERSIBLE so make sure you selected the correct staging repository.__
-__Once you move the artifacts into the release folder, they cannot be removed.__
+!!! danger
+    __THIS STEP IS IRREVERSIBLE so make sure you selected the correct staging repository.__
+    __Once you move the artifacts into the release folder, they cannot be removed.__
 
 After the vote passes, to upload the binaries to Apache mirrors, you move the binaries from dev directory (this should
 be where they are voted) to release directory. This "moving" is the only way you can add stuff to the actual release
