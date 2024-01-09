@@ -170,8 +170,7 @@ After cutting release branch, don't forget bump version in `main` branch.
 - Set environment variables.
 
 ```shell
-#Do not need to set RELEASE_VERSION manually, the release.sh script has done this.
-#RELEASE_VERSION=<release version, e.g. 0.3.1-incubating>
+# The RELEASE_VERSION will be extracted from the project's root `pom.xml`
 export RELEASE_RC_NO=<RC number, e.g. 0>
 ```
 
