@@ -26,6 +26,7 @@ license: |
 | Kerwin Zhang    |
 | Keyong Zhou     |
 | Shaoyun Chen    |
+| Xiaofeng Jiang  |
 | Yi Zhu          |
 | Yifan Xia       |
 | Yihe Li         |

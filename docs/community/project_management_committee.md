@@ -59,6 +59,7 @@ Current Celeborn Committers are as follows:
 | Binjie Yang     | zwangsheng    | binjieyang@apache.org     |
 | Fu Chen         | cfmcgrady     | fchen@apache.org          |
 | Shaoyun Chen    | cxzl25        | csy@apache.org            |
+| Xiaofeng Jiang  | SteNicholas   | nicholasjiang@apache.org  |
 | Yifan Xia       | nafiyAix      | nafiyaix@apache.org       |
 | Yihe Li         | onebox-li     | liyihe@apache.org         |
 | Zhongqiang Chen | zhongqiangczq | zhongqiangchen@apache.org |
