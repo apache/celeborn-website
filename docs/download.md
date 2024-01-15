@@ -88,7 +88,3 @@ Before entering Apache Incubator, it was named as Remote Shuffle Service.
 [Public keys](https://downloads.apache.org/incubator/celeborn/KEYS)
 
 [Instructions](https://www.apache.org/info/verification.html)
-
-## Security
-
-For security issues, please refer to [https://www.apache.org/security/](https://www.apache.org/security/)
