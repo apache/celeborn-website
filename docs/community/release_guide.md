@@ -253,7 +253,7 @@ KEYS file, also update the release copy.
 build/release/release.sh finalize
 ```
 
-Verify that the resources are present in https://www.apache.org/dist/incubator/incubator/. It may take a while for them to be visible.
+Verify that the resources are present in https://www.apache.org/dist/incubator/celeborn/. It may take a while for them to be visible.
 This will be mirrored throughout the Apache network.
 
 For Maven Central Repository, you can Release from the [Apache Nexus Repository Manager](https://repository.apache.org/).
