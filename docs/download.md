@@ -21,6 +21,16 @@ license: |
 
 The latest version is {{ stable_version }}.
 
+
+### 0.4.0-incubating (2024-02-04)
+
+[release note](community/release_notes/release_note_0.4.0.md)
+
+|             |                                                           Download from ASF                                                           |                                                                    Checksum                                                                     |                                                                 Signature                                                                 |
+|:-----------:|:-------------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------:|
+| Source Code | [src](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.4.0-incubating/apache-celeborn-0.4.0-incubating-source.tgz) | [sha512](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.4.0-incubating/apache-celeborn-0.4.0-incubating-source.tgz.sha512) | [asc](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.4.0-incubating/apache-celeborn-0.4.0-incubating-source.tgz.asc) |
+| Binary      |  [bin](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.4.0-incubating/apache-celeborn-0.4.0-incubating-bin.tgz)   |  [sha512](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.4.0-incubating/apache-celeborn-0.4.0-incubating-bin.tgz.sha512)   |  [asc](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.4.0-incubating/apache-celeborn-0.4.0-incubating-bin.tgz.asc)   |
+
 ### 0.3.2-incubating (2024-01-08)
 
 [release note](community/release_notes/release_note_0.3.2.md)

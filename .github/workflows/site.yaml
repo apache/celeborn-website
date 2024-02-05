@@ -58,6 +58,8 @@ jobs:
       - run: |
           ./.github/bin/build_docs.sh 'tags/v0.3.2-incubating.tar.gz' '0.3.2-incubating'
       - run: |
+          ./.github/bin/build_docs.sh 'tags/v0.4.0-incubating.tar.gz' '0.4.0-incubating'
+      - run: |
           echo 'publish:'           >> .asf.yaml
           echo '  whoami: asf-site' >> .asf.yaml
           git add .asf.yaml
