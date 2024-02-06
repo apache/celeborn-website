@@ -101,7 +101,6 @@ license: |
 - [CELEBORN-247][FOLLOWUP] Add metrics for each user's quota usage of Celeborn Worker
 - [CELEBORN-1095] Support configuration of fastest available XXHashFactory instance for checksum of Lz4Decompressor
 - [CELEBORN-1087] Remove SimpleStateMachineStorageUtil in master module
-- Revert "[CELEBORN-255] Add counter of outstandingFetches, outstanding…
 - [CELEBORN-1082] Fixing partition sorter task failures due to duplicate sorting
 - [CELEBORN-1070] Add error-prone to pom.xml
 - [CELEBORN-1079] Fix use of GuardedBy in client-flink/common
