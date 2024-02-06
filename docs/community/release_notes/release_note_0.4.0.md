@@ -219,7 +219,6 @@ license: |
 - [CELEBORN-1163] Upgrade protobuf from 3.19.2 to 3.21.7
 - [CELEBORN-1169] Bump Spark from 3.4.1 to 3.4.2
 - [CELEBORN-1170] Upgrade snappy-java from 1.1.8.2 to 1.1.10.5
-- upgrade snappy-java from 1.1.8.2 to 1.1.10.5
 - [CELEBORN-1113] Bump Hadoop client version from 3.2.4 to 3.3.6
 - [CELEBORN-1125] Bump guava from 14.0.1 to 32.1.3-jre
 - [CELEBORN-742][BUILD] Bump Hadoop 3.2.4
