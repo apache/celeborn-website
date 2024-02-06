@@ -223,6 +223,7 @@ license: |
 - [CELEBORN-1125] Bump guava from 14.0.1 to 32.1.3-jre
 - [CELEBORN-742][BUILD] Bump Hadoop 3.2.4
 - [CELEBORN-821][BUILD] Bump junit from 4.12 to 4.13.2
+- [MINOR] upgrade snappy-java from 1.1.8.2 to 1.1.10.5
 
 ## Credits
 
