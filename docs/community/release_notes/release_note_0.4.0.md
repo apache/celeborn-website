@@ -21,8 +21,8 @@ license: |
 ## Highlight
 
 - Rerun Spark Stage for Celeborn Shuffle Fetch Failure
-- Added support for Hadoop MapReduce
-- Added support for Flink 1.18
+- Added support for Apache Hadoop MapReduce
+- Added support for Apache Flink 1.18
 - Implemented JVM monitoring in Celeborn Worker using JVMQuake
 - Added support for SBT build system
 
