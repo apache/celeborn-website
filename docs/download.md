@@ -9,7 +9,9 @@ license: |
   The ASF licenses this file to You under the Apache License, Version 2.0
   (the "License"); you may not use this file except in compliance with
   the License.  You may obtain a copy of the License at
-      http://www.apache.org/licenses/LICENSE-2.0
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
   Unless required by applicable law or agreed to in writing, software
   distributed under the License is distributed on an "AS IS" BASIS,
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -20,6 +22,16 @@ license: |
 ## Versions
 
 The latest version is {{ stable_version }}.
+
+
+### 0.4.0-incubating (2024-02-04)
+
+[release note](community/release_notes/release_note_0.4.0.md)
+
+|             |                                                           Download from ASF                                                           |                                                                    Checksum                                                                     |                                                                 Signature                                                                 |
+|:-----------:|:-------------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------:|
+| Source Code | [src](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.4.0-incubating/apache-celeborn-0.4.0-incubating-source.tgz) | [sha512](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.4.0-incubating/apache-celeborn-0.4.0-incubating-source.tgz.sha512) | [asc](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.4.0-incubating/apache-celeborn-0.4.0-incubating-source.tgz.asc) |
+| Binary      |  [bin](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.4.0-incubating/apache-celeborn-0.4.0-incubating-bin.tgz)   |  [sha512](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.4.0-incubating/apache-celeborn-0.4.0-incubating-bin.tgz.sha512)   |  [asc](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.4.0-incubating/apache-celeborn-0.4.0-incubating-bin.tgz.asc)   |
 
 ### 0.3.2-incubating (2024-01-08)
 

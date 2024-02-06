@@ -51,12 +51,10 @@ jobs:
           git checkout main -- '.github/bin/build_docs.sh'
           git add '.github/bin/build_docs.sh'
           git commit -m '.github/bin/build_docs.sh'
-      - run: |
-          ./.github/bin/build_docs.sh 'heads/main.tar.gz' 'latest'
-      - run: |
-          ./.github/bin/build_docs.sh 'tags/v0.2.1-incubating.tar.gz' '0.2.1-incubating'
-      - run: |
-          ./.github/bin/build_docs.sh 'tags/v0.3.2-incubating.tar.gz' '0.3.2-incubating'
+      - run: ./.github/bin/build_docs.sh 'heads/main.tar.gz' 'latest'
+      - run: ./.github/bin/build_docs.sh 'tags/v0.2.1-incubating.tar.gz' '0.2.1-incubating'
+      - run: ./.github/bin/build_docs.sh 'tags/v0.3.2-incubating.tar.gz' '0.3.2-incubating'
+      - run: ./.github/bin/build_docs.sh 'tags/v0.4.0-incubating.tar.gz' '0.4.0-incubating'
       - run: |
           echo 'publish:'           >> .asf.yaml
           echo '  whoami: asf-site' >> .asf.yaml

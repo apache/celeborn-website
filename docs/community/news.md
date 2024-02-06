@@ -6,7 +6,9 @@ license: |
   The ASF licenses this file to You under the Apache License, Version 2.0
   (the "License"); you may not use this file except in compliance with
   the License.  You may obtain a copy of the License at
-      http://www.apache.org/licenses/LICENSE-2.0
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
   Unless required by applicable law or agreed to in writing, software
   distributed under the License is distributed on an "AS IS" BASIS,
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -18,6 +20,7 @@ license: |
 
 | Date             | Title                                                   | Brief                                                                                                                           |
 |------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| 2024 February 4  | Release 0.4.0-incubating                                | Celeborn release 0.4.0-incubating.                                                                                              |
 | 2024 January 11  | New Committer: Xiaofeng Jiang                           | We are happy to announce Xiaofeng Jiang becomes a new Celeborn committer.                                                       |
 | 2024 January 8   | Release 0.3.2-incubating                                | Celeborn release 0.3.2-incubating.                                                                                              |
 | 2023 November 16 | New Committer: Yihe Li                                  | We are happy to announce Yihe Li becomes a new Celeborn committer.                                                              |
