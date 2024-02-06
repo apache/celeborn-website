@@ -178,7 +178,7 @@ license: |
 - [CELEBORN-1207] SBT http repository documentation
 - [CELEBORN-1223] Align master and worker metrics of document with MasterSource and WorkerSource
 - [CELEBORN-1247] Output config's alternatives to doc
-- Add the Celeborn Helm Chart doc
+- [MINOR] Add the Celeborn Helm Chart doc
 - [MINOR] Updated sbt.md documentation to be consistent with description
 - [CELEBORN-1104][DOC] Fix SBT documentation incorrect command
 - [CELEBORN-1101] Update metrics doc to add necessary configuration steps
