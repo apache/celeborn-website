@@ -180,37 +180,37 @@ license: |
 - [CELEBORN-1247] Output config's alternatives to doc
 - [MINOR] Add the Celeborn Helm Chart doc
 - [MINOR] Updated sbt.md documentation to be consistent with description
-- [CELEBORN-1104][DOC] Fix SBT documentation incorrect command
+- [CELEBORN-1104] Fix SBT documentation incorrect command
 - [CELEBORN-1101] Update metrics doc to add necessary configuration steps
 - [CELEBORN-1091] Update docs about how to use error-prone plugin in IDEA
 - [CELEBORN-1085] Update metrics doc
-- [CELEBORN-987][DOC] README#Build should extend to Java8/11/17
+- [CELEBORN-987] README#Build should extend to Java8/11/17
 - [CELEBORN-1010] Update docs about `spark.shuffle.service.enabled`
 - [CELEBORN-954] Add documentation about reliable shuffle data storage
-- [CELEBORN-997][DOC] Fix Rolling upgrade broken link
-- [CELEBORN-991][DOC] Remove incorrect `spark.metrics.conf`
+- [CELEBORN-997] Fix Rolling upgrade broken link
+- [CELEBORN-991] Remove incorrect `spark.metrics.conf`
 - [CELEBORN-974] Add quick start guide about using MapReduce with Celeborn
-- [CELEBORN-948][DOC] fix quick start doc about failed to submit flink wordcount
-- [CELEBORN-822][DOC] Introduce a quick start guide for running Apache Flink with Apache Celeborn
-- [CELEBORN-927][DOC] Correct celeborn.metrics.conf.*.sink.csv.class configuration example for a CSV sink
-- [CELEBORN-927][DOC] Run dev/reformat before you create a new pull request for code style
-- [CELEBORN-927][DOC] Guideline to add new RPC messages
-- [CELEBORN-909][DOC] Mention `celeborn.worker.directMemoryRatioToResume` default value changed in main/0.4
-- [CELEBORN-893][DOC] Fix Spark patch list text in Readme
-- [CELEBORN-877][DOC] Document on SBT
-- [CELEBORN-870][DOC] Document on usage together with Gluten
-- [CELEBORN-869][DOC] Document on Integrating Celeborn
-- [CELEBORN-864][DOC] Document on blacklist
-- [CELEBORN-860][DOC] Document on ShuffleClient
-- [CELEBORN-853][DOC] Document on LifecycleManager
-- [CELEBORN-834][DOC] Add fault tolerant document
-- [CELEBORN-849][DOC] Document on Master
-- [CELEBORN-831][DOC] Add traffic control document
-- [CELEBORN-826][DOC] Add storage document
+- [CELEBORN-948] fix quick start doc about failed to submit flink wordcount
+- [CELEBORN-822] Introduce a quick start guide for running Apache Flink with Apache Celeborn
+- [CELEBORN-927] Correct celeborn.metrics.conf.*.sink.csv.class configuration example for a CSV sink
+- [CELEBORN-927] Run dev/reformat before you create a new pull request for code style
+- [CELEBORN-927] Guideline to add new RPC messages
+- [CELEBORN-909] Mention `celeborn.worker.directMemoryRatioToResume` default value changed in main/0.4
+- [CELEBORN-893] Fix Spark patch list text in Readme
+- [CELEBORN-877] Document on SBT
+- [CELEBORN-870] Document on usage together with Gluten
+- [CELEBORN-869] Document on Integrating Celeborn
+- [CELEBORN-864] Document on blacklist
+- [CELEBORN-860] Document on ShuffleClient
+- [CELEBORN-853] Document on LifecycleManager
+- [CELEBORN-834] Add fault tolerant document
+- [CELEBORN-849] Document on Master
+- [CELEBORN-831] Add traffic control document
+- [CELEBORN-826] Add storage document
 - [CELEBORN-828] Merge Monitoring to Development doc
-- [CELEBORN-824][DOC] Add PushData document
-- [CELEBORN-823][DOC] Add Celeborn architecture document
-- [CELEBORN-822][DOC] Add quick start guide
+- [CELEBORN-824] Add PushData document
+- [CELEBORN-823] Add Celeborn architecture document
+- [CELEBORN-822] Add quick start guide
 
 ### Dependencies
 
