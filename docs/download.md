@@ -24,7 +24,7 @@ license: |
 The latest version is {{ stable_version }}.
 
 
-### 0.4.0-incubating (2024-02-04)
+### 0.4.0-incubating (2024-02-06)
 
 [release note](community/release_notes/release_note_0.4.0.md)
 
