@@ -20,7 +20,7 @@ license: |
 
 | Date             | Title                                                   | Brief                                                                                                                           |
 |------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| 2024 February 14 | New PPMC Member: Fu Chen                                | We are happy to announce Fu Chen becomes a new Celeborn PPMC Member.                                                            |
+| 2024 February 14 | New PPMC Member: Fu Chen                                | We are happy to announce Fu Chen becomes a new Celeborn PPMC member.                                                            |
 | 2024 February 6  | Release 0.4.0-incubating                                | Celeborn release 0.4.0-incubating.                                                                                              |
 | 2024 January 11  | New Committer: Xiaofeng Jiang                           | We are happy to announce Xiaofeng Jiang becomes a new Celeborn committer.                                                       |
 | 2024 January 8   | Release 0.3.2-incubating                                | Celeborn release 0.3.2-incubating.                                                                                              |
