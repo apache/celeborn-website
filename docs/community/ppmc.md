@@ -22,6 +22,7 @@ license: |
 |--------------|
 | Cheng Pan    |
 | Ethan Feng   |
+| Fu Chen      |
 | Kerwin Zhang |
 | Keyong Zhou  |
 | Yi Zhu       |
