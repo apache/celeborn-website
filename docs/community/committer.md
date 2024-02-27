@@ -36,7 +36,7 @@ license: |
 | Zhongqiang Chen |
 
 
-## Become A Committer of Apache Celeborn
+## Become A Committer of Apache Celeborn™
 Anyone being supportive of the community and working in any of the CoPDoC areas can become an Apache Celeborn committer. The CoPDoC is an acronym from ASF to describe how we recognize your contributions not only by code.
 
 - Community - You can join us via our mailing list, issue trackers, discussions page to interact with community members, and share vision and knowledge

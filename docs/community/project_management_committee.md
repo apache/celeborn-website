@@ -19,7 +19,7 @@ license: |
 Project Management Committee
 ===
 
-Celeborn has received numerous help from the community. This page lists the contributors and committers of Apache Celeborn.
+Celeborn has received numerous help from the community. This page lists the contributors and committers of Apache Celeborn™.
 
 ## Project Management Committee (PMC)
 
