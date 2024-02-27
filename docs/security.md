@@ -19,7 +19,7 @@ license: |
   limitations under the License.
 ---
 
-## Apache Celeborn Security
+## Apache Celeborn™ Security
 
 If you have apprehensions regarding Celeborn's security or you discover vulnerability or potential
 threat, don’t hesitate to get in touch with the Apache Security Team by dropping a mail 

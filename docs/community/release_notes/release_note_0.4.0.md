@@ -19,7 +19,7 @@ license: |
   limitations under the License.
 ---
 
-# Apache Celeborn(Incubating) 0.4.0 Release Notes
+# Apache Celeborn™ (Incubating) 0.4.0 Release Notes
 
 ## Highlight
 
