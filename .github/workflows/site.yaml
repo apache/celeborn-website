@@ -52,9 +52,9 @@ jobs:
           git add '.github/bin/build_docs.sh'
           git commit -m '.github/bin/build_docs.sh'
       - run: ./.github/bin/build_docs.sh 'heads/main.tar.gz' 'latest'
-      - run: ./.github/bin/build_docs.sh 'tags/v0.2.1-incubating.tar.gz' '0.2.1-incubating'
-      - run: ./.github/bin/build_docs.sh 'tags/v0.3.2-incubating.tar.gz' '0.3.2-incubating'
-      - run: ./.github/bin/build_docs.sh 'tags/v0.4.0-incubating.tar.gz' '0.4.0-incubating'
+      - run: ./.github/bin/build_docs.sh 'v0.2.1-incubating/incubator-celeborn-0.2.1-incubating-tm.tar.gz' '0.2.1-incubating'
+      - run: ./.github/bin/build_docs.sh 'v0.3.2-incubating/incubator-celeborn-0.3.2-incubating-tm.tar.gz' '0.3.2-incubating'
+      - run: ./.github/bin/build_docs.sh 'v0.4.0-incubating/incubator-celeborn-0.4.0-incubating-tm.tar.gz' '0.4.0-incubating'
       - run: |
           echo 'publish:'           >> .asf.yaml
           echo '  whoami: asf-site' >> .asf.yaml

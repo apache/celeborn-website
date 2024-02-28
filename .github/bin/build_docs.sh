@@ -36,7 +36,14 @@ TAR_NAME=${REF_VERSION_NAME##*/}
 DIR_VERSION_NAME=$(echo "$TAR_NAME" | sed -r "s/v*(.*)\.tar\.gz/\1/g")
 TAR_DIR_NAME=incubator-celeborn-$DIR_VERSION_NAME
 
-wget "https://github.com/apache/incubator-celeborn/archive/refs/${REF_VERSION_NAME}"
+if [[ "$REF_VERSION_NAME" == *"-tm"* ]] ;then
+    echo "match"
+    wget "https://github.com/apache/incubator-celeborn/releases/download/${REF_VERSION_NAME}"
+  else
+    echo "not match"
+    wget "https://github.com/apache/incubator-celeborn/archive/refs/${REF_VERSION_NAME}"
+fi
+
 tar -xzf $TAR_NAME
 cd $TAR_DIR_NAME
 mkdocs build
