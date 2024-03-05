@@ -28,10 +28,12 @@ The latest version is {{ stable_version }}.
 
 [release note](community/release_notes/release_note_0.4.0.md)
 
-|             |                                                           Download from ASF                                                           |                                                                    Checksum                                                                     |                                                                 Signature                                                                 |
-|:-----------:|:-------------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------:|
-| Source Code | [src](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.4.0-incubating/apache-celeborn-0.4.0-incubating-source.tgz) | [sha512](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.4.0-incubating/apache-celeborn-0.4.0-incubating-source.tgz.sha512) | [asc](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.4.0-incubating/apache-celeborn-0.4.0-incubating-source.tgz.asc) |
-| Binary      |  [bin](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.4.0-incubating/apache-celeborn-0.4.0-incubating-bin.tgz)   |  [sha512](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.4.0-incubating/apache-celeborn-0.4.0-incubating-bin.tgz.sha512)   |  [asc](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.4.0-incubating/apache-celeborn-0.4.0-incubating-bin.tgz.asc)   |
+|             |                                                           Download from ASF                                                           |                                                                  Checksum                                                                   |                                                                Signature                                                                |
+|:-----------:|:-------------------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------:|
+| Source Code | [src](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.4.0-incubating/apache-celeborn-0.4.0-incubating-source.tgz) |   [sha512](https://downloads.apache.org/incubator/celeborn/celeborn-0.4.0-incubating/apache-celeborn-0.4.0-incubating-source.tgz.sha512)    |    [asc](https://downloads.apache.org/incubator/celeborn/celeborn-0.4.0-incubating/apache-celeborn-0.4.0-incubating-source.tgz.asc)     |
+| Binary      |  [bin](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.4.0-incubating/apache-celeborn-0.4.0-incubating-bin.tgz)   |     [sha512](https://downloads.apache.org/incubator/celeborn/celeborn-0.4.0-incubating/apache-celeborn-0.4.0-incubating-bin.tgz.sha512)     |      [asc](https://downloads.apache.org/incubator/celeborn/celeborn-0.4.0-incubating/apache-celeborn-0.4.0-incubating-bin.tgz.asc)      |
+
+
 
 ### 0.3.2-incubating (2024-01-08)
 
@@ -39,54 +41,18 @@ The latest version is {{ stable_version }}.
 
 |             |                                                           Download from ASF                                                           |                                                                    Checksum                                                                     |                                                                 Signature                                                                 |
 |:-----------:|:-------------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------:|
-| Source Code | [src](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.3.2-incubating/apache-celeborn-0.3.2-incubating-source.tgz) | [sha512](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.3.2-incubating/apache-celeborn-0.3.2-incubating-source.tgz.sha512) | [asc](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.3.2-incubating/apache-celeborn-0.3.2-incubating-source.tgz.asc) |
-| Binary      |  [bin](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.3.2-incubating/apache-celeborn-0.3.2-incubating-bin.tgz)   |  [sha512](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.3.2-incubating/apache-celeborn-0.3.2-incubating-bin.tgz.sha512)   |  [asc](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.3.2-incubating/apache-celeborn-0.3.2-incubating-bin.tgz.asc)   |
+| Source Code | [src](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.3.2-incubating/apache-celeborn-0.3.2-incubating-source.tgz) | [sha512](https://downloads.apache.org/incubator/celeborn/celeborn-0.3.2-incubating/apache-celeborn-0.3.2-incubating-source.tgz.sha512) | [asc](https://downloads.apache.org/incubator/celeborn/celeborn-0.3.2-incubating/apache-celeborn-0.3.2-incubating-source.tgz.asc) |
+| Binary      |  [bin](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.3.2-incubating/apache-celeborn-0.3.2-incubating-bin.tgz)   |  [sha512](https://downloads.apache.org/incubator/celeborn/celeborn-0.3.2-incubating/apache-celeborn-0.3.2-incubating-bin.tgz.sha512)   |  [asc](https://downloads.apache.org/incubator/celeborn/celeborn-0.3.2-incubating/apache-celeborn-0.3.2-incubating-bin.tgz.asc)   |
 
+### All stable releases
 
-### 0.3.1-incubating (2023-10-13)
-
-[release note](community/release_notes/release_note_0.3.1.md)
-
-|             |                                                           Download from ASF                                                           |                                                                   Checksum                                                                    | Signature |
-|:-----------:|:-------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------:|:---------:|
-| Source Code | [src](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.3.1-incubating/apache-celeborn-0.3.1-incubating-source.tgz) | [sha512](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.3.1-incubating/apache-celeborn-0.3.1-incubating-source.tgz.sha512)  | [asc](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.3.1-incubating/apache-celeborn-0.3.1-incubating-source.tgz.asc) |
-| Binary      | [bin](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.3.1-incubating/apache-celeborn-0.3.1-incubating-bin.tgz)    | [sha512](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.3.1-incubating/apache-celeborn-0.3.1-incubating-bin.tgz.sha512)  | [asc](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.3.1-incubating/apache-celeborn-0.3.1-incubating-bin.tgz.asc) |
-
-
-### 0.3.0-incubating (2023-07-27)
-
-[release note](community/release_notes/release_note_0.3.0.md)
-
-|             |                                                           Download from ASF                                                           |                                                                   Checksum                                                                    | Signature |
-|:-----------:|:-------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------:|:---------:|
-| Source Code | [src](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.3.0-incubating/apache-celeborn-0.3.0-incubating-source.tgz) | [sha512](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.3.0-incubating/apache-celeborn-0.3.0-incubating-source.tgz.sha512)  | [asc](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.3.0-incubating/apache-celeborn-0.3.0-incubating-source.tgz.asc) |
-| Binary      | [bin](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.3.0-incubating/apache-celeborn-0.3.0-incubating-bin.tgz)    | [sha512](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.3.0-incubating/apache-celeborn-0.3.0-incubating-bin.tgz.sha512)  | [asc](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.3.0-incubating/apache-celeborn-0.3.0-incubating-bin.tgz.asc) |
-
-
-### 0.2.1-incubating (2023-03-29)
-
-[release note](community/release_notes/release_note_0.2.1.md)
-
-|             |                                                           Download from ASF                                                           |                                                                   Checksum                                                                    | Signature |
-|:-----------:|:-------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------:|:---------:|
-| Source Code | [src](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.2.1-incubating/apache-celeborn-0.2.1-incubating-source.tgz) | [sha512](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.2.1-incubating/apache-celeborn-0.2.1-incubating-source.tgz.sha512)  | [asc](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.2.1-incubating/apache-celeborn-0.2.1-incubating-source.tgz.asc) |
-| Binary      | [bin](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.2.1-incubating/apache-celeborn-0.2.1-incubating-bin.tgz)    | [sha512](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.2.1-incubating/apache-celeborn-0.2.1-incubating-bin.tgz.sha512)  | [asc](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.2.1-incubating/apache-celeborn-0.2.1-incubating-bin.tgz.asc) |
-
-
-### 0.2.0-incubating (2023-03-01)
-
-[release note](community/release_notes/release_note_0.2.0.md)
-
-|             |                                                           Download from ASF                                                           |                                                                   Checksum                                                                    | Signature |
-|:-----------:|:-------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------:|:---------:|
-| Source Code | [src](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.2.0-incubating/apache-celeborn-0.2.0-incubating-source.tgz) | [sha512](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.2.0-incubating/apache-celeborn-0.2.0-incubating-source.tgz.sha512)  | [asc](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.2.0-incubating/apache-celeborn-0.2.0-incubating-source.tgz.asc) |
-| Binary      | [bin](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.2.0-incubating/apache-celeborn-0.2.0-incubating-bin.tgz)    | [sha512](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.2.0-incubating/apache-celeborn-0.2.0-incubating-bin.tgz.sha512)  | [asc](https://www.apache.org/dyn/closer.lua/incubator/celeborn/celeborn-0.2.0-incubating/apache-celeborn-0.2.0-incubating-bin.tgz.asc) |
-
-### Past releases
-
-Past celeborn releases are archived and can be found here:
-
-[Apache Archives](https://archive.apache.org/dist/incubator/celeborn/)
+All celeborn releases are available via https://archive.apache.org/dist/celeborn/ including checksums and signatures. At the time of writing, this includes the following versions:
+* Apache Celeborn 0.4.0-incubating (2024-02-06) ([Source](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.4.0-incubating/apache-celeborn-0.4.0-incubating-source.tgz), [Binaries](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.4.0-incubating/))
+* Apache Celeborn 0.3.2-incubating (2024-01-08) ([Source](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.3.2-incubating/apache-celeborn-0.3.2-incubating-source.tgz), [Binaries](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.3.2-incubating/))
+* Apache Celeborn 0.3.1-incubating (2023-10-13) ([Source](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.3.1-incubating/apache-celeborn-0.3.1-incubating-source.tgz), [Binaries](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.3.1-incubating/))
+* Apache Celeborn 0.3.0-incubating (2023-07-27) ([Source](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.3.0-incubating/apache-celeborn-0.3.0-incubating-source.tgz), [Binaries](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.3.0-incubating/))
+* Apache Celeborn 0.2.1-incubating (2023-03-29) ([Source](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.2.1-incubating/apache-celeborn-0.2.1-incubating-source.tgz), [Binaries](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.2.1-incubating/))
+* Apache Celeborn 0.2.0-incubating (2023-03-01) ([Source](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.2.0-incubating/apache-celeborn-0.2.0-incubating-source.tgz), [Binaries](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.2.0-incubating/))
 
 ### Old releases
 
@@ -97,6 +63,6 @@ Before entering Apache Incubator, it was named as Remote Shuffle Service.
 
 ## Verify the integrity
 
-[Public keys](https://downloads.apache.org/incubator/celeborn/KEYS)
+[KEYS](https://downloads.apache.org/incubator/celeborn/KEYS)
 
 [Instructions](https://www.apache.org/info/verification.html)
