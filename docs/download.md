@@ -46,13 +46,15 @@ The latest version is {{ stable_version }}.
 
 ### All stable releases
 
-All celeborn releases are available via https://archive.apache.org/dist/celeborn/ including checksums and signatures. At the time of writing, this includes the following versions:
-* Apache Celeborn 0.4.0-incubating (2024-02-06) ([Source](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.4.0-incubating/apache-celeborn-0.4.0-incubating-source.tgz), [Binaries](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.4.0-incubating/))
-* Apache Celeborn 0.3.2-incubating (2024-01-08) ([Source](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.3.2-incubating/apache-celeborn-0.3.2-incubating-source.tgz), [Binaries](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.3.2-incubating/))
-* Apache Celeborn 0.3.1-incubating (2023-10-13) ([Source](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.3.1-incubating/apache-celeborn-0.3.1-incubating-source.tgz), [Binaries](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.3.1-incubating/))
-* Apache Celeborn 0.3.0-incubating (2023-07-27) ([Source](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.3.0-incubating/apache-celeborn-0.3.0-incubating-source.tgz), [Binaries](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.3.0-incubating/))
-* Apache Celeborn 0.2.1-incubating (2023-03-29) ([Source](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.2.1-incubating/apache-celeborn-0.2.1-incubating-source.tgz), [Binaries](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.2.1-incubating/))
-* Apache Celeborn 0.2.0-incubating (2023-03-01) ([Source](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.2.0-incubating/apache-celeborn-0.2.0-incubating-source.tgz), [Binaries](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.2.0-incubating/))
+All celeborn releases are available via [https://archive.apache.org/dist/incubator/celeborn/](https://archive.apache.org/dist/incubator/celeborn/) including checksums and 
+signatures. At the time of writing, this includes the following versions:  
+
+* Apache Celeborn 0.4.0-incubating (2024-02-06) ([Source](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.4.0-incubating/apache-celeborn-0.4.0-incubating-source.tgz), [Binaries](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.4.0-incubating/))  
+* Apache Celeborn 0.3.2-incubating (2024-01-08) ([Source](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.3.2-incubating/apache-celeborn-0.3.2-incubating-source.tgz), [Binaries](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.3.2-incubating/))  
+* Apache Celeborn 0.3.1-incubating (2023-10-13) ([Source](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.3.1-incubating/apache-celeborn-0.3.1-incubating-source.tgz), [Binaries](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.3.1-incubating/))  
+* Apache Celeborn 0.3.0-incubating (2023-07-27) ([Source](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.3.0-incubating/apache-celeborn-0.3.0-incubating-source.tgz), [Binaries](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.3.0-incubating/))  
+* Apache Celeborn 0.2.1-incubating (2023-03-29) ([Source](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.2.1-incubating/apache-celeborn-0.2.1-incubating-source.tgz), [Binaries](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.2.1-incubating/))  
+* Apache Celeborn 0.2.0-incubating (2023-03-01) ([Source](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.2.0-incubating/apache-celeborn-0.2.0-incubating-source.tgz), [Binaries](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.2.0-incubating/))  
 
 ### Old releases
 
