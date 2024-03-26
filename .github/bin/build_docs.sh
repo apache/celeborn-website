@@ -36,7 +36,11 @@ TAR_NAME=${REF_VERSION_NAME##*/}
 
 if [[ "$REF_VERSION_NAME" == *"-tm"* ]] ;then
     DIR_VERSION_NAME=$(echo "$TAR_NAME" | sed -r "s/v*(.*)\.tar\.gz/\1/g")
-    TAR_DIR_NAME=celeborn-$DOC_LINK_PATH
+    if [[ "$REF_VERSION_NAME" == *"-incubating"* ]] ;then
+      TAR_DIR_NAME=incubator-celeborn-$DOC_LINK_PATH
+    else
+      TAR_DIR_NAME=celeborn-$DOC_LINK_PATH
+    fi
     wget "https://github.com/apache/celeborn/releases/download/${REF_VERSION_NAME}"
   else
     DIR_VERSION_NAME=$(echo "$TAR_NAME" | sed -r "s/v*(.*)\.tar\.gz/\1/g")
