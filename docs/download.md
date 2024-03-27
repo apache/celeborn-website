@@ -46,7 +46,7 @@ The latest version is {{ stable_version }}.
 
 ### All stable releases
 
-All celeborn releases are available via [https://archive.apache.org/dist/incubator/celeborn/](https://archive.apache.org/dist/incubator/celeborn/) including checksums and 
+All celeborn releases are available via [https://archive.apache.org/dist/celeborn/](https://archive.apache.org/dist/celeborn/) including checksums and 
 signatures. At the time of writing, this includes the following versions:  
 
 * Apache Celeborn 0.4.0-incubating (2024-02-06) ([Source](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.4.0-incubating/apache-celeborn-0.4.0-incubating-source.tgz), [Binaries](https://archive.apache.org/dist/incubator/celeborn/celeborn-0.4.0-incubating/))  
@@ -60,11 +60,11 @@ signatures. At the time of writing, this includes the following versions:
 
 Before entering Apache Incubator, it was named as Remote Shuffle Service.
 
-[GitHub releases](https://github.com/apache/incubator-celeborn/releases)
+[GitHub releases](https://github.com/apache/celeborn/releases)
 
 
 ## Verify the integrity
 
-[KEYS](https://downloads.apache.org/incubator/celeborn/KEYS)
+[KEYS](https://downloads.apache.org/celeborn/KEYS)
 
 [Instructions](https://www.apache.org/info/verification.html)

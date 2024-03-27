@@ -1,2 +1,2 @@
-Apache Celeborn(Incubating) Website
+Apache Celeborn Website
 ===

@@ -49,7 +49,7 @@ Apache Celeborn community strives to be meritocratic. Thus, once someone has con
 Being an Apache Celeborn committer does not necessarily mean you must commit code with your commit privilege to the codebase; it means you are committed to the Celeborn project and are productively contributing to our community’s success.
 
 ## Committer requirements
-There are no strict rules for becoming a committer or PPMC member. Candidates for new committers are typically people that are active contributors and community members. Anyway, if the rules can be clarified a little bit, it can somehow clear the doubts in the minds of contributors and make the community more transparent, reasonable, and fair.
+There are no strict rules for becoming a committer or PMC member. Candidates for new committers are typically people that are active contributors and community members. Anyway, if the rules can be clarified a little bit, it can somehow clear the doubts in the minds of contributors and make the community more transparent, reasonable, and fair.
 
 #### Continuous contributions
 Committer candidates should have a decent amount of continuous engagements and contributions (fixing bugs, adding new features, writing documentation, maintaining issues boards, code review, or answering community questions) to Celeborn either by contributing to the codebase of the main website or Celeborn’s GitHub repositories.
