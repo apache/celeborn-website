@@ -17,6 +17,6 @@
 .python-version
 .settings
 /site/
-incubator-celeborn-*/
+celeborn-*/
 *.zip
 *.tar.gz

@@ -16,7 +16,7 @@ license: |
   limitations under the License.
 ---
 
-## Current Podling PMC Members 
+## Current PMC Members 
 
 | Name         |
 |--------------|
@@ -34,8 +34,8 @@ license: |
 | Yu Li        |
 
 
-## Become A Podling PMC member of Apache Celeborn™
-Anyone being supportive of the community and working in any of the CoPDoC areas can become an Apache Celeborn Podling PMC(PPMC) member. The CoPDoC is an acronym from ASF to describe how we recognize your contributions not only by code.
+## Become A PMC member of Apache Celeborn™
+Anyone being supportive of the community and working in any of the CoPDoC areas can become an Apache Celeborn PMC member. The CoPDoC is an acronym from ASF to describe how we recognize your contributions not only by code.
 
 - Community - You can join us via our mailing list, issue trackers, discussions page to interact with community members, and share vision and knowledge
 - Project - a clear vision and consensus are needed
@@ -43,15 +43,15 @@ Anyone being supportive of the community and working in any of the CoPDoC areas 
 - Code - discussion goes nowhere without code
 
 
-Apache Celeborn community strives to be meritocratic. Thus, once someone has contributed sufficiently to any area of CoPDoC they can be a candidate for PPMC membership and at last voted in as a Celeborn PPMC member. The PPMC should take an active role in watching committers develop as community participants.
+Apache Celeborn community strives to be meritocratic. Thus, once someone has contributed sufficiently to any area of CoPDoC they can be a candidate for PMC membership and at last voted in as a Celeborn PMC member. The PMC should take an active role in watching committers develop as community participants.
 
-## PPMC member requirements:
-There are no strict rules for becoming a PPMC member. Candidates for new PPMC member are typically committers that are stilling actively participate in the community development after obtaining the committer membership, or contributors and community members that make significant contributions to the community for both code and contributor develop.
+## PMC member requirements:
+There are no strict rules for becoming a PMC member. Candidates for new PMC member are typically committers that are stilling actively participate in the community development after obtaining the committer membership, or contributors and community members that make significant contributions to the community for both code and contributor develop.
 
-It is a clear goal of Celeborn to have all committers participate in the PPMC based on their contributions, which are considered at a community level (not just a technical one).
+It is a clear goal of Celeborn to have all committers participate in the PMC based on their contributions, which are considered at a community level (not just a technical one).
 
 #### Continuous contributions
-PPMC member candidates should have a decent amount of continuous engagements and contributions (fixing bugs, adding new features, writing documentation, maintaining issues boards, code review, mentoring new contributors, and answering community questions) to the Celeborn codebase and community.
+PMC member candidates should have a decent amount of continuous engagements and contributions (fixing bugs, adding new features, writing documentation, maintaining issues boards, code review, mentoring new contributors, and answering community questions) to the Celeborn codebase and community.
 
 - +5 months with light activity and engagement.
 - +4 months of medium activity and engagement.
