@@ -21,6 +21,7 @@ license: |
 | Name            |
 |-----------------|
 | Binjie Yang     |
+| Chandni Singh   |
 | Cheng Pan       |
 | Ethan Feng      |
 | Fu Chen         |
@@ -34,7 +35,6 @@ license: |
 | Yihe Li         |
 | Wei Wu          |
 | Zhongqiang Chen |
-
 
 ## Become A Committer of Apache Celeborn™
 Anyone being supportive of the community and working in any of the CoPDoC areas can become an Apache Celeborn committer. The CoPDoC is an acronym from ASF to describe how we recognize your contributions not only by code.
