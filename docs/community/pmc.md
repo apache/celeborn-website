@@ -25,6 +25,7 @@ license: |
 | Fu Chen      |
 | Kerwin Zhang |
 | Keyong Zhou  |
+| Jiashu Xiong |
 | Yi Zhu       |
 | Wei Wu       |
 | Becket Qin   |
