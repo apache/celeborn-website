@@ -22,6 +22,26 @@ license: |
 Various companies and organizations are using Celeborn for production and commercial products.  
 Are you using this project? [Add your company](https://github.com/apache/celeborn/issues/2140).
 
-|                                    |                                    |          |          |          |
-|------------------------------------|------------------------------------|----------|----------|----------|
-| ![](/assets/logo/users/aliyun.png) |                                    |          |          |          | 
+<style>
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  flex: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+</style>
+
+<div class="row">
+  <div class="column">
+    <img src="/assets/logo/users/aliyun.png" width="200">
+  </div>
+</div>
