@@ -18,7 +18,9 @@ license: |
   See the License for the specific language governing permissions and
   limitations under the License.
 ---
+
 # Who's Using
+
 Various companies and organizations are using Celeborn for production and commercial products.  
 Are you using this project? [Add your company](https://github.com/apache/celeborn/issues/2140).
 
@@ -42,6 +44,9 @@ Are you using this project? [Add your company](https://github.com/apache/celebor
 
 <div class="row">
   <div class="column">
-    <img src="/assets/logo/users/aliyun.png" width="200">
+    <img src="../assets/logo/users/aliyun.png" width="200">
+  </div>
+  <div class="column">
+    <img src="../assets/logo/users/xiaohongshu.png" width="200">
   </div>
 </div>
