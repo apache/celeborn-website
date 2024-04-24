@@ -48,6 +48,8 @@ Are you using this project? [Add your company](https://github.com/apache/celebor
     <img src="../assets/logo/users/xiaohongshu.png" width="200">
     <img src="../assets/logo/users/shopee.png" width="200">
     <img src="../assets/logo/users/bilibili.jpg" width="200">
+  </div>
+  <div class="column">
     <img src="../assets/logo/users/zhihu.png" width="200">
   </div>
 </div>
