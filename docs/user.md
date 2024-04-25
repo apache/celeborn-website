@@ -53,5 +53,6 @@ Are you using this project? [Add your company](https://github.com/apache/celebor
 <div class="row">
   <div class="column">
     <img src="../assets/logo/users/zhihu.png" width="200">
+    <img src="../assets/logo/users/linkedin.png" width="200">
   </div>
 </div>
