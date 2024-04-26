@@ -25,35 +25,64 @@ Various companies and organizations are using Celeborn for production and commer
 Are you using this project? [Add your company](https://github.com/apache/celeborn/issues/2140).
 
 <style>
-.row {
+.itemContainer {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 4px;
+  padding: 0 0px;
 }
 
-.column {
-  flex: 25%;
-  padding: 0 4px;
+.companyItem {
+    width: 257px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FFFFFF;
+    border: 0px solid #E3E3E3;
+    box-sizing: border-box;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 32px;
 }
 
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
+.companyItem img {
+    max-width: 80%;
+    max-height: 70%;
+    margin: auto;
+    display: block;
+}
+
+companyItemImg {
+    width: 200px;
+    height: 180px;
+    margin-top: 48px;
+    margin-bottom: 20px;
+    height: 70%;
+    vertical-align: middle;
 }
 </style>
 
-<div class="row">
-  <div class="column">
-    <img src="../assets/logo/users/aliyun.png" width="200">
-    <img src="../assets/logo/users/xiaohongshu.png" width="200">
-    <img src="../assets/logo/users/shopee.png" width="200">
-    <img src="../assets/logo/users/bilibili.jpg" width="200">
-  </div>
-</div>
-<div class="row">
-  <div class="column">
-    <img src="../assets/logo/users/zhihu.png" width="200">
-    <img src="../assets/logo/users/linkedin.png" width="200">
-    <img src="../assets/logo/users/tongcheng.png" width="200">
-  </div>
+<div class="itemContainer">
+    <div class="companyItem">
+       <img class="companyItemImg" src="../assets/logo/users/aliyun.png">
+       <span></span>
+    </div>
+    <div class="companyItem">
+       <img class="companyItemImg" src="../assets/logo/users/xiaohongshu.png" width="200">
+    </div>
+    <div class="companyItem">
+       <img class="companyItemImg" src="../assets/logo/users/shopee.png" width="200">
+    </div>
+    <div class="companyItem">
+       <img class="companyItemImg" src="../assets/logo/users/bilibili.jpg" width="200">
+    </div>
+    <div class="companyItem">
+       <img class="companyItemImg" src="../assets/logo/users/zhihu.png" width="200">
+    </div>
+    <div class="companyItem">
+       <img class="companyItemImg" src="../assets/logo/users/linkedin.png" width="200">
+    </div>
+    <div class="companyItem">
+       <img class="companyItemImg" src="../assets/logo/users/tongcheng.png" width="200">
+    </div>
 </div>
