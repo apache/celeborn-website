@@ -65,24 +65,23 @@ companyItemImg {
 <div class="itemContainer">
     <div class="companyItem">
        <img class="companyItemImg" src="../assets/logo/users/aliyun.png">
-       <span></span>
     </div>
     <div class="companyItem">
-       <img class="companyItemImg" src="../assets/logo/users/xiaohongshu.png" width="200">
+       <img class="companyItemImg" src="../assets/logo/users/xiaohongshu.png">
     </div>
     <div class="companyItem">
-       <img class="companyItemImg" src="../assets/logo/users/shopee.png" width="200">
+       <img class="companyItemImg" src="../assets/logo/users/shopee.png">
     </div>
     <div class="companyItem">
-       <img class="companyItemImg" src="../assets/logo/users/bilibili.jpg" width="200">
+       <img class="companyItemImg" src="../assets/logo/users/bilibili.jpg">
     </div>
     <div class="companyItem">
-       <img class="companyItemImg" src="../assets/logo/users/zhihu.png" width="200">
+       <img class="companyItemImg" src="../assets/logo/users/zhihu.png">
     </div>
     <div class="companyItem">
-       <img class="companyItemImg" src="../assets/logo/users/linkedin.png" width="200">
+       <img class="companyItemImg" src="../assets/logo/users/linkedin.png">
     </div>
     <div class="companyItem">
-       <img class="companyItemImg" src="../assets/logo/users/tongcheng.png" width="200">
+       <img class="companyItemImg" src="../assets/logo/users/tongcheng.png">
     </div>
 </div>
