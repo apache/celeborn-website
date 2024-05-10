@@ -87,4 +87,7 @@ companyItemImg {
     <div class="companyItem">
        <img class="companyItemImg" src="../assets/logo/users/pinterest.png">
     </div>
+    <div class="companyItem">
+       <img class="companyItemImg" src="../assets/logo/users/trip.png">
+    </div>
 </div>
