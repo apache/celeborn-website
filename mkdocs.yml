@@ -78,7 +78,6 @@ nav:
       - Latest News: community/news.md
       - Release Guide: community/release_guide.md
       - Contributor Guide:
-          - Build and Test: community/contributor_guide/build_and_test.md
           - Docs and Website: community/contributor_guide/docs_and_website.md
   - Security: security.md
   - Apache Software Foundation:
