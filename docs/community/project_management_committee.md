@@ -45,7 +45,7 @@ Mentors from Apache Incubator help the project to turn into a good shape followi
 
 | Name              | GitHub ID   | Apache ID            |
 |:------------------|:------------|:---------------------|
-| Becket Qi         | becketqin   | jqin@apache.org      |
+| Becket Qin        | becketqin   | jqin@apache.org      |
 | Duo Zhang         | Apache9     | zhangduo@apache.org  |
 | Lidong Dai        | davidzollo  | lidongdai@apache.org |
 | Willem Ning Jiang | WillemJiang | ningjiang@apache.org |
