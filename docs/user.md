@@ -93,4 +93,7 @@ companyItemImg {
     <div class="companyItem">
        <img class="companyItemImg" src="../assets/logo/users/zto.png">
     </div>
+    <div class="companyItem">
+       <img class="companyItemImg" src="../assets/logo/users/bigo.png">
+    </div>
 </div>
