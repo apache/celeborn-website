@@ -18,23 +18,24 @@ license: |
 
 ## Current committers
 
-| Name            |
-|-----------------|
-| Binjie Yang     |
-| Chandni Singh   |
-| Cheng Pan       |
-| Ethan Feng      |
-| Fu Chen         |
-| JiaShu Xiong    |
-| Kerwin Zhang    |
-| Keyong Zhou     |
-| Shaoyun Chen    |
-| Xiaofeng Jiang  |
-| Yi Zhu          |
-| Yifan Xia       |
-| Yihe Li         |
-| Wei Wu          |
-| Zhongqiang Chen |
+| Name                |
+|---------------------|
+| Binjie Yang         |
+| Chandni Singh       |
+| Cheng Pan           |
+| Ethan Feng          |
+| Fu Chen             |
+| JiaShu Xiong        |
+| Kerwin Zhang        |
+| Keyong Zhou         |
+| Mridul Muralidharan |
+| Shaoyun Chen        |
+| Xiaofeng Jiang      |
+| Yi Zhu              |
+| Yifan Xia           |
+| Yihe Li             |
+| Wei Wu              |
+| Zhongqiang Chen     |
 
 ## Become A Committer of Apache Celeborn™
 Anyone being supportive of the community and working in any of the CoPDoC areas can become an Apache Celeborn committer. The CoPDoC is an acronym from ASF to describe how we recognize your contributions not only by code.
