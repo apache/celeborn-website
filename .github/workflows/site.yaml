@@ -55,7 +55,7 @@ jobs:
       - run: ./.github/bin/build_docs.sh 'v0.2.1-incubating/incubator-celeborn-0.2.1-incubating-tm.tar.gz' '0.2.1-incubating'
       - run: ./.github/bin/build_docs.sh 'v0.3.2-incubating/incubator-celeborn-0.3.2-incubating-tm.tar.gz' '0.3.2-incubating'
       - run: ./.github/bin/build_docs.sh 'v0.4.0-incubating/incubator-celeborn-0.4.0-incubating-tm.tar.gz' '0.4.0-incubating'
-      - run: ./.github/bin/build_docs.sh 'v0.4.1/celeborn-0.4.1.tar.gz' '0.4.1'
+      - run: ./.github/bin/build_docs.sh 'v0.4.1/v0.4.1.tar.gz' '0.4.1'
       - run: |
           echo 'publish:'           >> .asf.yaml
           echo '  whoami: asf-site' >> .asf.yaml
