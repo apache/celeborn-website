@@ -219,8 +219,6 @@ The tag pattern is `v${RELEASE_VERSION}-rc${RELEASE_RC_NO}`, e.g. `v0.5.0-rc0`
 
 !!! note
     After all the voting passed, be sure to create a final tag with the pattern: `v${RELEASE_VERSION}`
-!!! note 
-    Before a release candidates is published, check the license and notice in the binary package first.  
 
 ```shell
 # Bump to the release version
