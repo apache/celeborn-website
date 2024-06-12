@@ -187,10 +187,12 @@ LICENSE File
 Basic Principle: The LICENSE file should contain the full text of the license for your 
 project (typically the Apache License 2.0) and should also acknowledge any third-party components
 that are not wholly composed of the project code with corresponding license declarations.
+
 Third-party Dependencies: If your Apache project utilizes third-party libraries or code under 
 different licenses, these dependencies should be enumerated in the LICENSE file with their 
 respective licensing information articulated. Ideally, this section should be sufficiently
 detailed to inform users of the licensing terms of third-party components used.
+
 Specific Attribution: For each dependency, it’s beneficial to include specific details such as 
 the library's name, version number, and its license. If the dependency’s license requires its 
 full text to be included with distributions, then that license text usually should be included 
@@ -199,10 +201,12 @@ in your project (sometimes in the LICENSE file itself, other times as a separate
 NOTICE File
 Basic Principle: The NOTICE file is intended for including essential notices to users regarding 
 the Apache project and any third-party dependencies it may contain.
+
 Attribution Statements: If third-party components require attributions to be presented in any 
 product that includes them broadly (such as recognized copyright statements or acknowledgement of use),
 such attributions must be included in the NOTICE file. This is more than just listing 
 dependencies — it has to comply with the attribution and notice requirements of the third-party licenses.
+
 Conciseness and Clarity: The NOTICE file should be brief, containing only necessary attributions 
 and legal acknowledgements. It is not required to provide attributions for every third-party 
 library used in the project, but only for those that specifically require mention in the NOTICE file.
