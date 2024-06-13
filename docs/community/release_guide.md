@@ -181,7 +181,7 @@ Build a release package and check license and notice with the binary package's j
 ```shell
 ./buile/make-distribution.sh --release --sbt-enabled
 ```
-According to the Apache License section 4, the principal of License and Notice is as following:
+According to the [Apache License section 4](https://apache.org/licenses/LICENSE-2.0), the principal of License and Notice is as following:
 
 LICENSE File
 Basic Principle: The LICENSE file should contain the full text of the license for your 
