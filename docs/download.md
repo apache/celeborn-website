@@ -23,6 +23,14 @@ license: |
 
 The latest version is {{ stable_version }}.
 
+### 0.5.0 (2024-06-24)
+[release note](community/release_notes/release_note_0.5.0.md)
+
+|             |                                      Download from ASF                                       |                                                Checksum                                                |                                            Signature                                             |
+|:-----------:|:--------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------:|
+| Source Code | [src](https://downloads.apache.org/celeborn/celeborn-0.5.0/apache-celeborn-0.5.0-source.tgz) | [sha512](https://downloads.apache.org/celeborn/celeborn-0.5.0/apache-celeborn-0.5.0-source.tgz.sha512) | [asc](https://downloads.apache.org/celeborn/celeborn-0.5.0/apache-celeborn-0.5.0-source.tgz.asc) |
+|   Binary    |  [bin](https://downloads.apache.org/celeborn/celeborn-0.5.0/apache-celeborn-0.5.0-bin.tgz)   |  [sha512](https://downloads.apache.org/celeborn/celeborn-0.5.0/apache-celeborn-0.5.0-bin.tgz.sha512)   |  [asc](https://downloads.apache.org/celeborn/celeborn-0.5.0/apache-celeborn-0.5.0-bin.tgz.asc)   |
+
 ### 0.4.1 (2024-05-22)
 
 [release note](community/release_notes/release_note_0.4.1.md)
