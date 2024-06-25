@@ -342,12 +342,12 @@ license: |
 
 Thanks to the following contributors who helped to review and commit to Apache Celeborn 0.5.0 version:
 
-| Contributors |                 |                   |                 |                     |               |
-|--------------|-----------------|-------------------|-----------------|---------------------|---------------|
-| albin3       | AngersZhuuuu    | Aravind Patnam    | binjie yang     | cfmcgrady           | ChenYi015     |
-| CodingCat    | Curtis Howard   | cxzl25            | dev-lpq         | ErikFang            | FMX           |
-| ForVic       | huangxiaopingRD | jiang13021        | jiaoqingbo      | kerwin-zk           | labbomb       |
-| leixm        | lifulong        | lyy-pineapple     | miyuesc         | Mridul Muralidharan | mridulm       |
-| onebox-li    | otterc          | pan3793           | radeity         | s0nskar             | SteNicholas   |
-| tiny-dust    |   turboFei      |      waitinfuture |       wxplovecc |   xianminglei       |    xinyuwang1 |
-| zwangsheng   |                 |                   |                 |                     |               |
+| Contributors |                 |                |             |                     |             |
+|--------------|-----------------|----------------|-------------|---------------------|-------------|
+| albin3       | AngersZhuuuu    | Aravind Patnam | binjie yang | cfmcgrady           | ChenYi015   |
+| CodingCat    | Curtis Howard   | cxzl25         | dev-lpq     | ErikFang            | FMX         |
+| ForVic       | huangxiaopingRD | jiang13021     | jiaoqingbo  | kerwin-zk           | labbomb     |
+| leixm        | lifulong        | lyy-pineapple  | miyuesc     | Mridul Muralidharan | mridulm     |
+| onebox-li    | otterc          | pan3793        | radeity     | s0nskar             | SteNicholas |
+| tiny-dust    | turboFei        | waitinfuture   | wxplovecc   | xianminglei         | xinyuwang1  |
+| zwangsheng   |                 |                |             |                     |             |
