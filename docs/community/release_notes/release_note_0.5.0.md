@@ -22,7 +22,7 @@ license: |
 # Apache Celeborn™ 0.5.0 Release Notes
 
 ## Highlight
-- Celeborn support TLS for communication
+- Support TLS for internal communication
 - Memory usage and performance optimization
 - Enhanced metrics and HTTP APIs
 - Support Spark3.5 with JDK21
