@@ -25,7 +25,7 @@ license: |
 - Support TLS for internal communication
 - Memory usage and performance optimization
 - Enhanced metrics and HTTP APIs
-- Support Spark3.5 with JDK21
+- Support Spark 3.5 with JDK 21
 - Support memory storage(experimental)
 
 ### Improvement
