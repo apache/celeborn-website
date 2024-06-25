@@ -23,11 +23,11 @@ license: |
 
 ## Highlight
 - Support TLS for internal communication
-- Memory usage and performance optimization
 - Support Flink 1.19
-- Enhanced metrics and HTTP APIs
 - Support Java 21
 - Support memory storage(experimental)
+- Memory usage and performance optimization
+- Enhanced metrics and HTTP APIs
 
 ### Improvement
 - [CELEBORN-1468] update dashboard layout for Celeborn 0.5
