@@ -20,6 +20,7 @@ license: |
 
 | Date             | Title                                                   | Brief                                                                                                                           |
 |------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| 2024 July 22     | New Committer: Fei Wang                                 | We are happy to announce Fei Wang becomes a new Celeborn committer.                                                             |
 | 2024 May 22      | Release 0.4.1                                           | Celeborn release 0.4.1.                                                                                                         |
 | 2024 April 28    | New Committer: Mridul Muralidharan                      | We are happy to announce Mridul Muralidharan becomes a new Celeborn committer.                                                  |
 | 2024 March 21    | New Committer: Chandni Singh                            | We are happy to announce Chandni Singh becomes a new Celeborn committer.                                                        |
