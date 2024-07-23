@@ -27,16 +27,17 @@ A committer will be promoted to a PMC member when the community thinks he/she is
 
 Current Celeborn PMC members are as follows:
 
-| Name         | GitHub ID    | Apache ID               |
-|:-------------|:-------------|:------------------------|
-| Cheng Pan    | pan3793      | chengpan@apache.org     |
-| Ethan Feng   | FMX          | ethanfeng@apache.org    |
-| Fu Chen      | cfmcgrady    | fchen@apache.org        |
-| Jiashu Xiong | RexXiong     | rexxiong@apache.org     |
-| Kerwin Zhang | kerwin-zk    | kerwinzhang@apache.org  |
-| Keyong Zhou  | waitinfuture | zhouky@apache.org       |
-| Yi Zhu       | AngersZhuuuu | angerszhuuuu@apache.org |
-| Wei Wu       | powerwu      | powerwu@apache.org      |
+| Name           | GitHub ID    | Apache ID                |
+|:---------------|:-------------|:-------------------------|
+| Cheng Pan      | pan3793      | chengpan@apache.org      |
+| Ethan Feng     | FMX          | ethanfeng@apache.org     |
+| Fu Chen        | cfmcgrady    | fchen@apache.org         |
+| Jiashu Xiong   | RexXiong     | rexxiong@apache.org      |
+| Kerwin Zhang   | kerwin-zk    | kerwinzhang@apache.org   |
+| Keyong Zhou    | waitinfuture | zhouky@apache.org        |
+| Xiaofeng Jiang | SteNicholas  | nicholasjiang@apache.org |
+| Yi Zhu         | AngersZhuuuu | angerszhuuuu@apache.org  |
+| Wei Wu         | powerwu      | powerwu@apache.org       |
 
 ## Mentors
 
