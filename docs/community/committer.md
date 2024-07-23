@@ -24,6 +24,7 @@ license: |
 | Chandni Singh       |
 | Cheng Pan           |
 | Ethan Feng          |
+| Fei Wang            |
 | Fu Chen             |
 | JiaShu Xiong        |
 | Kerwin Zhang        |
