@@ -18,21 +18,22 @@ license: |
 
 ## Current PMC Members 
 
-| Name         |
-|--------------|
-| Cheng Pan    |
-| Ethan Feng   |
-| Fu Chen      |
-| Kerwin Zhang |
-| Keyong Zhou  |
-| Jiashu Xiong |
-| Yi Zhu       |
-| Wei Wu       |
-| Becket Qin   |
-| Duo Zhang    |
-| Lidong Dai   |
-| Ning Jiang   |
-| Yu Li        |
+| Name           |
+|----------------|
+| Cheng Pan      |
+| Ethan Feng     |
+| Fu Chen        |
+| Kerwin Zhang   |
+| Keyong Zhou    |
+| Jiashu Xiong   |
+| Xiaofeng Jiang |
+| Yi Zhu         |
+| Wei Wu         |
+| Becket Qin     |
+| Duo Zhang      |
+| Lidong Dai     |
+| Ning Jiang     |
+| Yu Li          |
 
 
 ## Become A PMC member of Apache Celeborn™
