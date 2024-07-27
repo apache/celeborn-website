@@ -48,7 +48,7 @@ license: |
 
 Thanks to the following contributors who helped to review and commit to Apache Celeborn 0.4.1 version:
 
-| Contributors    |              |              |             -  |              |               |
+| Contributors    |              |              |                |              |               |
 |-----------------|--------------|--------------|----------------|--------------|---------------|
 | Fei Wang        | Jiashu Xiong | Keyong Zhou  | Nicholas Jiang | Sanskar Modi | Shaoyun Chen  |
 | Xianming Lei    | Xinyu Wang   | Yanze Jiang  | ZHAO ZHAO      |              |               |
