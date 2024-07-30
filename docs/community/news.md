@@ -20,9 +20,11 @@ license: |
 
 | Date             | Title                                                   | Brief                                                                                                                           |
 |------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| 2024 July 29     | Release 0.5.1                                           | Celeborn release 0.5.1.                                                                                                         |
 | 2024 July 26     | Release 0.4.2                                           | Celeborn release 0.4.2.                                                                                                         |
 | 2024 July 23     | New PMC Member:  Xiaofeng Jiang                         | We are happy to announce Xiaofeng Jiang becomes a new Celeborn PMC member.                                                      |
 | 2024 July 22     | New Committer: Fei Wang                                 | We are happy to announce Fei Wang becomes a new Celeborn committer.                                                             |
+| 2024 June 24     | Release 0.5.0                                           | Celeborn release 0.5.0.                                                                                                         |
 | 2024 May 22      | Release 0.4.1                                           | Celeborn release 0.4.1.                                                                                                         |
 | 2024 April 28    | New Committer: Mridul Muralidharan                      | We are happy to announce Mridul Muralidharan becomes a new Celeborn committer.                                                  |
 | 2024 March 21    | New Committer: Chandni Singh                            | We are happy to announce Chandni Singh becomes a new Celeborn committer.                                                        |

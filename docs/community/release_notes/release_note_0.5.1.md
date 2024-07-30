@@ -57,7 +57,7 @@ license: |
 
 ## Credits
 
-Thanks to the following contributors who helped to review and commit to Apache Celeborn 0.5.0 version:
+Thanks to the following contributors who helped to review and commit to Apache Celeborn 0.5.1 version:
 
 | Contributors |             |                |                     |         |          |
 |--------------|-------------|----------------|---------------------|---------|----------|
