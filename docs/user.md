@@ -105,4 +105,7 @@ companyItemImg {
     <div class="companyItem">
        <img class="companyItemImg" src="../assets/logo/users/vivo.jpg">
     </div>
+    <div class="companyItem">
+       <img class="companyItemImg" src="../assets/logo/users/xiaomi.png">
+    </div>
 </div>
