@@ -27,17 +27,18 @@ A committer will be promoted to a PMC member when the community thinks he/she is
 
 Current Celeborn PMC members are as follows:
 
-| Name           | GitHub ID    | Apache ID                |
-|:---------------|:-------------|:-------------------------|
-| Cheng Pan      | pan3793      | chengpan@apache.org      |
-| Ethan Feng     | FMX          | ethanfeng@apache.org     |
-| Fu Chen        | cfmcgrady    | fchen@apache.org         |
-| Jiashu Xiong   | RexXiong     | rexxiong@apache.org      |
-| Kerwin Zhang   | kerwin-zk    | kerwinzhang@apache.org   |
-| Keyong Zhou    | waitinfuture | zhouky@apache.org        |
-| Xiaofeng Jiang | SteNicholas  | nicholasjiang@apache.org |
-| Yi Zhu         | AngersZhuuuu | angerszhuuuu@apache.org  |
-| Wei Wu         | powerwu      | powerwu@apache.org       |
+| Name                | GitHub ID     | Apache ID                  |
+|:--------------------|:--------------|:---------------------------|
+| Cheng Pan           | pan3793       | chengpan@apache.org        |
+| Ethan Feng          | FMX           | ethanfeng@apache.org       |
+| Fu Chen             | cfmcgrady     | fchen@apache.org           |
+| Jiashu Xiong        | RexXiong      | rexxiong@apache.org        |
+| Kerwin Zhang        | kerwin-zk     | kerwinzhang@apache.org     |
+| Keyong Zhou         | waitinfuture  | zhouky@apache.org          |
+| Mridul Muralidharan | mridulm       | mridulm80@apache.org       |
+| Xiaofeng Jiang      | SteNicholas   | nicholasjiang@apache.org   |
+| Yi Zhu              | AngersZhuuuu  | angerszhuuuu@apache.org    |
+| Wei Wu              | powerwu       | powerwu@apache.org         |
 
 ## Mentors
 
@@ -63,9 +64,7 @@ Current Celeborn Committers are as follows:
 | Binjie Yang         | zwangsheng    | binjieyang@apache.org     |
 | Chandni Singh       | otterc        | csingh@apache.org         |
 | Fei Wang            | turboFei      | feiwang@apache.org        |
-| Mridul Muralidharan | mridulm       | mridulm80@apache.org      |
 | Shaoyun Chen        | cxzl25        | csy@apache.org            |
-| Xiaofeng Jiang      | SteNicholas   | nicholasjiang@apache.org  |
 | Yifan Xia           | nafiyAix      | nafiyaix@apache.org       |
 | Yihe Li             | onebox-li     | liyihe@apache.org         |
 | Zhongqiang Chen     | zhongqiangczq | zhongqiangchen@apache.org |
