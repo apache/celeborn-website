@@ -120,4 +120,7 @@ companyItemImg {
     <div class="companyItem">
        <img class="companyItemImg" src="../assets/logo/users/nio.png">
     </div>
+    <div class="companyItem">
+       <img class="companyItemImg" src="../assets/logo/users/kcb.png">
+    </div>
 </div>
