@@ -58,6 +58,7 @@ jobs:
       - run: ./.github/bin/build_docs.sh 'tags/v0.4.1.tar.gz' '0.4.1'
       - run: ./.github/bin/build_docs.sh 'tags/v0.4.2.tar.gz' '0.4.2'
       - run: ./.github/bin/build_docs.sh 'tags/v0.5.1.tar.gz' '0.5.1'
+      - run: ./.github/bin/build_docs.sh 'tags/v0.5.2.tar.gz' '0.5.2'
       - run: |
           echo 'publish:'           >> .asf.yaml
           echo '  whoami: asf-site' >> .asf.yaml
