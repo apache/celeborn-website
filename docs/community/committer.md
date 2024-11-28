@@ -36,6 +36,7 @@ license: |
 | Yifan Xia           |
 | Yihe Li             |
 | Wei Wu              |
+| Weijie Guo          |
 | Zhongqiang Chen     |
 
 ## Become A Committer of Apache Celeborn™

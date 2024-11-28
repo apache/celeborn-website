@@ -20,7 +20,8 @@ license: |
 
 | Date              | Title                                                   | Brief                                                                                                                           |
 |-------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| 2024 November 29  | Release 0.5.2                                           | Celeborn release 0.5.2.                                                                                                         |
+| 2024 November 28  | New Committer: Weijie Guo                               | We are happy to announce Weijie Guo becomes a new Celeborn committer.                                                           |
+| 2024 November 26  | Release 0.5.2                                           | Celeborn release 0.5.2.                                                                                                         |
 | 2024 September 20 | New PMC Member: Mridul Muralidharan                     | We are happy to announce Mridul Muralidharan becomes a new Celeborn PMC member.                                                 |
 | 2024 July 29      | Release 0.5.1                                           | Celeborn release 0.5.1.                                                                                                         |
 | 2024 July 26      | Release 0.4.2                                           | Celeborn release 0.4.2.                                                                                                         |
