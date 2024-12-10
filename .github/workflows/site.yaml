@@ -57,6 +57,7 @@ jobs:
       - run: ./.github/bin/build_docs.sh 'v0.4.0-incubating/incubator-celeborn-0.4.0-incubating-tm.tar.gz' '0.4.0-incubating'
       - run: ./.github/bin/build_docs.sh 'tags/v0.4.1.tar.gz' '0.4.1'
       - run: ./.github/bin/build_docs.sh 'tags/v0.4.2.tar.gz' '0.4.2'
+      - run: ./.github/bin/build_docs.sh 'tags/v0.4.3.tar.gz' '0.4.3'
       - run: ./.github/bin/build_docs.sh 'tags/v0.5.1.tar.gz' '0.5.1'
       - run: ./.github/bin/build_docs.sh 'tags/v0.5.2.tar.gz' '0.5.2'
       - run: |
