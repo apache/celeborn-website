@@ -30,6 +30,7 @@ license: |
 | Kerwin Zhang        |
 | Keyong Zhou         |
 | Mridul Muralidharan |
+| Sanskar Modi        |
 | Shaoyun Chen        |
 | Xiaofeng Jiang      |
 | Yi Zhu              |
