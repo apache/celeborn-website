@@ -37,6 +37,7 @@ license: |
 
 ### Stability and Bug Fix
 
+- Revert "[CELEBORN-1376] Push data failed should always release request body"
 - [CELEBORN-1510] Partial task unable to switch to the replica
 - [CELEBORN-1701][FOLLOWUP] Support stage rerun for shuffle data lost
 - [CELEBORN-1759] Fix reserve slots might lost partition location between 0.4 client and 0.5 server
@@ -45,7 +46,6 @@ license: |
 - [CELEBORN-1765] Fix NPE when removeFileInfo in StorageManager
 - [CELEBORN-1769] Fix packed partition location cause GetReducerFileGroupResponse lose location
 - [CELEBORN-1770] FlushNotifier should setException for all Throwables in Flusher
-- Revert "[CELEBORN-1376] Push data failed should always release request body"
 - [CELEBORN-1743] Resolve the metrics data interruption and the job failure caused by locked resources
 - [CELEBORN-1783] Fix Pending task in commitThreadPool wont be canceled
 - [CELEBORN-1783][FOLLOWUP] Compatible with UT
