@@ -23,14 +23,14 @@ license: |
 
 The latest version is {{ stable_version }}.
 
-### 0.5.2 (2024-11-26)
+### 0.5.3 (2025-01-06)
 
-[release note](community/release_notes/release_note_0.5.2.md)
+[release note](community/release_notes/release_note_0.5.3.md)
 
 |             |                                      Download from ASF                                       |                                                Checksum                                                |                                            Signature                                             |
 |:-----------:|:--------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------:|
-| Source Code | [src](https://downloads.apache.org/celeborn/celeborn-0.5.2/apache-celeborn-0.5.2-source.tgz) | [sha512](https://downloads.apache.org/celeborn/celeborn-0.5.2/apache-celeborn-0.5.2-source.tgz.sha512) | [asc](https://downloads.apache.org/celeborn/celeborn-0.5.2/apache-celeborn-0.5.2-source.tgz.asc) |
-|   Binary    |  [bin](https://downloads.apache.org/celeborn/celeborn-0.5.2/apache-celeborn-0.5.2-bin.tgz)   |  [sha512](https://downloads.apache.org/celeborn/celeborn-0.5.2/apache-celeborn-0.5.2-bin.tgz.sha512)   |  [asc](https://downloads.apache.org/celeborn/celeborn-0.5.2/apache-celeborn-0.5.2-bin.tgz.asc)   |
+| Source Code | [src](https://downloads.apache.org/celeborn/celeborn-0.5.3/apache-celeborn-0.5.3-source.tgz) | [sha512](https://downloads.apache.org/celeborn/celeborn-0.5.3/apache-celeborn-0.5.3-source.tgz.sha512) | [asc](https://downloads.apache.org/celeborn/celeborn-0.5.3/apache-celeborn-0.5.3-source.tgz.asc) |
+|   Binary    |  [bin](https://downloads.apache.org/celeborn/celeborn-0.5.3/apache-celeborn-0.5.3-bin.tgz)   |  [sha512](https://downloads.apache.org/celeborn/celeborn-0.5.3/apache-celeborn-0.5.3-bin.tgz.sha512)   |  [asc](https://downloads.apache.org/celeborn/celeborn-0.5.3/apache-celeborn-0.5.3-bin.tgz.asc)   |
 
 
 ### 0.4.3 (2024-12-10)
