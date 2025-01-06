@@ -56,7 +56,7 @@ The latest version is {{ stable_version }}.
 All celeborn releases are available via [https://archive.apache.org/dist/celeborn/](https://archive.apache.org/dist/celeborn/) including checksums and 
 signatures. At the time of writing, this includes the following versions:  
 
-* Apache Celeborn 0.5.3 (2025-01-06) ([Source](https://archive.apache.org/dist/celeborn/celeborn-0.5.2/apache-celeborn-0.5.2-source.tgz), [Binaries](https://archive.apache.org/dist/celeborn/celeborn-0.5.2/))
+* Apache Celeborn 0.5.3 (2025-01-06) ([Source](https://archive.apache.org/dist/celeborn/celeborn-0.5.3/apache-celeborn-0.5.3-source.tgz), [Binaries](https://archive.apache.org/dist/celeborn/celeborn-0.5.3/))
 * Apache Celeborn 0.5.2 (2024-11-26) ([Source](https://archive.apache.org/dist/celeborn/celeborn-0.5.2/apache-celeborn-0.5.2-source.tgz), [Binaries](https://archive.apache.org/dist/celeborn/celeborn-0.5.2/))
 * Apache Celeborn 0.5.1 (2024-07-29) ([Source](https://archive.apache.org/dist/celeborn/celeborn-0.5.1/apache-celeborn-0.5.1-source.tgz), [Binaries](https://archive.apache.org/dist/celeborn/celeborn-0.5.1/))
 * Apache Celeborn 0.4.3 (2024-12-10) ([Source](https://archive.apache.org/dist/celeborn/celeborn-0.4.3/apache-celeborn-0.4.3-source.tgz), [Binaries](https://archive.apache.org/dist/celeborn/celeborn-0.4.3/))
