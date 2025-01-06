@@ -20,7 +20,9 @@ license: |
 
 | Date              | Title                                                   | Brief                                                                                                                           |
 |-------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| 2025 January 6    | Release 0.5.3                                           | Celeborn release 0.5.3.                                                                                                         |
 | 2024 December 31  | New PMC Member:  Fei Wang                               | We are happy to announce Fei Wang becomes a new Celeborn PMC member.                                                            |
+| 2024 December 18  | New Committer: Sanskar Modi                             | We are happy to announce Sanskar Modi becomes a new Celeborn committer.                                                         |
 | 2024 December 10  | Release 0.4.3                                           | Celeborn release 0.4.3.                                                                                                         |
 | 2024 November 28  | New Committer: Weijie Guo                               | We are happy to announce Weijie Guo becomes a new Celeborn committer.                                                           |
 | 2024 November 26  | Release 0.5.2                                           | Celeborn release 0.5.2.                                                                                                         |
