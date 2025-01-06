@@ -19,7 +19,7 @@ license: |
   limitations under the License.
 ---
 
-# Apache Celeborn™ 0.5.2 Release Notes
+# Apache Celeborn™ 0.5.3 Release Notes
 
 ## Highlight
 
