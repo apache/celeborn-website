@@ -135,4 +135,10 @@ companyItemImg {
     <div class="companyItem">
        <img class="companyItemImg" src="../assets/logo/users/tuya.png">
     </div>
+    <div class="companyItem">
+       <img class="companyItemImg" src="../assets/logo/users/qifu.png">
+    </div>
+    <div class="companyItem">
+       <img class="companyItemImg" src="../assets/logo/users/bytedance.png">
+    </div>
 </div>
