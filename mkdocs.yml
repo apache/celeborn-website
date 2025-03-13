@@ -51,7 +51,7 @@ markdown_extensions:
 
 extra:
   version: 0.6.0-SNAPSHOT
-  stable_version: 0.5.3
+  stable_version: 0.5.4
   social:
     - icon: fontawesome/brands/github
 
