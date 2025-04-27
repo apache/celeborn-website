@@ -64,6 +64,7 @@ Current Celeborn Committers are as follows:
 |:--------------------|:--------------|:--------------------------|
 | Binjie Yang         | zwangsheng    | binjieyang@apache.org     |
 | Chandni Singh       | otterc        | csingh@apache.org         |
+| Sanskar Modi        | s0nskar       | s0nskar@apache.org        |
 | Shaoyun Chen        | cxzl25        | csy@apache.org            |
 | Weijie Guo          | reswqa        | guoweijie@apache.org      |
 | Yifan Xia           | nafiyAix      | nafiyaix@apache.org       |
