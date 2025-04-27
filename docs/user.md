@@ -144,4 +144,7 @@ companyItemImg {
     <div class="companyItem">
        <img class="companyItemImg" src="../assets/logo/users/dji.png">
     </div>
+        <div class="companyItem">
+       <img class="companyItemImg" src="../assets/logo/users/uber.png">
+    </div>
 </div>
