@@ -26,6 +26,7 @@ license: |
 | Ethan Feng          |
 | Fei Wang            |
 | Fu Chen             |
+| Jiaming Xie         |
 | JiaShu Xiong        |
 | Kerwin Zhang        |
 | Keyong Zhou         |
