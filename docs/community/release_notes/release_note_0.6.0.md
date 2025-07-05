@@ -478,6 +478,6 @@ Thanks to the following contributors who helped to review and commit to Apache C
 | Leo Li          | Lianne Li       | Madhukar525722  | Minchu Yang     | Mingxiao Feng   | Mridul Muralidharan  |
 | Nan Zhu         | Nicholas Jiang  | Nicolas Fraison | Pengqi Li       | Sanskar Modi    | Saurabh Dubey        |
 | Shaoyun Chen    | Shengjie Wang   | Shlomi Uubul    | Veli Yang       | Weijie Guo      | Xianming Lei         |
-| Xinyu Wang      | Xu Huang        | xy2953396112    | Yajun Gao       | Yanze Jiang     | Yi Chen              |
-| Yi Zhu          | Yuting Wang     | Yuxin Tan       | Zhao Zhao       | Zhengqi Zhang   | Zhentao Shuai        |
+| Xinyu Wang      | Xu Huang        | Yajun Gao       | Yanze Jiang     | Yi Chen         | Yi Zhu               |
+| Yuting Wang     | Yuxin Tan       | Zhao Zhao       | Zhaohui Xu      | Zhengqi Zhang   | Zhentao Shuai        | 
 | Ziyi Wu         |                 |                 |                 |                 |                      |
