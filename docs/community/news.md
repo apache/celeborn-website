@@ -20,6 +20,7 @@ license: |
 
 | Date              | Title                                                   | Brief                                                                                                                           |
 |-------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| 2025 July 5       | Release 0.6.0                                           | Celeborn release 0.6.0.                                                                                                         |
 | 2025 May 20       | New Committer: Jiaming Xie                              | We are happy to announce Jiaming Xie becomes a new Celeborn committer.                                                          |
 | 2025 March 13     | Release 0.5.4                                           | Celeborn release 0.5.4.                                                                                                         |
 | 2025 January 6    | Release 0.5.3                                           | Celeborn release 0.5.3.                                                                                                         |
