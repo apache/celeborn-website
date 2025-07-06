@@ -25,6 +25,7 @@ license: |
 
 - Support Flink hybrid shuffle integration with Apache Celeborn
 - Support Spark 4.0.0
+- Support Flink 2.0
 - Support HARD_SPLIT in PushMergedData
 - Optimize skew partition logic for Reduce Mode to avoid sorting shuffle files
 - Refine the celeborn RESTful APIs and introduce Celeborn CLI for automation
