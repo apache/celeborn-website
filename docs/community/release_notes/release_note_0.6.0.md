@@ -472,11 +472,11 @@ Thanks to the following contributors who helped to review and commit to Apache C
 
 | Contributors    |                 |                 |                 |                 |                      |
 |-----------------|-----------------|-----------------|-----------------|-----------------|----------------------|
-| Aidar Bariev    | Amandeep Singh  | Aravind Patnam  | Arsen Gumin     | avishnus        | Biao Geng            |
+| Aidar Bariev    | Amandeep Singh  | Aravind Patnam  | Arsen Gumin     | A Vishnusankar  | Biao Geng            |
 | Binjie Yang     | Björn Boschman  | Bowen Liang     | Cheng Pan       | Chongchen Chen  | Erik Fang            |
 | Fei Wang        | Fu Chen         | Guangwei Hong   | Haotian Cao     | He Zhao         | Jiaming Xie          |
 | Jianfu Li       | Jiashu Xiong    | Jinqian Fan     | Kerwin Zhang    | Keyong Zhou     | Kun Wan              |
-| Leo Li          | Lianne Li       | Madhukar525722  | Minchu Yang     | Mingxiao Feng   | Mridul Muralidharan  |
+| Leo Li          | Lianne Li       | Madhukar        | Minchu Yang     | Mingxiao Feng   | Mridul Muralidharan  |
 | Nan Zhu         | Nicholas Jiang  | Nicolas Fraison | Pengqi Li       | Sanskar Modi    | Saurabh Dubey        |
 | Shaoyun Chen    | Shengjie Wang   | Shlomi Uubul    | Veli Yang       | Weijie Guo      | Xianming Lei         |
 | Xinyu Wang      | Xu Huang        | Yajun Gao       | Yanze Jiang     | Yi Chen         | Yi Zhu               |
