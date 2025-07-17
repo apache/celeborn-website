@@ -156,4 +156,7 @@ companyItemImg {
     <div class="companyItem">
        <img class="companyItemImg" src="../assets/logo/users/meituan.jpg">
     </div>
+   <div class="companyItem">
+       <img class="companyItemImg" src="../assets/logo/users/antgroup.png" style="transform: scale(3);">
+    </div>
 </div>
