@@ -59,9 +59,9 @@ There are no strict rules for becoming a committer or PMC member. Candidates for
 #### Continuous contributions
 Committer candidates should have a decent amount of continuous engagements and contributions (fixing bugs, adding new features, writing documentation, maintaining issues boards, code review, or answering community questions) to Celeborn either by contributing to the codebase of the main website or Celeborn’s GitHub repositories.
 
-- +3 months with light activity and engagement
-- +2 months of medium activity and engagement
-- +1 month with solid activity and engagement
+- +5 months with light activity and engagement
+- +4 months of medium activity and engagement
+- +3 month with solid activity and engagement
 
 #### Quality of contributions
 - A solid general understanding of the project

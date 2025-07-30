@@ -57,9 +57,9 @@ It is a clear goal of Celeborn to have all committers participate in the PMC bas
 #### Continuous contributions
 PMC member candidates should have a decent amount of continuous engagements and contributions (fixing bugs, adding new features, writing documentation, maintaining issues boards, code review, mentoring new contributors, and answering community questions) to the Celeborn codebase and community.
 
-- +5 months with light activity and engagement.
-- +4 months of medium activity and engagement.
-- +3 month with solid activity and engagement.
+- +7 months with light activity and engagement.
+- +6 months of medium activity and engagement.
+- +5 month with solid activity and engagement.
 
 #### Quality of contributions
 - A solid general understanding of the project
