@@ -66,6 +66,7 @@ jobs:
       - run: ./.github/bin/build_docs.sh 'tags/v0.6.1.tar.gz' '0.6.1'
       - run: ./.github/bin/build_docs.sh 'tags/v0.6.2.tar.gz' '0.6.2'
       - run: ./.github/bin/build_docs.sh 'tags/v0.6.3.tar.gz' '0.6.3'
+      - run: ./.github/bin/build_docs.sh 'tags/v0.7.0.tar.gz' '0.7.0'
       - run: |
           echo 'publish:'           >> .asf.yaml
           echo '  whoami: asf-site' >> .asf.yaml
