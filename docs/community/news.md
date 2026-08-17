@@ -20,6 +20,7 @@ license: |
 
 | Date              | Title                                                   | Brief                                                                                                                           |
 |-------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| 2026 August 16    | Release 0.7.0                                           | Celeborn release 0.7.0.                                                                                                         |
 | 2026 April 23     | Release 0.6.3                                           | Celeborn release 0.6.3.                                                                                                         |
 | 2025 December 8   | Release 0.6.2                                           | Celeborn release 0.6.2.                                                                                                         |
 | 2025 December 3   | New Committer: Erik Fang                                | We are happy to announce Erik Fang becomes a new Celeborn committer.                                                            |
