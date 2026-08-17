@@ -34,6 +34,16 @@ The latest version is {{ stable_version }}.
 |   Binary    |  [bin](https://downloads.apache.org/celeborn/celeborn-0.7.0/apache-celeborn-0.7.0-bin.tgz)   |  [sha512](https://downloads.apache.org/celeborn/celeborn-0.7.0/apache-celeborn-0.7.0-bin.tgz.sha512)   |  [asc](https://downloads.apache.org/celeborn/celeborn-0.7.0/apache-celeborn-0.7.0-bin.tgz.asc)   |
 
 
+### 0.6.3 (2026-04-23)
+
+[release note](community/release_notes/release_note_0.6.3.md)
+
+|             |                                      Download from ASF                                       |                                                Checksum                                                |                                            Signature                                             |
+|:-----------:|:--------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------:|
+| Source Code | [src](https://downloads.apache.org/celeborn/celeborn-0.6.3/apache-celeborn-0.6.3-source.tgz) | [sha512](https://downloads.apache.org/celeborn/celeborn-0.6.3/apache-celeborn-0.6.3-source.tgz.sha512) | [asc](https://downloads.apache.org/celeborn/celeborn-0.6.3/apache-celeborn-0.6.3-source.tgz.asc) |
+|   Binary    |  [bin](https://downloads.apache.org/celeborn/celeborn-0.6.3/apache-celeborn-0.6.3-bin.tgz)   |  [sha512](https://downloads.apache.org/celeborn/celeborn-0.6.3/apache-celeborn-0.6.3-bin.tgz.sha512)   |  [asc](https://downloads.apache.org/celeborn/celeborn-0.6.3/apache-celeborn-0.6.3-bin.tgz.asc)   |
+
+
 ### 0.5.4 (2025-03-13)
 
 [release note](community/release_notes/release_note_0.5.4.md)
