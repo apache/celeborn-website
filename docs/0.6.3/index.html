@@ -1,0 +1,1756 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="assets/logo/celeborn-2.svg">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Apache Celeborn™</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="assets/css/custom.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#quick-start" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Apache Celeborn™" class="md-header__button md-logo" aria-label="Apache Celeborn™" data-md-component="logo">
+      
+  <img src="assets/logo/celeborn-1.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apache Celeborn™
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              QuickStart
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://gitbox.apache.org/repos/asf/celeborn.git" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    apache/celeborn
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="." class="md-tabs__link md-tabs__link--active">
+      QuickStart
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="deploy/" class="md-tabs__link">
+        Deployment
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="configuration/" class="md-tabs__link">
+      Configuration
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="migration/" class="md-tabs__link">
+      Migration Guide
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="developers/overview/" class="md-tabs__link">
+        Developers Doc
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Apache Celeborn™" class="md-nav__button md-logo" aria-label="Apache Celeborn™" data-md-component="logo">
+      
+  <img src="assets/logo/celeborn-1.svg" alt="logo">
+
+    </a>
+    Apache Celeborn™
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://gitbox.apache.org/repos/asf/celeborn.git" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    apache/celeborn
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          QuickStart
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        QuickStart
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#download-celeborn" class="md-nav__link">
+    Download Celeborn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-logging-and-storage" class="md-nav__link">
+    Configure Logging and Storage
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure Logging and Storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-logging" class="md-nav__link">
+    Configure Logging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-storage" class="md-nav__link">
+    Configure Storage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-celeborn-service" class="md-nav__link">
+    Start Celeborn Service
+  </a>
+  
+    <nav class="md-nav" aria-label="Start Celeborn Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-master" class="md-nav__link">
+    Start Master
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-worker" class="md-nav__link">
+    Start Worker
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-spark-with-celeborn" class="md-nav__link">
+    Start Spark with Celeborn
+  </a>
+  
+    <nav class="md-nav" aria-label="Start Spark with Celeborn">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#copy-celeborn-client-to-sparks-jars" class="md-nav__link">
+    Copy Celeborn Client to Spark's jars
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-spark-shell" class="md-nav__link">
+    Start spark-shell
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-flink-with-celeborn" class="md-nav__link">
+    Start Flink with Celeborn
+  </a>
+  
+    <nav class="md-nav" aria-label="Start Flink with Celeborn">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#copy-celeborn-client-to-flinks-lib" class="md-nav__link">
+    Copy Celeborn Client to Flink's lib
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-celeborn-configuration-to-flinks-conf" class="md-nav__link">
+    Add Celeborn configuration to Flink's conf
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-mapreduce-with-celeborn" class="md-nav__link">
+    Start MapReduce With Celeborn
+  </a>
+  
+    <nav class="md-nav" aria-label="Start MapReduce With Celeborn">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#copy-celeborn-client-to-mapreduces-classpath" class="md-nav__link">
+    Copy Celeborn Client to MapReduce's classpath
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-celeborn-configuration-to-mapreduces-conf" class="md-nav__link">
+    Add Celeborn configuration to MapReduce's conf
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Deployment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Deployment" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Deployment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="deploy/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="deploy_on_k8s/" class="md-nav__link">
+        Kubernetes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          Monitoring
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Monitoring" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Monitoring
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="monitoring/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="restapi/" class="md-nav__link">
+        Rest API
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_4" type="checkbox" id="__nav_2_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_4">
+          CLI
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="CLI" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          CLI
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="celeborn_cli/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="celeborn_ratis_shell/" class="md-nav__link">
+        Ratis Shell
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="security/" class="md-nav__link">
+        Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="quota_management/" class="md-nav__link">
+        Quota Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="upgrading/" class="md-nav__link">
+        Upgrading
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="decommissioning/" class="md-nav__link">
+        Decommissioning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="cluster_planning/" class="md-nav__link">
+        Cluster Planning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="worker_tags/" class="md-nav__link">
+        Worker Tags
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="configuration/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="migration/" class="md-nav__link">
+        Migration Guide
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Developers Doc
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Developers Doc" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Developers Doc
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="developers/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_2">
+          Master
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Master" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Master
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="developers/master/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="developers/slotsallocation/" class="md-nav__link">
+        Slots Allocation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3">
+          Worker
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Worker" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Worker
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="developers/worker/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="developers/storage/" class="md-nav__link">
+        Storage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="developers/trafficcontrol/" class="md-nav__link">
+        Traffic Control
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="developers/jvmprofiler/" class="md-nav__link">
+        JVM Profiler
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_4">
+          Client
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Client" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Client
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="developers/client/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="developers/lifecyclemanager/" class="md-nav__link">
+        LifecycleManager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="developers/shuffleclient/" class="md-nav__link">
+        ShuffleClient
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="developers/java-columnar-shuffle/" class="md-nav__link">
+        JavaColumnarShuffle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="developers/configuration/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="developers/faulttolerant/" class="md-nav__link">
+        Fault Tolerant
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="developers/workerexclusion/" class="md-nav__link">
+        Worker Exclusion
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="developers/integrate/" class="md-nav__link">
+        Integrating Celeborn
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="developers/sbt/" class="md-nav__link">
+        SBT Build
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_10" type="checkbox" id="__nav_5_10" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_10">
+          Native Engine Integration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Native Engine Integration" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_10">
+          <span class="md-nav__icon md-icon"></span>
+          Native Engine Integration
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="developers/auronsupport/" class="md-nav__link">
+        Auron
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="developers/glutensupport/" class="md-nav__link">
+        Gluten
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="developers/helm-charts/" class="md-nav__link">
+        Helm Charts
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#download-celeborn" class="md-nav__link">
+    Download Celeborn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-logging-and-storage" class="md-nav__link">
+    Configure Logging and Storage
+  </a>
+  
+    <nav class="md-nav" aria-label="Configure Logging and Storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-logging" class="md-nav__link">
+    Configure Logging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-storage" class="md-nav__link">
+    Configure Storage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-celeborn-service" class="md-nav__link">
+    Start Celeborn Service
+  </a>
+  
+    <nav class="md-nav" aria-label="Start Celeborn Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#start-master" class="md-nav__link">
+    Start Master
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-worker" class="md-nav__link">
+    Start Worker
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-spark-with-celeborn" class="md-nav__link">
+    Start Spark with Celeborn
+  </a>
+  
+    <nav class="md-nav" aria-label="Start Spark with Celeborn">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#copy-celeborn-client-to-sparks-jars" class="md-nav__link">
+    Copy Celeborn Client to Spark's jars
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-spark-shell" class="md-nav__link">
+    Start spark-shell
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-flink-with-celeborn" class="md-nav__link">
+    Start Flink with Celeborn
+  </a>
+  
+    <nav class="md-nav" aria-label="Start Flink with Celeborn">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#copy-celeborn-client-to-flinks-lib" class="md-nav__link">
+    Copy Celeborn Client to Flink's lib
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-celeborn-configuration-to-flinks-conf" class="md-nav__link">
+    Add Celeborn configuration to Flink's conf
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-mapreduce-with-celeborn" class="md-nav__link">
+    Start MapReduce With Celeborn
+  </a>
+  
+    <nav class="md-nav" aria-label="Start MapReduce With Celeborn">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#copy-celeborn-client-to-mapreduces-classpath" class="md-nav__link">
+    Copy Celeborn Client to MapReduce's classpath
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-celeborn-configuration-to-mapreduces-conf" class="md-nav__link">
+    Add Celeborn configuration to MapReduce's conf
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="quick-start">Quick Start</h1>
+<p>This documentation gives a quick start guide for running Spark/Flink/MapReduce with Apache Celeborn™.</p>
+<h3 id="download-celeborn">Download Celeborn</h3>
+<p>Download the latest Celeborn binary from the <a href="https://celeborn.apache.org/download/">Downloading Page</a>.
+Decompress the binary and set <code>$CELEBORN_HOME</code>.
+<div class="highlight"><pre><span></span><code>tar -C &lt;DST_DIR&gt; -zxvf apache-celeborn-&lt;VERSION&gt;-bin.tgz
+<span class="nb">export</span> <span class="nv">CELEBORN_HOME</span><span class="o">=</span>&lt;Decompressed path&gt;
+</code></pre></div></p>
+<h2 id="configure-logging-and-storage">Configure Logging and Storage</h2>
+<h4 id="configure-logging">Configure Logging</h4>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> <span class="nv">$CELEBORN_HOME</span>/conf
+cp log4j2.xml.template log4j2.xml
+</code></pre></div>
+<h4 id="configure-storage">Configure Storage</h4>
+<p>Configure the directory to store shuffle data, for example <code>$CELEBORN_HOME/shuffle</code>.
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> <span class="nv">$CELEBORN_HOME</span>/conf
+<span class="nb">echo</span> <span class="s2">&quot;celeborn.worker.storage.dirs=</span><span class="nv">$CELEBORN_HOME</span><span class="s2">/shuffle&quot;</span> &gt; celeborn-defaults.conf
+</code></pre></div></p>
+<h2 id="start-celeborn-service">Start Celeborn Service</h2>
+<h4 id="start-master">Start Master</h4>
+<p><div class="highlight"><pre><span></span><code><span class="nb">cd</span> <span class="nv">$CELEBORN_HOME</span>
+./sbin/start-master.sh
+</code></pre></div>
+You should see <code>Master</code>'s ip:port in the log:
+<div class="highlight"><pre><span></span><code>INFO [main] NettyRpcEnvFactory: Starting RPC Server [Master] on 192.168.2.109:9097 with advertised endpoint 192.168.2.109:9097
+</code></pre></div></p>
+<h4 id="start-worker">Start Worker</h4>
+<p>Use the Master's IP and Port to start Worker:
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> <span class="nv">$CELEBORN_HOME</span>
+./sbin/start-worker.sh celeborn://&lt;Master IP&gt;:&lt;Master Port&gt;
+</code></pre></div>
+You should see the following message in Worker's log:
+<div class="highlight"><pre><span></span><code>INFO [main] MasterClient: connect to master 192.168.2.109:9097.
+INFO [main] Worker: Register worker successfully.
+INFO [main] Worker: Worker started.
+</code></pre></div>
+And also the following message in Master's log:
+<div class="highlight"><pre><span></span><code>INFO [dispatcher-event-loop-9] Master: Registered worker
+Host: 192.168.2.109
+RpcPort: 57806
+PushPort: 57807
+FetchPort: 57809
+ReplicatePort: 57808
+SlotsUsed: 0
+LastHeartbeat: 0
+HeartbeatElapsedSeconds: xxx
+Disks:
+  DiskInfo0: xxx
+UserResourceConsumption: empty
+WorkerRef: null
+</code></pre></div></p>
+<h2 id="start-spark-with-celeborn">Start Spark with Celeborn</h2>
+<h4 id="copy-celeborn-client-to-sparks-jars">Copy Celeborn Client to Spark's jars</h4>
+<p>Celeborn release binary contains clients for Spark 2.x and Spark 3.x, copy the corresponding client jar into Spark's
+<code>jars/</code> directory:
+<div class="highlight"><pre><span></span><code>cp <span class="nv">$CELEBORN_HOME</span>/spark/celeborn-client-spark-&lt;spark.major.version&gt;-shaded_&lt;scala.binary.version&gt;-&lt;celeborn.version&gt;.jar <span class="nv">$SPARK_HOME</span>/jars/
+</code></pre></div></p>
+<h4 id="start-spark-shell">Start spark-shell</h4>
+<p>Set <code>spark.shuffle.manager</code> to Celeborn's ShuffleManager, and turn off <code>spark.shuffle.service.enabled</code>:
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> <span class="nv">$SPARK_HOME</span>
+
+./bin/spark-shell <span class="se">\</span>
+--conf spark.shuffle.manager<span class="o">=</span>org.apache.spark.shuffle.celeborn.SparkShuffleManager <span class="se">\</span>
+--conf spark.shuffle.service.enabled<span class="o">=</span><span class="nb">false</span>
+</code></pre></div>
+Then run the following test case:
+<div class="highlight"><pre><span></span><code><span class="n">spark</span><span class="p">.</span><span class="n">sparkContext</span><span class="w"></span>
+<span class="w">  </span><span class="p">.</span><span class="n">parallelize</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">.</span><span class="n">flatMap</span><span class="p">(</span><span class="n">_</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mi">100</span><span class="p">).</span><span class="n">iterator</span><span class="p">.</span><span class="n">map</span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">num</span><span class="p">))</span><span class="w"></span>
+<span class="w">  </span><span class="p">.</span><span class="n">repartition</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="p">.</span><span class="n">count</span><span class="w"></span>
+</code></pre></div>
+During the Spark Job, you should see the following message in Celeborn Master's log:
+<div class="highlight"><pre><span></span><code>Master: Offer slots successfully for 10 reducers of local-1690000152711-0 on 1 workers.
+</code></pre></div>
+And the following message in Celeborn Worker's log:
+<div class="highlight"><pre><span></span><code>INFO [dispatcher-event-loop-9] Controller: Reserved 10 primary location and 0 replica location for local-1690000152711-0
+INFO [dispatcher-event-loop-8] Controller: Start commitFiles for local-1690000152711-0
+INFO [async-reply] Controller: CommitFiles for local-1690000152711-0 success with 10 committed primary partitions, 0 empty primary partitions , 0 failed primary partitions, 0 committed replica partitions, 0 empty replica partitions , 0 failed replica partitions.
+</code></pre></div></p>
+<h2 id="start-flink-with-celeborn">Start Flink with Celeborn</h2>
+<p><strong>Important: Only Flink batch jobs are supported for now.</strong></p>
+<h4 id="copy-celeborn-client-to-flinks-lib">Copy Celeborn Client to Flink's lib</h4>
+<p>Celeborn release binary contains clients for Flink 1.16.x, Flink 1.17.x, Flink 1.18.x, Flink 1.19.x, Flink 1.20.x and Flink 2.0.x, copy the corresponding client jar into Flink's
+<code>lib/</code> directory:
+<div class="highlight"><pre><span></span><code>cp <span class="nv">$CELEBORN_HOME</span>/flink/celeborn-client-flink-&lt;flink.version&gt;-shaded_&lt;scala.binary.version&gt;-&lt;celeborn.version&gt;.jar <span class="nv">$FLINK_HOME</span>/lib/
+</code></pre></div></p>
+<h4 id="add-celeborn-configuration-to-flinks-conf">Add Celeborn configuration to Flink's conf</h4>
+<p>Set <code>shuffle-service-factory.class</code> to Celeborn's ShuffleServiceFactory in Flink configuration file:</p>
+<ul>
+<li>
+<p>Flink 1.16.x, Flink 1.17.x, Flink 1.18.x
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> <span class="nv">$FLINK_HOME</span>
+vi conf/flink-conf.yaml
+</code></pre></div></p>
+</li>
+<li>
+<p>Flink 1.19.x, Flink 1.20.x, Flink 2.0.x
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> <span class="nv">$FLINK_HOME</span>
+vi conf/config.yaml
+</code></pre></div></p>
+</li>
+</ul>
+<p>Choose one of flink integration strategies and add the following configuration:</p>
+<p><strong>(Support Flink 1.16 and above versions) Flink Remote Shuffle Service Config</strong>
+<div class="highlight"><pre><span></span><code><span class="na">shuffle-service-factory.class</span><span class="o">:</span><span class="w"> </span><span class="s">org.apache.celeborn.plugin.flink.RemoteShuffleServiceFactory</span><span class="w"></span>
+<span class="na">execution.batch-shuffle-mode</span><span class="o">:</span><span class="w"> </span><span class="s">ALL_EXCHANGES_BLOCKING</span><span class="w"></span>
+</code></pre></div>
+<strong>Note</strong>: The config option <code>execution.batch-shuffle-mode</code> should configure as <code>ALL_EXCHANGES_BLOCKING</code>.</p>
+<p><strong>(Support Flink 1.20 and above versions) Flink <a href="https://nightlies.apache.org/flink/flink-docs-stable/docs/ops/batch/batch_shuffle/#hybrid-shuffle">hybrid shuffle</a> Config</strong>
+<div class="highlight"><pre><span></span><code><span class="na">shuffle-service-factory.class</span><span class="o">:</span><span class="w"> </span><span class="s">org.apache.flink.runtime.io.network.NettyShuffleServiceFactory</span><span class="w"></span>
+<span class="na">taskmanager.network.hybrid-shuffle.external-remote-tier-factory.class</span><span class="o">:</span><span class="w"> </span><span class="s">org.apache.celeborn.plugin.flink.tiered.CelebornTierFactory</span><span class="w"></span>
+<span class="na">execution.batch-shuffle-mode</span><span class="o">:</span><span class="w"> </span><span class="s">ALL_EXCHANGES_HYBRID_FULL</span><span class="w"></span>
+<span class="na">jobmanager.partition.hybrid.partition-data-consume-constraint</span><span class="o">:</span><span class="w"> </span><span class="s">ALL_PRODUCERS_FINISHED</span><span class="w"></span>
+</code></pre></div>
+<strong>Note</strong>: The config option <code>execution.batch-shuffle-mode</code> should configure as <code>ALL_EXCHANGES_HYBRID_FULL</code>.</p>
+<p>Then deploy the example word count job to the running cluster:
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> <span class="nv">$FLINK_HOME</span>
+
+./bin/flink run examples/streaming/WordCount.jar --execution-mode BATCH
+</code></pre></div>
+During the Flink Job, you should see the following message in Celeborn Master's log:
+<div class="highlight"><pre><span></span><code>Master: Offer slots successfully for 1 reducers of local-1690000152711-0 on 1 workers.
+</code></pre></div>
+And the following message in Celeborn Worker's log:
+<div class="highlight"><pre><span></span><code>INFO [dispatcher-event-loop-4] Controller: Reserved 1 primary location and 0 replica location for local-1690000152711-0
+INFO [dispatcher-event-loop-3] Controller: Start commitFiles for local-1690000152711-0
+INFO [async-reply] Controller: CommitFiles for local-1690000152711-0 success with 1 committed primary partitions, 0 empty primary partitions , 0 failed primary partitions, 0 committed replica partitions, 0 empty replica partitions , 0 failed replica partitions.
+</code></pre></div></p>
+<h2 id="start-mapreduce-with-celeborn">Start MapReduce With Celeborn</h2>
+<h3 id="copy-celeborn-client-to-mapreduces-classpath">Copy Celeborn Client to MapReduce's classpath</h3>
+<ol>
+<li>Copy <code>$CELEBORN_HOME/mr/*.jar</code> into <code>mapreduce.application.classpath</code> and <code>yarn.application.classpath</code>.
+<div class="highlight"><pre><span></span><code>cp <span class="nv">$CELEBORN_HOME</span>/mr/celeborn-client-mr-shaded_&lt;scala.binary.version&gt;-&lt;celeborn.version&gt;.jar &lt;mapreduce.application.classpath&gt;
+cp <span class="nv">$CELEBORN_HOME</span>/mr/celeborn-client-mr-shaded_&lt;scala.binary.version&gt;-&lt;celeborn.version&gt;.jar &lt;yarn.application.classpath&gt;
+</code></pre></div></li>
+<li>Restart your yarn cluster.</li>
+</ol>
+<h3 id="add-celeborn-configuration-to-mapreduces-conf">Add Celeborn configuration to MapReduce's conf</h3>
+<ul>
+<li>Modify configurations in <code>${HADOOP_CONF_DIR}/yarn-site.xml</code>.
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;configuration&gt;</span>
+    <span class="nt">&lt;property&gt;</span>
+        <span class="nt">&lt;name&gt;</span>yarn.app.mapreduce.am.job.recovery.enable<span class="nt">&lt;/name&gt;</span>
+        <span class="nt">&lt;value&gt;</span>false<span class="nt">&lt;/value&gt;</span>
+    <span class="nt">&lt;/property&gt;</span>
+
+    <span class="nt">&lt;property&gt;</span>
+        <span class="nt">&lt;name&gt;</span>yarn.app.mapreduce.am.command-opts<span class="nt">&lt;/name&gt;</span>
+        <span class="cm">&lt;!-- Append &#39;org.apache.celeborn.mapreduce.v2.app.MRAppMasterWithCeleborn&#39; to this setting  --&gt;</span>
+        <span class="nt">&lt;value&gt;</span>org.apache.celeborn.mapreduce.v2.app.MRAppMasterWithCeleborn<span class="nt">&lt;/value&gt;</span>
+    <span class="nt">&lt;/property&gt;</span>
+<span class="nt">&lt;/configuration&gt;</span>
+</code></pre></div></li>
+<li>Modify configurations in <code>${HADOOP_CONF_DIR}/mapred-site.xml</code>.
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;configuration&gt;</span>
+    <span class="nt">&lt;property&gt;</span>
+        <span class="nt">&lt;name&gt;</span>mapreduce.job.reduce.slowstart.completedmaps<span class="nt">&lt;/name&gt;</span>
+        <span class="nt">&lt;value&gt;</span>1<span class="nt">&lt;/value&gt;</span>
+    <span class="nt">&lt;/property&gt;</span>
+    <span class="nt">&lt;property&gt;</span>
+        <span class="nt">&lt;name&gt;</span>mapreduce.celeborn.master.endpoints<span class="nt">&lt;/name&gt;</span>
+        <span class="cm">&lt;!-- Replace placeholder to the real master address       --&gt;</span>
+        <span class="nt">&lt;value&gt;</span>placeholder<span class="nt">&lt;/value&gt;</span>
+    <span class="nt">&lt;/property&gt;</span>
+    <span class="nt">&lt;property&gt;</span>
+        <span class="nt">&lt;name&gt;</span>mapreduce.job.map.output.collector.class<span class="nt">&lt;/name&gt;</span>
+        <span class="nt">&lt;value&gt;</span>org.apache.hadoop.mapred.CelebornMapOutputCollector<span class="nt">&lt;/value&gt;</span>
+    <span class="nt">&lt;/property&gt;</span>
+    <span class="nt">&lt;property&gt;</span>
+        <span class="nt">&lt;name&gt;</span>mapreduce.job.reduce.shuffle.consumer.plugin.class<span class="nt">&lt;/name&gt;</span>
+        <span class="nt">&lt;value&gt;</span>org.apache.hadoop.mapreduce.task.reduce.CelebornShuffleConsumer<span class="nt">&lt;/value&gt;</span>
+    <span class="nt">&lt;/property&gt;</span>
+<span class="nt">&lt;/configuration&gt;</span>
+</code></pre></div>
+<strong>Note</strong>: <code>MRAppMasterWithCeleborn</code> supports setting <code>mapreduce.celeborn.master.endpoints</code> via environment variable <code>CELEBORN_MASTER_ENDPOINTS</code>.
+Meanwhile, <code>MRAppMasterWithCeleborn</code> disables <code>yarn.app.mapreduce.am.job.recovery.enable</code> and sets <code>mapreduce.job.reduce.slowstart.completedmaps</code> to 1 by default.</li>
+</ul>
+<p>Then deploy the example word count to the running cluster for verifying whether above configurations are correct.
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> <span class="nv">$HADOOP_HOME</span>
+
+./bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.1.jar wordcount /someinput /someoutput
+</code></pre></div>
+During the MapReduce Job, you should see the following message in Celeborn Master's log:
+<div class="highlight"><pre><span></span><code>Master: Offer slots successfully for 1 reducers of application_1694674023293_0003-0 on 1 workers.
+</code></pre></div>
+And the following message in Celeborn Worker's log:
+<div class="highlight"><pre><span></span><code>INFO [dispatcher-event-loop-4] Controller: Reserved 1 primary location and 0 replica location for application_1694674023293_0003-0
+INFO [dispatcher-event-loop-3] Controller: Start commitFiles for application_1694674023293_0003-0
+INFO [async-reply] Controller: CommitFiles for application_1694674023293_0003-0 success with 1 committed primary partitions, 0 empty primary partitions , 0 failed primary partitions, 0 committed replica partitions, 0 empty replica partitions , 0 failed replica partitions.
+</code></pre></div></p>
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+      
+        
+        <a href="deploy/" class="md-footer__link md-footer__link--next" aria-label="Next: Overview" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Overview
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <br> Copyright © 2022-2024 The Apache Software Foundation, Licensed under the Apache License, Version 2.0. <a href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy Policy<a/><br> <br> Apache Celeborn™, Apache, and the Apache feather logo are trademarks or registered trademarks of The Apache Software Foundation.<br> <br> Please visit <a href="https://www.apache.org/">Apache Software Foundation</a> for more details.<br> <br>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking"], "search": "assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>
