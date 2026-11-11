@@ -20,11 +20,9 @@ license: |
 
 | Name                |
 |---------------------|
-| Becket Qin          |
 | Binjie Yang         |
 | Chandni Singh       |
 | Cheng Pan           |
-| Duo Zhang           |
 | Erik Fang           |
 | Ethan Feng          |
 | Fei Wang            |
@@ -33,19 +31,16 @@ license: |
 | Jiashu Xiong        |
 | Kerwin Zhang        |
 | Keyong Zhou         |
-| Lidong Dai          |
 | Mridul Muralidharan |
 | Sanskar Modi        |
 | Shaoyun Chen        |
 | Wei Wu              |
 | Weijie Guo          |
-| Willem Ning Jiang   |
 | Xianming Lei        |
 | Xiaofeng Jiang      |
 | Yi Zhu              |
 | Yifan Xia           |
 | Yihe Li             |
-| Yu Li               |
 | Zhentao Shuai       |
 | Zhongqiang Chen     |
 
