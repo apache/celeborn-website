@@ -28,18 +28,20 @@ license: |
 | Fei Wang            |
 | Fu Chen             |
 | Jiaming Xie         |
-| JiaShu Xiong        |
+| Jiashu Xiong        |
 | Kerwin Zhang        |
 | Keyong Zhou         |
 | Mridul Muralidharan |
 | Sanskar Modi        |
 | Shaoyun Chen        |
+| Wei Wu              |
+| Weijie Guo          |
+| Xianming Lei        |
 | Xiaofeng Jiang      |
 | Yi Zhu              |
 | Yifan Xia           |
 | Yihe Li             |
-| Wei Wu              |
-| Weijie Guo          |
+| Zhentao Shuai       |
 | Zhongqiang Chen     |
 
 ## Become A Committer of Apache Celeborn™
