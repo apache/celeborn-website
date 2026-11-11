@@ -20,26 +20,33 @@ license: |
 
 | Name                |
 |---------------------|
+| Becket Qin          |
 | Binjie Yang         |
 | Chandni Singh       |
 | Cheng Pan           |
+| Duo Zhang           |
 | Erik Fang           |
 | Ethan Feng          |
 | Fei Wang            |
 | Fu Chen             |
 | Jiaming Xie         |
-| JiaShu Xiong        |
+| Jiashu Xiong        |
 | Kerwin Zhang        |
 | Keyong Zhou         |
+| Lidong Dai          |
 | Mridul Muralidharan |
 | Sanskar Modi        |
 | Shaoyun Chen        |
+| Wei Wu              |
+| Weijie Guo          |
+| Willem Ning Jiang   |
+| Xianming Lei        |
 | Xiaofeng Jiang      |
 | Yi Zhu              |
 | Yifan Xia           |
 | Yihe Li             |
-| Wei Wu              |
-| Weijie Guo          |
+| Yu Li               |
+| Zhentao Shuai       |
 | Zhongqiang Chen     |
 
 ## Become A Committer of Apache Celeborn™
