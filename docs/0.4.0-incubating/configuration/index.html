@@ -1,0 +1,3511 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/logo/celeborn-2.svg">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Configuration - Apache Celeborn™ (Incubating)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configuration-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Apache Celeborn™ (Incubating)" class="md-header__button md-logo" aria-label="Apache Celeborn™ (Incubating)" data-md-component="logo">
+      
+  <img src="../assets/logo/celeborn-1.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apache Celeborn™ (Incubating)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Configuration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://gitbox.apache.org/repos/asf/incubator-celeborn.git" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    apache/incubator-celeborn
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      QuickStart
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../deploy/" class="md-tabs__link">
+        Deployment
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
+      Configuration
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../migration/" class="md-tabs__link">
+      Migration Guide
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../developers/overview/" class="md-tabs__link">
+        Developers Doc
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Apache Celeborn™ (Incubating)" class="md-nav__button md-logo" aria-label="Apache Celeborn™ (Incubating)" data-md-component="logo">
+      
+  <img src="../assets/logo/celeborn-1.svg" alt="logo">
+
+    </a>
+    Apache Celeborn™ (Incubating)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://gitbox.apache.org/repos/asf/incubator-celeborn.git" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    apache/incubator-celeborn
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        QuickStart
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Deployment
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Deployment" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Deployment
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploy/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploy_on_k8s/" class="md-nav__link">
+        Kubernetes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monitoring/" class="md-nav__link">
+        Monitoring
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upgrading/" class="md-nav__link">
+        Upgrading
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../celeborn_ratis_shell/" class="md-nav__link">
+        Ratis Shell
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cluster_planning/" class="md-nav__link">
+        Cluster Planning
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Configuration
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#important-configurations" class="md-nav__link">
+    Important Configurations
+  </a>
+  
+    <nav class="md-nav" aria-label="Important Configurations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    Environment Variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#all-configurations" class="md-nav__link">
+    All Configurations
+  </a>
+  
+    <nav class="md-nav" aria-label="All Configurations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#master" class="md-nav__link">
+    Master
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#master-ha" class="md-nav__link">
+    Master HA
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worker" class="md-nav__link">
+    Worker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client" class="md-nav__link">
+    Client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quota" class="md-nav__link">
+    Quota
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network" class="md-nav__link">
+    Network
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#columnar-shuffle" class="md-nav__link">
+    Columnar Shuffle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrics" class="md-nav__link">
+    Metrics
+  </a>
+  
+    <nav class="md-nav" aria-label="Metrics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metricsproperties" class="md-nav__link">
+    metrics.properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-variables_1" class="md-nav__link">
+    Environment Variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tuning" class="md-nav__link">
+    Tuning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rack-awareness" class="md-nav__link">
+    Rack Awareness
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worker-recover-status-after-restart" class="md-nav__link">
+    Worker Recover Status After Restart
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migration/" class="md-nav__link">
+        Migration Guide
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Developers Doc
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Developers Doc" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Developers Doc
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developers/overview/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developers/master/" class="md-nav__link">
+        Master
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3">
+          Worker
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Worker" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Worker
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developers/worker/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developers/storage/" class="md-nav__link">
+        Storage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developers/trafficcontrol/" class="md-nav__link">
+        Traffic Control
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_4">
+          Client
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Client" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Client
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developers/client/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developers/lifecyclemanager/" class="md-nav__link">
+        LifecycleManager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developers/shuffleclient/" class="md-nav__link">
+        ShuffleClient
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developers/faulttolerant/" class="md-nav__link">
+        Fault Tolerant
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developers/workerexclusion/" class="md-nav__link">
+        Worker Exclusion
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developers/integrate/" class="md-nav__link">
+        Integrating Celeborn
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developers/sbt/" class="md-nav__link">
+        SBT Build
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../developers/glutensupport/" class="md-nav__link">
+        Gluten Support
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#important-configurations" class="md-nav__link">
+    Important Configurations
+  </a>
+  
+    <nav class="md-nav" aria-label="Important Configurations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    Environment Variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#all-configurations" class="md-nav__link">
+    All Configurations
+  </a>
+  
+    <nav class="md-nav" aria-label="All Configurations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#master" class="md-nav__link">
+    Master
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#master-ha" class="md-nav__link">
+    Master HA
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worker" class="md-nav__link">
+    Worker
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client" class="md-nav__link">
+    Client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quota" class="md-nav__link">
+    Quota
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network" class="md-nav__link">
+    Network
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#columnar-shuffle" class="md-nav__link">
+    Columnar Shuffle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrics" class="md-nav__link">
+    Metrics
+  </a>
+  
+    <nav class="md-nav" aria-label="Metrics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metricsproperties" class="md-nav__link">
+    metrics.properties
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-variables_1" class="md-nav__link">
+    Environment Variables
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tuning" class="md-nav__link">
+    Tuning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rack-awareness" class="md-nav__link">
+    Rack Awareness
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worker-recover-status-after-restart" class="md-nav__link">
+    Worker Recover Status After Restart
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="configuration-guide">Configuration Guide</h1>
+<p>This documentation contains Celeborn configuration details and a tuning guide.</p>
+<h2 id="important-configurations">Important Configurations</h2>
+<h3 id="environment-variables">Environment Variables</h3>
+<ul>
+<li><code>CELEBORN_WORKER_MEMORY=4g</code></li>
+<li><code>CELEBORN_WORKER_OFFHEAP_MEMORY=24g</code></li>
+</ul>
+<p>Celeborn workers tend to improve performance by using off-heap buffers.
+Off-heap memory requirement can be estimated as below:</p>
+<div class="highlight"><pre><span></span><code>numDirs = `celeborn.worker.storage.dirs`             # the amount of directory will be used by Celeborn storage
+bufferSize = `celeborn.worker.flusher.buffer.size`   # the amount of memory will be used by a single flush buffer 
+off-heap-memory = bufferSize * estimatedTasks * 2 + network memory
+</code></pre></div>
+<p>For example, if a Celeborn worker has 10 storage directories or disks and the buffer size is set to 256 KiB.
+The necessary off-heap memory is 10 GiB.</p>
+<p>Network memory will be consumed when netty reads from a TCP channel, there will need some extra
+memory. Empirically, Celeborn worker off-heap memory should be set to <code>(numDirs  * bufferSize * 1.2)</code>.</p>
+<h2 id="all-configurations">All Configurations</h2>
+<h3 id="master">Master</h3>
+<!-- BEGIN INCLUDE ./master.md '&lt;!--begin-include--&gt;' '&lt;!--end-include--&gt;' -->
+
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default</th>
+<th>Description</th>
+<th>Since</th>
+<th>Deprecated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>celeborn.dynamicConfig.refresh.interval</td>
+<td>120s</td>
+<td>Interval for refreshing the corresponding dynamic config periodically.</td>
+<td>0.4.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.dynamicConfig.store.backend</td>
+<td>NONE</td>
+<td>Store backend for dynamic config. Available options: NONE, FS. Note: NONE means disabling dynamic config store.</td>
+<td>0.4.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.master.estimatedPartitionSize.initialSize</td>
+<td>64mb</td>
+<td>Initial partition size for estimation, it will change according to runtime stats.</td>
+<td>0.3.0</td>
+<td>celeborn.shuffle.initialEstimatedPartitionSize</td>
+</tr>
+<tr>
+<td>celeborn.master.estimatedPartitionSize.update.initialDelay</td>
+<td>5min</td>
+<td>Initial delay time before start updating partition size for estimation.</td>
+<td>0.3.0</td>
+<td>celeborn.shuffle.estimatedPartitionSize.update.initialDelay</td>
+</tr>
+<tr>
+<td>celeborn.master.estimatedPartitionSize.update.interval</td>
+<td>10min</td>
+<td>Interval of updating partition size for estimation.</td>
+<td>0.3.0</td>
+<td>celeborn.shuffle.estimatedPartitionSize.update.interval</td>
+</tr>
+<tr>
+<td>celeborn.master.hdfs.expireDirs.timeout</td>
+<td>1h</td>
+<td>The timeout for a expire dirs to be deleted on HDFS.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.master.heartbeat.application.timeout</td>
+<td>300s</td>
+<td>Application heartbeat timeout.</td>
+<td>0.3.0</td>
+<td>celeborn.application.heartbeat.timeout</td>
+</tr>
+<tr>
+<td>celeborn.master.heartbeat.worker.timeout</td>
+<td>120s</td>
+<td>Worker heartbeat timeout.</td>
+<td>0.3.0</td>
+<td>celeborn.worker.heartbeat.timeout</td>
+</tr>
+<tr>
+<td>celeborn.master.host</td>
+<td>&lt;localhost&gt;</td>
+<td>Hostname for master to bind.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.master.http.host</td>
+<td>&lt;localhost&gt;</td>
+<td>Master's http host.</td>
+<td>0.4.0</td>
+<td>celeborn.metrics.master.prometheus.host,celeborn.master.metrics.prometheus.host</td>
+</tr>
+<tr>
+<td>celeborn.master.http.port</td>
+<td>9098</td>
+<td>Master's http port.</td>
+<td>0.4.0</td>
+<td>celeborn.metrics.master.prometheus.port,celeborn.master.metrics.prometheus.port</td>
+</tr>
+<tr>
+<td>celeborn.master.port</td>
+<td>9097</td>
+<td>Port for master to bind.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.master.slot.assign.extraSlots</td>
+<td>2</td>
+<td>Extra slots number when master assign slots.</td>
+<td>0.3.0</td>
+<td>celeborn.slots.assign.extraSlots</td>
+</tr>
+<tr>
+<td>celeborn.master.slot.assign.loadAware.diskGroupGradient</td>
+<td>0.1</td>
+<td>This value means how many more workload will be placed into a faster disk group than a slower group.</td>
+<td>0.3.0</td>
+<td>celeborn.slots.assign.loadAware.diskGroupGradient</td>
+</tr>
+<tr>
+<td>celeborn.master.slot.assign.loadAware.fetchTimeWeight</td>
+<td>1.0</td>
+<td>Weight of average fetch time when calculating ordering in load-aware assignment strategy</td>
+<td>0.3.0</td>
+<td>celeborn.slots.assign.loadAware.fetchTimeWeight</td>
+</tr>
+<tr>
+<td>celeborn.master.slot.assign.loadAware.flushTimeWeight</td>
+<td>0.0</td>
+<td>Weight of average flush time when calculating ordering in load-aware assignment strategy</td>
+<td>0.3.0</td>
+<td>celeborn.slots.assign.loadAware.flushTimeWeight</td>
+</tr>
+<tr>
+<td>celeborn.master.slot.assign.loadAware.numDiskGroups</td>
+<td>5</td>
+<td>This configuration is a guidance for load-aware slot allocation algorithm. This value is control how many disk groups will be created.</td>
+<td>0.3.0</td>
+<td>celeborn.slots.assign.loadAware.numDiskGroups</td>
+</tr>
+<tr>
+<td>celeborn.master.slot.assign.maxWorkers</td>
+<td>10000</td>
+<td>Max workers that slots of one shuffle can be allocated on. Will choose the smaller positive one from Master side and Client side, see <code>celeborn.client.slot.assign.maxWorkers</code>.</td>
+<td>0.3.1</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.master.slot.assign.policy</td>
+<td>ROUNDROBIN</td>
+<td>Policy for master to assign slots, Celeborn supports two types of policy: roundrobin and loadaware. Loadaware policy will be ignored when <code>HDFS</code> is enabled in <code>celeborn.storage.activeTypes</code></td>
+<td>0.3.0</td>
+<td>celeborn.slots.assign.policy</td>
+</tr>
+<tr>
+<td>celeborn.master.userResourceConsumption.update.interval</td>
+<td>30s</td>
+<td>Time length for a window about compute user resource consumption.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.master.workerUnavailableInfo.expireTimeout</td>
+<td>1800s</td>
+<td>Worker unavailable info would be cleared when the retention period is expired</td>
+<td>0.3.1</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.storage.availableTypes</td>
+<td>HDD</td>
+<td>Enabled storages. Available options: MEMORY,HDD,SSD,HDFS. Note: HDD and SSD would be treated as identical.</td>
+<td>0.3.0</td>
+<td>celeborn.storage.activeTypes</td>
+</tr>
+<tr>
+<td>celeborn.storage.hdfs.dir</td>
+<td>&lt;undefined&gt;</td>
+<td>HDFS base directory for Celeborn to store shuffle data.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.storage.hdfs.kerberos.keytab</td>
+<td>&lt;undefined&gt;</td>
+<td>Kerberos keytab file path for HDFS storage connection.</td>
+<td>0.3.2</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.storage.hdfs.kerberos.principal</td>
+<td>&lt;undefined&gt;</td>
+<td>Kerberos principal for HDFS storage connection.</td>
+<td>0.3.2</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<!-- END INCLUDE -->
+
+<p>Apart from these, the following properties are also available for enable master HA:</p>
+<h3 id="master-ha">Master HA</h3>
+<!-- BEGIN INCLUDE ./ha.md '&lt;!--begin-include--&gt;' '&lt;!--end-include--&gt;' -->
+
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default</th>
+<th>Description</th>
+<th>Since</th>
+<th>Deprecated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>celeborn.master.ha.enabled</td>
+<td>false</td>
+<td>When true, master nodes run as Raft cluster mode.</td>
+<td>0.3.0</td>
+<td>celeborn.ha.enabled</td>
+</tr>
+<tr>
+<td>celeborn.master.ha.node.&lt;id&gt;.host</td>
+<td>&lt;required&gt;</td>
+<td>Host to bind of master node <id> in HA mode.</td>
+<td>0.3.0</td>
+<td>celeborn.ha.master.node.&lt;id&gt;.host</td>
+</tr>
+<tr>
+<td>celeborn.master.ha.node.&lt;id&gt;.port</td>
+<td>9097</td>
+<td>Port to bind of master node <id> in HA mode.</td>
+<td>0.3.0</td>
+<td>celeborn.ha.master.node.&lt;id&gt;.port</td>
+</tr>
+<tr>
+<td>celeborn.master.ha.node.&lt;id&gt;.ratis.port</td>
+<td>9872</td>
+<td>Ratis port to bind of master node <id> in HA mode.</td>
+<td>0.3.0</td>
+<td>celeborn.ha.master.node.&lt;id&gt;.ratis.port</td>
+</tr>
+<tr>
+<td>celeborn.master.ha.ratis.raft.rpc.type</td>
+<td>netty</td>
+<td>RPC type for Ratis, available options: netty, grpc.</td>
+<td>0.3.0</td>
+<td>celeborn.ha.master.ratis.raft.rpc.type</td>
+</tr>
+<tr>
+<td>celeborn.master.ha.ratis.raft.server.storage.dir</td>
+<td>/tmp/ratis</td>
+<td></td>
+<td>0.3.0</td>
+<td>celeborn.ha.master.ratis.raft.server.storage.dir</td>
+</tr>
+</tbody>
+</table>
+<!-- END INCLUDE -->
+
+<h3 id="worker">Worker</h3>
+<!-- BEGIN INCLUDE ./worker.md '&lt;!--begin-include--&gt;' '&lt;!--end-include--&gt;' -->
+
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default</th>
+<th>Description</th>
+<th>Since</th>
+<th>Deprecated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>celeborn.dynamicConfig.refresh.interval</td>
+<td>120s</td>
+<td>Interval for refreshing the corresponding dynamic config periodically.</td>
+<td>0.4.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.dynamicConfig.store.backend</td>
+<td>NONE</td>
+<td>Store backend for dynamic config. Available options: NONE, FS. Note: NONE means disabling dynamic config store.</td>
+<td>0.4.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.master.endpoints</td>
+<td>&lt;localhost&gt;:9097</td>
+<td>Endpoints of master nodes for celeborn client to connect, allowed pattern is: <code>&lt;host1&gt;:&lt;port1&gt;[,&lt;host2&gt;:&lt;port2&gt;]*</code>, e.g. <code>clb1:9097,clb2:9098,clb3:9099</code>. If the port is omitted, 9097 will be used.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.master.estimatedPartitionSize.minSize</td>
+<td>8mb</td>
+<td>Ignore partition size smaller than this configuration of partition size for estimation.</td>
+<td>0.3.0</td>
+<td>celeborn.shuffle.minPartitionSizeToEstimate</td>
+</tr>
+<tr>
+<td>celeborn.shuffle.chunk.size</td>
+<td>8m</td>
+<td>Max chunk size of reducer's merged shuffle data. For example, if a reducer's shuffle data is 128M and the data will need 16 fetch chunk requests to fetch.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.storage.availableTypes</td>
+<td>HDD</td>
+<td>Enabled storages. Available options: MEMORY,HDD,SSD,HDFS. Note: HDD and SSD would be treated as identical.</td>
+<td>0.3.0</td>
+<td>celeborn.storage.activeTypes</td>
+</tr>
+<tr>
+<td>celeborn.storage.hdfs.dir</td>
+<td>&lt;undefined&gt;</td>
+<td>HDFS base directory for Celeborn to store shuffle data.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.storage.hdfs.kerberos.keytab</td>
+<td>&lt;undefined&gt;</td>
+<td>Kerberos keytab file path for HDFS storage connection.</td>
+<td>0.3.2</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.storage.hdfs.kerberos.principal</td>
+<td>&lt;undefined&gt;</td>
+<td>Kerberos principal for HDFS storage connection.</td>
+<td>0.3.2</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.activeConnection.max</td>
+<td>&lt;undefined&gt;</td>
+<td>If the number of active connections on a worker exceeds this configuration value, the worker will be marked as high-load in the heartbeat report, and the master will not include that node in the response of RequestSlots.</td>
+<td>0.3.1</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.bufferStream.threadsPerMountpoint</td>
+<td>8</td>
+<td>Threads count for read buffer per mount point.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.clean.threads</td>
+<td>64</td>
+<td>Thread number of worker to clean up expired shuffle keys.</td>
+<td>0.3.2</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.closeIdleConnections</td>
+<td>false</td>
+<td>Whether worker will close idle connections.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.commitFiles.threads</td>
+<td>32</td>
+<td>Thread number of worker to commit shuffle data files asynchronously. It's recommended to set at least <code>128</code> when <code>HDFS</code> is enabled in <code>celeborn.storage.activeTypes</code>.</td>
+<td>0.3.0</td>
+<td>celeborn.worker.commit.threads</td>
+</tr>
+<tr>
+<td>celeborn.worker.commitFiles.timeout</td>
+<td>120s</td>
+<td>Timeout for a Celeborn worker to commit files of a shuffle. It's recommended to set at least <code>240s</code> when <code>HDFS</code> is enabled in <code>celeborn.storage.activeTypes</code>.</td>
+<td>0.3.0</td>
+<td>celeborn.worker.shuffle.commit.timeout</td>
+</tr>
+<tr>
+<td>celeborn.worker.congestionControl.check.interval</td>
+<td>10ms</td>
+<td>Interval of worker checks congestion if celeborn.worker.congestionControl.enabled is true.</td>
+<td>0.3.2</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.congestionControl.enabled</td>
+<td>false</td>
+<td>Whether to enable congestion control or not.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.congestionControl.high.watermark</td>
+<td>&lt;undefined&gt;</td>
+<td>If the total bytes in disk buffer exceeds this configure, will start to congestusers whose produce rate is higher than the potential average consume rate. The congestion will stop if the produce rate is lower or equal to the average consume rate, or the total pending bytes lower than celeborn.worker.congestionControl.low.watermark</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.congestionControl.low.watermark</td>
+<td>&lt;undefined&gt;</td>
+<td>Will stop congest users if the total pending bytes of disk buffer is lower than this configuration</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.congestionControl.sample.time.window</td>
+<td>10s</td>
+<td>The worker holds a time sliding list to calculate users' produce/consume rate</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.congestionControl.user.inactive.interval</td>
+<td>10min</td>
+<td>How long will consider this user is inactive if it doesn't send data</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.decommission.checkInterval</td>
+<td>30s</td>
+<td>The wait interval of checking whether all the shuffle expired during worker decommission</td>
+<td>0.4.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.decommission.forceExitTimeout</td>
+<td>6h</td>
+<td>The wait time of waiting for all the shuffle expire during worker decommission.</td>
+<td>0.4.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.directMemoryRatioForMemoryShuffleStorage</td>
+<td>0.0</td>
+<td>Max ratio of direct memory to store shuffle data</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.directMemoryRatioForReadBuffer</td>
+<td>0.1</td>
+<td>Max ratio of direct memory for read buffer</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.directMemoryRatioToPauseReceive</td>
+<td>0.85</td>
+<td>If direct memory usage reaches this limit, the worker will stop to receive data from Celeborn shuffle clients.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.directMemoryRatioToPauseReplicate</td>
+<td>0.95</td>
+<td>If direct memory usage reaches this limit, the worker will stop to receive replication data from other workers. This value should be higher than celeborn.worker.directMemoryRatioToPauseReceive.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.directMemoryRatioToResume</td>
+<td>0.7</td>
+<td>If direct memory usage is less than this limit, worker will resume.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.disk.clean.threads</td>
+<td>4</td>
+<td>Thread number of worker to clean up directories of expired shuffle keys on disk.</td>
+<td>0.3.2</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.fetch.heartbeat.enabled</td>
+<td>false</td>
+<td>enable the heartbeat from worker to client when fetching data</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.fetch.io.threads</td>
+<td>&lt;undefined&gt;</td>
+<td>Netty IO thread number of worker to handle client fetch data. The default threads number is the number of flush thread.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.fetch.port</td>
+<td>0</td>
+<td>Server port for Worker to receive fetch data request from ShuffleClient.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.flusher.buffer.size</td>
+<td>256k</td>
+<td>Size of buffer used by a single flusher.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.flusher.diskTime.slidingWindow.size</td>
+<td>20</td>
+<td>The size of sliding windows used to calculate statistics about flushed time and count.</td>
+<td>0.3.0</td>
+<td>celeborn.worker.flusher.avgFlushTime.slidingWindow.size</td>
+</tr>
+<tr>
+<td>celeborn.worker.flusher.hdd.threads</td>
+<td>1</td>
+<td>Flusher's thread count per disk used for write data to HDD disks.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.flusher.hdfs.buffer.size</td>
+<td>4m</td>
+<td>Size of buffer used by a HDFS flusher.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.flusher.hdfs.threads</td>
+<td>8</td>
+<td>Flusher's thread count used for write data to HDFS.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.flusher.shutdownTimeout</td>
+<td>3s</td>
+<td>Timeout for a flusher to shutdown.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.flusher.ssd.threads</td>
+<td>16</td>
+<td>Flusher's thread count per disk used for write data to SSD disks.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.flusher.threads</td>
+<td>16</td>
+<td>Flusher's thread count per disk for unknown-type disks.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.graceful.shutdown.checkSlotsFinished.interval</td>
+<td>1s</td>
+<td>The wait interval of checking whether all released slots to be committed or destroyed during worker graceful shutdown</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.graceful.shutdown.checkSlotsFinished.timeout</td>
+<td>480s</td>
+<td>The wait time of waiting for the released slots to be committed or destroyed during worker graceful shutdown.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.graceful.shutdown.enabled</td>
+<td>false</td>
+<td>When true, during worker shutdown, the worker will wait for all released slots to be committed or destroyed.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.graceful.shutdown.partitionSorter.shutdownTimeout</td>
+<td>120s</td>
+<td>The wait time of waiting for sorting partition files during worker graceful shutdown.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.graceful.shutdown.recoverDbBackend</td>
+<td>LEVELDB</td>
+<td>Specifies a disk-based store used in local db. LEVELDB or ROCKSDB.</td>
+<td>0.4.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.graceful.shutdown.recoverPath</td>
+<td>&lt;tmp&gt;/recover</td>
+<td>The path to store DB.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.graceful.shutdown.saveCommittedFileInfo.interval</td>
+<td>5s</td>
+<td>Interval for a Celeborn worker to flush committed file infos into Level DB.</td>
+<td>0.3.1</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.graceful.shutdown.saveCommittedFileInfo.sync</td>
+<td>false</td>
+<td>Whether to call sync method to save committed file infos into Level DB to handle OS crash.</td>
+<td>0.3.1</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.graceful.shutdown.timeout</td>
+<td>600s</td>
+<td>The worker's graceful shutdown timeout time.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.http.host</td>
+<td>&lt;localhost&gt;</td>
+<td>Worker's http host.</td>
+<td>0.4.0</td>
+<td>celeborn.metrics.worker.prometheus.host,celeborn.worker.metrics.prometheus.host</td>
+</tr>
+<tr>
+<td>celeborn.worker.http.port</td>
+<td>9096</td>
+<td>Worker's http port.</td>
+<td>0.4.0</td>
+<td>celeborn.metrics.worker.prometheus.port,celeborn.worker.metrics.prometheus.port</td>
+</tr>
+<tr>
+<td>celeborn.worker.jvmQuake.check.interval</td>
+<td>1s</td>
+<td>Interval of gc behavior checking for worker jvm quake.</td>
+<td>0.4.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.jvmQuake.dump.enabled</td>
+<td>true</td>
+<td>Whether to heap dump for the maximum GC 'deficit' during worker jvm quake.</td>
+<td>0.4.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.jvmQuake.dump.path</td>
+<td>&lt;tmp&gt;/jvm-quake/dump/&lt;pid&gt;</td>
+<td>The path of heap dump for the maximum GC 'deficit' during worker jvm quake.</td>
+<td>0.4.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.jvmQuake.dump.threshold</td>
+<td>30s</td>
+<td>The threshold of heap dump for the maximum GC 'deficit' which can be accumulated before jvmquake takes action. Meanwhile, there is no heap dump generated when dump threshold is greater than kill threshold.</td>
+<td>0.4.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.jvmQuake.enabled</td>
+<td>false</td>
+<td>When true, Celeborn worker will start the jvm quake to monitor of gc behavior, which enables early detection of memory management issues and facilitates fast failure.</td>
+<td>0.4.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.jvmQuake.exitCode</td>
+<td>502</td>
+<td>The exit code of system kill for the maximum GC 'deficit' during worker jvm quake.</td>
+<td>0.4.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.jvmQuake.kill.threshold</td>
+<td>60s</td>
+<td>The threshold of system kill for the maximum GC 'deficit' which can be accumulated before jvmquake takes action.</td>
+<td>0.4.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.jvmQuake.runtimeWeight</td>
+<td>5.0</td>
+<td>The factor by which to multiply running JVM time, when weighing it against GCing time. 'Deficit' is accumulated as <code>gc_time - runtime * runtime_weight</code>, and is compared against threshold to determine whether to take action.</td>
+<td>0.4.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.monitor.disk.check.interval</td>
+<td>30s</td>
+<td>Intervals between device monitor to check disk.</td>
+<td>0.3.0</td>
+<td>celeborn.worker.monitor.disk.checkInterval</td>
+</tr>
+<tr>
+<td>celeborn.worker.monitor.disk.check.timeout</td>
+<td>30s</td>
+<td>Timeout time for worker check device status.</td>
+<td>0.3.0</td>
+<td>celeborn.worker.disk.check.timeout</td>
+</tr>
+<tr>
+<td>celeborn.worker.monitor.disk.checklist</td>
+<td>readwrite,diskusage</td>
+<td>Monitor type for disk, available items are: iohang, readwrite and diskusage.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.monitor.disk.enabled</td>
+<td>true</td>
+<td>When true, worker will monitor device and report to master.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.monitor.disk.notifyError.expireTimeout</td>
+<td>10m</td>
+<td>The expire timeout of non-critical device error. Only notify critical error when the number of non-critical errors for a period of time exceeds threshold.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.monitor.disk.notifyError.threshold</td>
+<td>64</td>
+<td>Device monitor will only notify critical error once the accumulated valid non-critical error number exceeding this threshold.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.monitor.disk.sys.block.dir</td>
+<td>/sys/block</td>
+<td>The directory where linux file block information is stored.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.monitor.memory.check.interval</td>
+<td>10ms</td>
+<td>Interval of worker direct memory checking.</td>
+<td>0.3.0</td>
+<td>celeborn.worker.memory.checkInterval</td>
+</tr>
+<tr>
+<td>celeborn.worker.monitor.memory.report.interval</td>
+<td>10s</td>
+<td>Interval of worker direct memory tracker reporting to log.</td>
+<td>0.3.0</td>
+<td>celeborn.worker.memory.reportInterval</td>
+</tr>
+<tr>
+<td>celeborn.worker.monitor.memory.trimChannelWaitInterval</td>
+<td>1s</td>
+<td>Wait time after worker trigger channel to trim cache.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.monitor.memory.trimFlushWaitInterval</td>
+<td>1s</td>
+<td>Wait time after worker trigger StorageManger to flush data.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.partition.initial.readBuffersMax</td>
+<td>1024</td>
+<td>Max number of initial read buffers</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.partition.initial.readBuffersMin</td>
+<td>1</td>
+<td>Min number of initial read buffers</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.partitionSorter.directMemoryRatioThreshold</td>
+<td>0.1</td>
+<td>Max ratio of partition sorter's memory for sorting, when reserved memory is higher than max partition sorter memory, partition sorter will stop sorting.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.push.heartbeat.enabled</td>
+<td>false</td>
+<td>enable the heartbeat from worker to client when pushing data</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.push.io.threads</td>
+<td>&lt;undefined&gt;</td>
+<td>Netty IO thread number of worker to handle client push data. The default threads number is the number of flush thread.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.push.port</td>
+<td>0</td>
+<td>Server port for Worker to receive push data request from ShuffleClient.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.readBuffer.allocationWait</td>
+<td>50ms</td>
+<td>The time to wait when buffer dispatcher can not allocate a buffer.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.readBuffer.target.changeThreshold</td>
+<td>1mb</td>
+<td>The target ratio for pre read memory usage.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.readBuffer.target.ratio</td>
+<td>0.9</td>
+<td>The target ratio for read ahead buffer's memory usage.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.readBuffer.target.updateInterval</td>
+<td>100ms</td>
+<td>The interval for memory manager to calculate new read buffer's target memory.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.readBuffer.toTriggerReadMin</td>
+<td>32</td>
+<td>Min buffers count for map data partition to trigger read.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.register.timeout</td>
+<td>180s</td>
+<td>Worker register timeout.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.replicate.fastFail.duration</td>
+<td>60s</td>
+<td>If a replicate request not replied during the duration, worker will mark the replicate data request as failed.It's recommended to set at least <code>240s</code> when <code>HDFS</code> is enabled in <code>celeborn.storage.activeTypes</code>.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.replicate.io.threads</td>
+<td>&lt;undefined&gt;</td>
+<td>Netty IO thread number of worker to replicate shuffle data. The default threads number is the number of flush thread.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.replicate.port</td>
+<td>0</td>
+<td>Server port for Worker to receive replicate data request from other Workers.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.replicate.randomConnection.enabled</td>
+<td>true</td>
+<td>Whether worker will create random connection to peer when replicate data. When false, worker tend to reuse the same cached TransportClient to a specific replicate worker; when true, worker tend to use different cached TransportClient. Netty will use the same thread to serve the same connection, so with more connections replicate server can leverage more netty threads</td>
+<td>0.2.1</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.replicate.threads</td>
+<td>64</td>
+<td>Thread number of worker to replicate shuffle data.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.rpc.port</td>
+<td>0</td>
+<td>Server port for Worker to receive RPC request.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.shuffle.partitionSplit.enabled</td>
+<td>true</td>
+<td>enable the partition split on worker side</td>
+<td>0.3.0</td>
+<td>celeborn.worker.partition.split.enabled</td>
+</tr>
+<tr>
+<td>celeborn.worker.shuffle.partitionSplit.max</td>
+<td>2g</td>
+<td>Specify the maximum partition size for splitting, and ensure that individual partition files are always smaller than this limit.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.shuffle.partitionSplit.min</td>
+<td>1m</td>
+<td>Min size for a partition to split</td>
+<td>0.3.0</td>
+<td>celeborn.shuffle.partitionSplit.min</td>
+</tr>
+<tr>
+<td>celeborn.worker.sortPartition.indexCache.expire</td>
+<td>180s</td>
+<td>PartitionSorter's cache item expire time.</td>
+<td>0.4.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.sortPartition.indexCache.maxWeight</td>
+<td>100000</td>
+<td>PartitionSorter's cache max weight for index buffer.</td>
+<td>0.4.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.sortPartition.reservedMemoryPerPartition</td>
+<td>1mb</td>
+<td>Reserved memory when sorting a shuffle file off-heap.</td>
+<td>0.3.0</td>
+<td>celeborn.worker.partitionSorter.reservedMemoryPerPartition</td>
+</tr>
+<tr>
+<td>celeborn.worker.sortPartition.threads</td>
+<td>&lt;undefined&gt;</td>
+<td>PartitionSorter's thread counts. It's recommended to set at least <code>64</code> when <code>HDFS</code> is enabled in <code>celeborn.storage.activeTypes</code>.</td>
+<td>0.3.0</td>
+<td>celeborn.worker.partitionSorter.threads</td>
+</tr>
+<tr>
+<td>celeborn.worker.sortPartition.timeout</td>
+<td>220s</td>
+<td>Timeout for a shuffle file to sort.</td>
+<td>0.3.0</td>
+<td>celeborn.worker.partitionSorter.sort.timeout</td>
+</tr>
+<tr>
+<td>celeborn.worker.storage.checkDirsEmpty.maxRetries</td>
+<td>3</td>
+<td>The number of retries for a worker to check if the working directory is cleaned up before registering with the master.</td>
+<td>0.3.0</td>
+<td>celeborn.worker.disk.checkFileClean.maxRetries</td>
+</tr>
+<tr>
+<td>celeborn.worker.storage.checkDirsEmpty.timeout</td>
+<td>1000ms</td>
+<td>The wait time per retry for a worker to check if the working directory is cleaned up before registering with the master.</td>
+<td>0.3.0</td>
+<td>celeborn.worker.disk.checkFileClean.timeout</td>
+</tr>
+<tr>
+<td>celeborn.worker.storage.dirs</td>
+<td>&lt;undefined&gt;</td>
+<td>Directory list to store shuffle data. It's recommended to configure one directory on each disk. Storage size limit can be set for each directory. For the sake of performance, there should be no more than 2 flush threads on the same disk partition if you are using HDD, and should be 8 or more flush threads on the same disk partition if you are using SSD. For example: <code>dir1[:capacity=][:disktype=][:flushthread=],dir2[:capacity=][:disktype=][:flushthread=]</code></td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.storage.disk.reserve.ratio</td>
+<td>&lt;undefined&gt;</td>
+<td>Celeborn worker reserved ratio for each disk. The minimum usable size for each disk is the max space between the reserved space and the space calculate via reserved ratio.</td>
+<td>0.3.2</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.storage.disk.reserve.size</td>
+<td>5G</td>
+<td>Celeborn worker reserved space for each disk.</td>
+<td>0.3.0</td>
+<td>celeborn.worker.disk.reserve.size</td>
+</tr>
+<tr>
+<td>celeborn.worker.storage.expireDirs.timeout</td>
+<td>1h</td>
+<td>The timeout for a expire dirs to be deleted on disk.</td>
+<td>0.3.2</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.storage.workingDir</td>
+<td>celeborn-worker/shuffle_data</td>
+<td>Worker's working dir path name.</td>
+<td>0.3.0</td>
+<td>celeborn.worker.workingDir</td>
+</tr>
+<tr>
+<td>celeborn.worker.writer.close.timeout</td>
+<td>120s</td>
+<td>Timeout for a file writer to close</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.worker.writer.create.maxAttempts</td>
+<td>3</td>
+<td>Retry count for a file writer to create if its creation was failed.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<!-- END INCLUDE -->
+
+<h3 id="client">Client</h3>
+<!-- BEGIN INCLUDE ./client.md '&lt;!--begin-include--&gt;' '&lt;!--end-include--&gt;' -->
+
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default</th>
+<th>Description</th>
+<th>Since</th>
+<th>Deprecated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>celeborn.client.application.heartbeatInterval</td>
+<td>10s</td>
+<td>Interval for client to send heartbeat message to master.</td>
+<td>0.3.0</td>
+<td>celeborn.application.heartbeatInterval</td>
+</tr>
+<tr>
+<td>celeborn.client.application.unregister.enabled</td>
+<td>true</td>
+<td>When true, Celeborn client will inform celeborn master the application is already shutdown during client exit, this allows the cluster to release resources immediately, resulting in resource savings.</td>
+<td>0.3.2</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.closeIdleConnections</td>
+<td>true</td>
+<td>Whether client will close idle connections.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.commitFiles.ignoreExcludedWorker</td>
+<td>false</td>
+<td>When true, LifecycleManager will skip workers which are in the excluded list.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.eagerlyCreateInputStream.threads</td>
+<td>32</td>
+<td>Threads count for streamCreatorPool in CelebornShuffleReader.</td>
+<td>0.3.1</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.excludePeerWorkerOnFailure.enabled</td>
+<td>true</td>
+<td>When true, Celeborn will exclude partition's peer worker on failure when push data to replica failed.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.excludedWorker.expireTimeout</td>
+<td>180s</td>
+<td>Timeout time for LifecycleManager to clear reserved excluded worker. Default to be 1.5 * <code>celeborn.master.heartbeat.worker.timeout</code>to cover worker heartbeat timeout check period</td>
+<td>0.3.0</td>
+<td>celeborn.worker.excluded.expireTimeout</td>
+</tr>
+<tr>
+<td>celeborn.client.fetch.buffer.size</td>
+<td>64k</td>
+<td>Size of reducer partition buffer memory for shuffle reader. The fetched data will be buffered in memory before consuming. For performance consideration keep this buffer size not less than <code>celeborn.client.push.buffer.max.size</code>.</td>
+<td>0.4.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.fetch.dfsReadChunkSize</td>
+<td>8m</td>
+<td>Max chunk size for DfsPartitionReader.</td>
+<td>0.3.1</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.fetch.excludeWorkerOnFailure.enabled</td>
+<td>false</td>
+<td>Whether to enable shuffle client-side fetch exclude workers on failure.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.fetch.excludedWorker.expireTimeout</td>
+<td>&lt;value of celeborn.client.excludedWorker.expireTimeout&gt;</td>
+<td>ShuffleClient is a static object, it will be used in the whole lifecycle of Executor,We give a expire time for excluded workers to avoid a transient worker issues.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.fetch.maxReqsInFlight</td>
+<td>3</td>
+<td>Amount of in-flight chunk fetch request.</td>
+<td>0.3.0</td>
+<td>celeborn.fetch.maxReqsInFlight</td>
+</tr>
+<tr>
+<td>celeborn.client.fetch.maxRetriesForEachReplica</td>
+<td>3</td>
+<td>Max retry times of fetch chunk on each replica</td>
+<td>0.3.0</td>
+<td>celeborn.fetch.maxRetriesForEachReplica,celeborn.fetch.maxRetries</td>
+</tr>
+<tr>
+<td>celeborn.client.fetch.timeout</td>
+<td>600s</td>
+<td>Timeout for a task to open stream and fetch chunk.</td>
+<td>0.3.0</td>
+<td>celeborn.fetch.timeout</td>
+</tr>
+<tr>
+<td>celeborn.client.flink.compression.enabled</td>
+<td>true</td>
+<td>Whether to compress data in Flink plugin.</td>
+<td>0.3.0</td>
+<td>remote-shuffle.job.enable-data-compression</td>
+</tr>
+<tr>
+<td>celeborn.client.flink.inputGate.concurrentReadings</td>
+<td>2147483647</td>
+<td>Max concurrent reading channels for a input gate.</td>
+<td>0.3.0</td>
+<td>remote-shuffle.job.concurrent-readings-per-gate</td>
+</tr>
+<tr>
+<td>celeborn.client.flink.inputGate.memory</td>
+<td>32m</td>
+<td>Memory reserved for a input gate.</td>
+<td>0.3.0</td>
+<td>remote-shuffle.job.memory-per-gate</td>
+</tr>
+<tr>
+<td>celeborn.client.flink.inputGate.minMemory</td>
+<td>8m</td>
+<td>Min memory reserved for a input gate.</td>
+<td>0.3.0</td>
+<td>remote-shuffle.job.min.memory-per-gate</td>
+</tr>
+<tr>
+<td>celeborn.client.flink.inputGate.supportFloatingBuffer</td>
+<td>true</td>
+<td>Whether to support floating buffer in Flink input gates.</td>
+<td>0.3.0</td>
+<td>remote-shuffle.job.support-floating-buffer-per-input-gate</td>
+</tr>
+<tr>
+<td>celeborn.client.flink.resultPartition.memory</td>
+<td>64m</td>
+<td>Memory reserved for a result partition.</td>
+<td>0.3.0</td>
+<td>remote-shuffle.job.memory-per-partition</td>
+</tr>
+<tr>
+<td>celeborn.client.flink.resultPartition.minMemory</td>
+<td>8m</td>
+<td>Min memory reserved for a result partition.</td>
+<td>0.3.0</td>
+<td>remote-shuffle.job.min.memory-per-partition</td>
+</tr>
+<tr>
+<td>celeborn.client.flink.resultPartition.supportFloatingBuffer</td>
+<td>true</td>
+<td>Whether to support floating buffer for result partitions.</td>
+<td>0.3.0</td>
+<td>remote-shuffle.job.support-floating-buffer-per-output-gate</td>
+</tr>
+<tr>
+<td>celeborn.client.mr.pushData.max</td>
+<td>32m</td>
+<td>Max size for a push data sent from mr client.</td>
+<td>0.4.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.push.buffer.initial.size</td>
+<td>8k</td>
+<td></td>
+<td>0.3.0</td>
+<td>celeborn.push.buffer.initial.size</td>
+</tr>
+<tr>
+<td>celeborn.client.push.buffer.max.size</td>
+<td>64k</td>
+<td>Max size of reducer partition buffer memory for shuffle hash writer. The pushed data will be buffered in memory before sending to Celeborn worker. For performance consideration keep this buffer size higher than 32K. Example: If reducer amount is 2000, buffer size is 64K, then each task will consume up to <code>64KiB * 2000 = 125MiB</code> heap memory.</td>
+<td>0.3.0</td>
+<td>celeborn.push.buffer.max.size</td>
+</tr>
+<tr>
+<td>celeborn.client.push.excludeWorkerOnFailure.enabled</td>
+<td>false</td>
+<td>Whether to enable shuffle client-side push exclude workers on failures.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.push.limit.inFlight.sleepInterval</td>
+<td>50ms</td>
+<td>Sleep interval when check netty in-flight requests to be done.</td>
+<td>0.3.0</td>
+<td>celeborn.push.limit.inFlight.sleepInterval</td>
+</tr>
+<tr>
+<td>celeborn.client.push.limit.inFlight.timeout</td>
+<td>&lt;undefined&gt;</td>
+<td>Timeout for netty in-flight requests to be done.Default value should be <code>celeborn.client.push.timeout * 2</code>.</td>
+<td>0.3.0</td>
+<td>celeborn.push.limit.inFlight.timeout</td>
+</tr>
+<tr>
+<td>celeborn.client.push.limit.strategy</td>
+<td>SIMPLE</td>
+<td>The strategy used to control the push speed. Valid strategies are SIMPLE and SLOWSTART. The SLOWSTART strategy usually works with congestion control mechanism on the worker side.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.push.maxReqsInFlight.perWorker</td>
+<td>32</td>
+<td>Amount of Netty in-flight requests per worker. Default max memory of in flight requests  per worker is <code>celeborn.client.push.maxReqsInFlight.perWorker</code> * <code>celeborn.client.push.buffer.max.size</code> * compression ratio(1 in worst case): 64KiB * 32 = 2MiB. The maximum memory will not exceed <code>celeborn.client.push.maxReqsInFlight.total</code>.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.push.maxReqsInFlight.total</td>
+<td>256</td>
+<td>Amount of total Netty in-flight requests. The maximum memory is <code>celeborn.client.push.maxReqsInFlight.total</code> * <code>celeborn.client.push.buffer.max.size</code> * compression ratio(1 in worst case): 64KiB * 256 = 16MiB</td>
+<td>0.3.0</td>
+<td>celeborn.push.maxReqsInFlight</td>
+</tr>
+<tr>
+<td>celeborn.client.push.queue.capacity</td>
+<td>512</td>
+<td>Push buffer queue size for a task. The maximum memory is <code>celeborn.client.push.buffer.max.size</code> * <code>celeborn.client.push.queue.capacity</code>, default: 64KiB * 512 = 32MiB</td>
+<td>0.3.0</td>
+<td>celeborn.push.queue.capacity</td>
+</tr>
+<tr>
+<td>celeborn.client.push.replicate.enabled</td>
+<td>false</td>
+<td>When true, Celeborn worker will replicate shuffle data to another Celeborn worker asynchronously to ensure the pushed shuffle data won't be lost after the node failure. It's recommended to set <code>false</code> when <code>HDFS</code> is enabled in <code>celeborn.storage.activeTypes</code>.</td>
+<td>0.3.0</td>
+<td>celeborn.push.replicate.enabled</td>
+</tr>
+<tr>
+<td>celeborn.client.push.retry.threads</td>
+<td>8</td>
+<td>Thread number to process shuffle re-send push data requests.</td>
+<td>0.3.0</td>
+<td>celeborn.push.retry.threads</td>
+</tr>
+<tr>
+<td>celeborn.client.push.revive.batchSize</td>
+<td>2048</td>
+<td>Max number of partitions in one Revive request.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.push.revive.interval</td>
+<td>100ms</td>
+<td>Interval for client to trigger Revive to LifecycleManager. The number of partitions in one Revive request is <code>celeborn.client.push.revive.batchSize</code>.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.push.revive.maxRetries</td>
+<td>5</td>
+<td>Max retry times for reviving when celeborn push data failed.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.push.sendBufferPool.checkExpireInterval</td>
+<td>30s</td>
+<td>Interval to check expire for send buffer pool. If the pool has been idle for more than <code>celeborn.client.push.sendBufferPool.expireTimeout</code>, the pooled send buffers and push tasks will be cleaned up.</td>
+<td>0.3.1</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.push.sendBufferPool.expireTimeout</td>
+<td>60s</td>
+<td>Timeout before clean up SendBufferPool. If SendBufferPool is idle for more than this time, the send buffers and push tasks will be cleaned up.</td>
+<td>0.3.1</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.push.slowStart.initialSleepTime</td>
+<td>500ms</td>
+<td>The initial sleep time if the current max in flight requests is 0</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.push.slowStart.maxSleepTime</td>
+<td>2s</td>
+<td>If celeborn.client.push.limit.strategy is set to SLOWSTART, push side will take a sleep strategy for each batch of requests, this controls the max sleep time if the max in flight requests limit is 1 for a long time</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.push.sort.randomizePartitionId.enabled</td>
+<td>false</td>
+<td>Whether to randomize partitionId in push sorter. If true, partitionId will be randomized when sort data to avoid skew when push to worker</td>
+<td>0.3.0</td>
+<td>celeborn.push.sort.randomizePartitionId.enabled</td>
+</tr>
+<tr>
+<td>celeborn.client.push.splitPartition.threads</td>
+<td>8</td>
+<td>Thread number to process shuffle split request in shuffle client.</td>
+<td>0.3.0</td>
+<td>celeborn.push.splitPartition.threads</td>
+</tr>
+<tr>
+<td>celeborn.client.push.stageEnd.timeout</td>
+<td>&lt;value of celeborn.&lt;module&gt;.io.connectionTimeout&gt;</td>
+<td>Timeout for waiting StageEnd. During this process, there are <code>celeborn.client.requestCommitFiles.maxRetries</code> times for retry opportunities for committing files and 1 times for releasing slots request. User can customize this value according to your setting. By default, the value is the max timeout value <code>celeborn.&lt;module&gt;.io.connectionTimeout</code>.</td>
+<td>0.3.0</td>
+<td>celeborn.push.stageEnd.timeout</td>
+</tr>
+<tr>
+<td>celeborn.client.push.takeTaskMaxWaitAttempts</td>
+<td>1</td>
+<td>Max wait times if no task available to push to worker.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.push.takeTaskWaitInterval</td>
+<td>50ms</td>
+<td>Wait interval if no task available to push to worker.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.push.timeout</td>
+<td>120s</td>
+<td>Timeout for a task to push data rpc message. This value should better be more than twice of <code>celeborn.&lt;module&gt;.push.timeoutCheck.interval</code></td>
+<td>0.3.0</td>
+<td>celeborn.push.data.timeout</td>
+</tr>
+<tr>
+<td>celeborn.client.readLocalShuffleFile.enabled</td>
+<td>false</td>
+<td>Enable read local shuffle file for clusters that co-deployed with yarn node manager.</td>
+<td>0.3.1</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.readLocalShuffleFile.threads</td>
+<td>4</td>
+<td>Threads count for read local shuffle file.</td>
+<td>0.3.1</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.registerShuffle.maxRetries</td>
+<td>3</td>
+<td>Max retry times for client to register shuffle.</td>
+<td>0.3.0</td>
+<td>celeborn.shuffle.register.maxRetries</td>
+</tr>
+<tr>
+<td>celeborn.client.registerShuffle.retryWait</td>
+<td>3s</td>
+<td>Wait time before next retry if register shuffle failed.</td>
+<td>0.3.0</td>
+<td>celeborn.shuffle.register.retryWait</td>
+</tr>
+<tr>
+<td>celeborn.client.requestCommitFiles.maxRetries</td>
+<td>4</td>
+<td>Max retry times for requestCommitFiles RPC.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.reserveSlots.maxRetries</td>
+<td>3</td>
+<td>Max retry times for client to reserve slots.</td>
+<td>0.3.0</td>
+<td>celeborn.slots.reserve.maxRetries</td>
+</tr>
+<tr>
+<td>celeborn.client.reserveSlots.rackaware.enabled</td>
+<td>false</td>
+<td>Whether need to place different replicates on different racks when allocating slots.</td>
+<td>0.3.1</td>
+<td>celeborn.client.reserveSlots.rackware.enabled</td>
+</tr>
+<tr>
+<td>celeborn.client.reserveSlots.retryWait</td>
+<td>3s</td>
+<td>Wait time before next retry if reserve slots failed.</td>
+<td>0.3.0</td>
+<td>celeborn.slots.reserve.retryWait</td>
+</tr>
+<tr>
+<td>celeborn.client.rpc.cache.concurrencyLevel</td>
+<td>32</td>
+<td>The number of write locks to update rpc cache.</td>
+<td>0.3.0</td>
+<td>celeborn.rpc.cache.concurrencyLevel</td>
+</tr>
+<tr>
+<td>celeborn.client.rpc.cache.expireTime</td>
+<td>15s</td>
+<td>The time before a cache item is removed.</td>
+<td>0.3.0</td>
+<td>celeborn.rpc.cache.expireTime</td>
+</tr>
+<tr>
+<td>celeborn.client.rpc.cache.size</td>
+<td>256</td>
+<td>The max cache items count for rpc cache.</td>
+<td>0.3.0</td>
+<td>celeborn.rpc.cache.size</td>
+</tr>
+<tr>
+<td>celeborn.client.rpc.getReducerFileGroup.askTimeout</td>
+<td>&lt;value of celeborn.&lt;module&gt;.io.connectionTimeout&gt;</td>
+<td>Timeout for ask operations during getting reducer file group information. During this process, there are <code>celeborn.client.requestCommitFiles.maxRetries</code> times for retry opportunities for committing files and 1 times for releasing slots request. User can customize this value according to your setting. By default, the value is the max timeout value <code>celeborn.&lt;module&gt;.io.connectionTimeout</code>.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.rpc.maxRetries</td>
+<td>3</td>
+<td>Max RPC retry times in LifecycleManager.</td>
+<td>0.3.2</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.rpc.registerShuffle.askTimeout</td>
+<td>&lt;value of celeborn.&lt;module&gt;.io.connectionTimeout&gt;</td>
+<td>Timeout for ask operations during register shuffle. During this process, there are two times for retry opportunities for requesting slots, one request for establishing a connection with Worker and <code>celeborn.client.reserveSlots.maxRetries</code> times for retry opportunities for reserving slots. User can customize this value according to your setting. By default, the value is the max timeout value <code>celeborn.&lt;module&gt;.io.connectionTimeout</code>.</td>
+<td>0.3.0</td>
+<td>celeborn.rpc.registerShuffle.askTimeout</td>
+</tr>
+<tr>
+<td>celeborn.client.rpc.requestPartition.askTimeout</td>
+<td>&lt;value of celeborn.&lt;module&gt;.io.connectionTimeout&gt;</td>
+<td>Timeout for ask operations during requesting change partition location, such as reviving or splitting partition. During this process, there are <code>celeborn.client.reserveSlots.maxRetries</code> times for retry opportunities for reserving slots. User can customize this value according to your setting. By default, the value is the max timeout value <code>celeborn.&lt;module&gt;.io.connectionTimeout</code>.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.rpc.reserveSlots.askTimeout</td>
+<td>&lt;value of celeborn.rpc.askTimeout&gt;</td>
+<td>Timeout for LifecycleManager request reserve slots.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.rpc.shared.threads</td>
+<td>16</td>
+<td>Number of shared rpc threads in LifecycleManager.</td>
+<td>0.3.2</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.shuffle.batchHandleChangePartition.interval</td>
+<td>100ms</td>
+<td>Interval for LifecycleManager to schedule handling change partition requests in batch.</td>
+<td>0.3.0</td>
+<td>celeborn.shuffle.batchHandleChangePartition.interval</td>
+</tr>
+<tr>
+<td>celeborn.client.shuffle.batchHandleChangePartition.threads</td>
+<td>8</td>
+<td>Threads number for LifecycleManager to handle change partition request in batch.</td>
+<td>0.3.0</td>
+<td>celeborn.shuffle.batchHandleChangePartition.threads</td>
+</tr>
+<tr>
+<td>celeborn.client.shuffle.batchHandleCommitPartition.interval</td>
+<td>5s</td>
+<td>Interval for LifecycleManager to schedule handling commit partition requests in batch.</td>
+<td>0.3.0</td>
+<td>celeborn.shuffle.batchHandleCommitPartition.interval</td>
+</tr>
+<tr>
+<td>celeborn.client.shuffle.batchHandleCommitPartition.threads</td>
+<td>8</td>
+<td>Threads number for LifecycleManager to handle commit partition request in batch.</td>
+<td>0.3.0</td>
+<td>celeborn.shuffle.batchHandleCommitPartition.threads</td>
+</tr>
+<tr>
+<td>celeborn.client.shuffle.batchHandleReleasePartition.interval</td>
+<td>5s</td>
+<td>Interval for LifecycleManager to schedule handling release partition requests in batch.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.shuffle.batchHandleReleasePartition.threads</td>
+<td>8</td>
+<td>Threads number for LifecycleManager to handle release partition request in batch.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.shuffle.compression.codec</td>
+<td>LZ4</td>
+<td>The codec used to compress shuffle data. By default, Celeborn provides three codecs: <code>lz4</code>, <code>zstd</code>, <code>none</code>.</td>
+<td>0.3.0</td>
+<td>celeborn.shuffle.compression.codec,remote-shuffle.job.compression.codec</td>
+</tr>
+<tr>
+<td>celeborn.client.shuffle.compression.zstd.level</td>
+<td>1</td>
+<td>Compression level for Zstd compression codec, its value should be an integer between -5 and 22. Increasing the compression level will result in better compression at the expense of more CPU and memory.</td>
+<td>0.3.0</td>
+<td>celeborn.shuffle.compression.zstd.level</td>
+</tr>
+<tr>
+<td>celeborn.client.shuffle.decompression.lz4.xxhash.instance</td>
+<td>&lt;undefined&gt;</td>
+<td>Decompression XXHash instance for Lz4. Available options: JNI, JAVASAFE, JAVAUNSAFE.</td>
+<td>0.3.2</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.shuffle.expired.checkInterval</td>
+<td>60s</td>
+<td>Interval for client to check expired shuffles.</td>
+<td>0.3.0</td>
+<td>celeborn.shuffle.expired.checkInterval</td>
+</tr>
+<tr>
+<td>celeborn.client.shuffle.manager.port</td>
+<td>0</td>
+<td>Port used by the LifecycleManager on the Driver.</td>
+<td>0.3.0</td>
+<td>celeborn.shuffle.manager.port</td>
+</tr>
+<tr>
+<td>celeborn.client.shuffle.mapPartition.split.enabled</td>
+<td>false</td>
+<td>whether to enable shuffle partition split. Currently, this only applies to MapPartition.</td>
+<td>0.3.1</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.shuffle.partition.type</td>
+<td>REDUCE</td>
+<td>Type of shuffle's partition.</td>
+<td>0.3.0</td>
+<td>celeborn.shuffle.partition.type</td>
+</tr>
+<tr>
+<td>celeborn.client.shuffle.partitionSplit.mode</td>
+<td>SOFT</td>
+<td>soft: the shuffle file size might be larger than split threshold. hard: the shuffle file size will be limited to split threshold.</td>
+<td>0.3.0</td>
+<td>celeborn.shuffle.partitionSplit.mode</td>
+</tr>
+<tr>
+<td>celeborn.client.shuffle.partitionSplit.threshold</td>
+<td>1G</td>
+<td>Shuffle file size threshold, if file size exceeds this, trigger split.</td>
+<td>0.3.0</td>
+<td>celeborn.shuffle.partitionSplit.threshold</td>
+</tr>
+<tr>
+<td>celeborn.client.shuffle.rangeReadFilter.enabled</td>
+<td>false</td>
+<td>If a spark application have skewed partition, this value can set to true to improve performance.</td>
+<td>0.2.0</td>
+<td>celeborn.shuffle.rangeReadFilter.enabled</td>
+</tr>
+<tr>
+<td>celeborn.client.shuffle.register.filterExcludedWorker.enabled</td>
+<td>false</td>
+<td>Whether to filter excluded worker when register shuffle.</td>
+<td>0.4.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.slot.assign.maxWorkers</td>
+<td>10000</td>
+<td>Max workers that slots of one shuffle can be allocated on. Will choose the smaller positive one from Master side and Client side, see <code>celeborn.master.slot.assign.maxWorkers</code>.</td>
+<td>0.3.1</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.spark.fetch.throwsFetchFailure</td>
+<td>false</td>
+<td>client throws FetchFailedException instead of CelebornIOException</td>
+<td>0.4.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.spark.push.sort.memory.threshold</td>
+<td>64m</td>
+<td>When SortBasedPusher use memory over the threshold, will trigger push data.</td>
+<td>0.3.0</td>
+<td>celeborn.push.sortMemory.threshold</td>
+</tr>
+<tr>
+<td>celeborn.client.spark.push.unsafeRow.fastWrite.enabled</td>
+<td>true</td>
+<td>This is Celeborn's optimization on UnsafeRow for Spark and it's true by default. If you have changed UnsafeRow's memory layout set this to false.</td>
+<td>0.2.2</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.client.spark.shuffle.forceFallback.enabled</td>
+<td>false</td>
+<td>Whether force fallback shuffle to Spark's default.</td>
+<td>0.3.0</td>
+<td>celeborn.shuffle.forceFallback.enabled</td>
+</tr>
+<tr>
+<td>celeborn.client.spark.shuffle.forceFallback.numPartitionsThreshold</td>
+<td>2147483647</td>
+<td>Celeborn will only accept shuffle of partition number lower than this configuration value.</td>
+<td>0.3.0</td>
+<td>celeborn.shuffle.forceFallback.numPartitionsThreshold</td>
+</tr>
+<tr>
+<td>celeborn.client.spark.shuffle.writer</td>
+<td>HASH</td>
+<td>Celeborn supports the following kind of shuffle writers. 1. hash: hash-based shuffle writer works fine when shuffle partition count is normal; 2. sort: sort-based shuffle writer works fine when memory pressure is high or shuffle partition count is huge.</td>
+<td>0.3.0</td>
+<td>celeborn.shuffle.writer</td>
+</tr>
+<tr>
+<td>celeborn.master.endpoints</td>
+<td>&lt;localhost&gt;:9097</td>
+<td>Endpoints of master nodes for celeborn client to connect, allowed pattern is: <code>&lt;host1&gt;:&lt;port1&gt;[,&lt;host2&gt;:&lt;port2&gt;]*</code>, e.g. <code>clb1:9097,clb2:9098,clb3:9099</code>. If the port is omitted, 9097 will be used.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.storage.availableTypes</td>
+<td>HDD</td>
+<td>Enabled storages. Available options: MEMORY,HDD,SSD,HDFS. Note: HDD and SSD would be treated as identical.</td>
+<td>0.3.0</td>
+<td>celeborn.storage.activeTypes</td>
+</tr>
+<tr>
+<td>celeborn.storage.hdfs.dir</td>
+<td>&lt;undefined&gt;</td>
+<td>HDFS base directory for Celeborn to store shuffle data.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<!-- END INCLUDE -->
+
+<h3 id="quota">Quota</h3>
+<!-- BEGIN INCLUDE ./quota.md '&lt;!--begin-include--&gt;' '&lt;!--end-include--&gt;' -->
+
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default</th>
+<th>Description</th>
+<th>Since</th>
+<th>Deprecated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>celeborn.quota.configuration.path</td>
+<td>&lt;undefined&gt;</td>
+<td>Quota configuration file path. The file format should be yaml. Quota configuration file template can be found under conf directory.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.quota.enabled</td>
+<td>true</td>
+<td>When true, before registering shuffle, LifecycleManager should check if current user have enough quota space, if cluster don't have enough quota space for current user, fallback to Spark's default shuffle</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.quota.identity.provider</td>
+<td>org.apache.celeborn.common.identity.DefaultIdentityProvider</td>
+<td>IdentityProvider class name. Default class is <code>org.apache.celeborn.common.identity.DefaultIdentityProvider</code>. Optional values: org.apache.celeborn.common.identity.HadoopBasedIdentityProvider user name will be obtained by UserGroupInformation.getUserName; org.apache.celeborn.common.identity.DefaultIdentityProvider user name and tenant id are default values or user-specific values.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.quota.identity.user-specific.tenant</td>
+<td>default</td>
+<td>Tenant id if celeborn.quota.identity.provider is org.apache.celeborn.common.identity.DefaultIdentityProvider.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.quota.identity.user-specific.userName</td>
+<td>default</td>
+<td>User name if celeborn.quota.identity.provider is org.apache.celeborn.common.identity.DefaultIdentityProvider.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.quota.manager</td>
+<td>org.apache.celeborn.common.quota.DefaultQuotaManager</td>
+<td>QuotaManger class name. Default class is <code>org.apache.celeborn.common.quota.DefaultQuotaManager</code>.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<!-- END INCLUDE -->
+
+<h3 id="network">Network</h3>
+<!-- BEGIN INCLUDE ./network.md '&lt;!--begin-include--&gt;' '&lt;!--end-include--&gt;' -->
+
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default</th>
+<th>Description</th>
+<th>Since</th>
+<th>Deprecated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>celeborn.&lt;module&gt;.fetch.timeoutCheck.interval</td>
+<td>5s</td>
+<td>Interval for checking fetch data timeout. It only support setting <module> to <code>data</code> since it works for shuffle client fetch data.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.&lt;module&gt;.fetch.timeoutCheck.threads</td>
+<td>4</td>
+<td>Threads num for checking fetch data timeout. It only support setting <module> to <code>data</code> since it works for shuffle client fetch data.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.&lt;module&gt;.heartbeat.interval</td>
+<td>60s</td>
+<td>The heartbeat interval between worker and client. If setting <module> to <code>rpc</code>, it works for shuffle client. If setting <module> to <code>data</code>, it works for shuffle client push and fetch data. If setting <module> to <code>replicate</code>, it works for replicate client of worker replicating data to peer worker.If you are using the "celeborn.client.heartbeat.interval", please use the new configs for each module according to your needs or replace it with "celeborn.rpc.heartbeat.interval", "celeborn.data.heartbeat.interval" and"celeborn.replicate.heartbeat.interval".</td>
+<td>0.3.0</td>
+<td>celeborn.client.heartbeat.interval</td>
+</tr>
+<tr>
+<td>celeborn.&lt;module&gt;.io.backLog</td>
+<td>0</td>
+<td>Requested maximum length of the queue of incoming connections. Default 0 for no backlog. If setting <module> to <code>rpc</code>, it works for master or worker. If setting <module> to <code>push</code>, it works for worker receiving push data. If setting <module> to <code>replicate</code>, it works for replicate server of worker replicating data to peer worker. If setting <module> to <code>fetch</code>, it works for worker fetch server.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.&lt;module&gt;.io.clientThreads</td>
+<td>0</td>
+<td>Number of threads used in the client thread pool. Default to 0, which is 2x#cores. If setting <module> to <code>rpc</code>, it works for shuffle client. If setting <module> to <code>data</code>, it works for shuffle client push and fetch data. If setting <module> to <code>replicate</code>, it works for replicate client of worker replicating data to peer worker.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.&lt;module&gt;.io.connectTimeout</td>
+<td>&lt;value of celeborn.network.connect.timeout&gt;</td>
+<td>Socket connect timeout. If setting <module> to <code>rpc</code>, it works for shuffle client. If setting <module> to <code>data</code>, it works for shuffle client push and fetch data. If setting <module> to <code>replicate</code>, it works for the replicate client of worker replicating data to peer worker.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.&lt;module&gt;.io.connectionTimeout</td>
+<td>&lt;value of celeborn.network.timeout&gt;</td>
+<td>Connection active timeout. If setting <module> to <code>rpc</code>, it works for shuffle client, master or worker. If setting <module> to <code>data</code>, it works for shuffle client push and fetch data. If setting <module> to <code>push</code>, it works for worker receiving push data. If setting <module> to <code>replicate</code>, it works for replicate server or client of worker replicating data to peer worker. If setting <module> to <code>fetch</code>, it works for worker fetch server.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.&lt;module&gt;.io.enableVerboseMetrics</td>
+<td>false</td>
+<td>Whether to track Netty memory detailed metrics. If true, the detailed metrics of Netty PoolByteBufAllocator will be gotten, otherwise only general memory usage will be tracked.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.&lt;module&gt;.io.lazyFD</td>
+<td>true</td>
+<td>Whether to initialize FileDescriptor lazily or not. If true, file descriptors are created only when data is going to be transferred. This can reduce the number of open files. If setting <module> to <code>fetch</code>, it works for worker fetch server.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.&lt;module&gt;.io.maxRetries</td>
+<td>3</td>
+<td>Max number of times we will try IO exceptions (such as connection timeouts) per request. If set to 0, we will not do any retries. If setting <module> to <code>push</code>, it works for Flink shuffle client push data.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.&lt;module&gt;.io.mode</td>
+<td>NIO</td>
+<td>Netty EventLoopGroup backend, available options: NIO, EPOLL.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.&lt;module&gt;.io.numConnectionsPerPeer</td>
+<td>1</td>
+<td>Number of concurrent connections between two nodes. If setting <module> to <code>rpc</code>, it works for shuffle client. If setting <module> to <code>data</code>, it works for shuffle client push and fetch data. If setting <module> to <code>replicate</code>, it works for replicate client of worker replicating data to peer worker.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.&lt;module&gt;.io.preferDirectBufs</td>
+<td>true</td>
+<td>If true, we will prefer allocating off-heap byte buffers within Netty. If setting <module> to <code>rpc</code>, it works for shuffle client, master or worker. If setting <module> to <code>data</code>, it works for shuffle client push and fetch data. If setting <module> to <code>push</code>, it works for worker receiving push data. If setting <module> to <code>replicate</code>, it works for replicate server or client of worker replicating data to peer worker. If setting <module> to <code>fetch</code>, it works for worker fetch server.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.&lt;module&gt;.io.receiveBuffer</td>
+<td>0b</td>
+<td>Receive buffer size (SO_RCVBUF). Note: the optimal size for receive buffer and send buffer should be latency * network_bandwidth. Assuming latency = 1ms, network_bandwidth = 10Gbps buffer size should be ~ 1.25MB. If setting <module> to <code>rpc</code>, it works for shuffle client, master or worker. If setting <module> to <code>data</code>, it works for shuffle client push and fetch data. If setting <module> to <code>push</code>, it works for worker receiving push data. If setting <module> to <code>replicate</code>, it works for replicate server or client of worker replicating data to peer worker. If setting <module> to <code>fetch</code>, it works for worker fetch server.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.&lt;module&gt;.io.retryWait</td>
+<td>5s</td>
+<td>Time that we will wait in order to perform a retry after an IOException. Only relevant if maxIORetries &gt; 0. If setting <module> to <code>data</code>, it works for shuffle client push and fetch data. If setting <module> to <code>push</code>, it works for Flink shuffle client push data.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.&lt;module&gt;.io.saslTimeout</td>
+<td>30s</td>
+<td>Timeout for a single round trip of auth message exchange, in milliseconds.</td>
+<td>0.5.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.&lt;module&gt;.io.sendBuffer</td>
+<td>0b</td>
+<td>Send buffer size (SO_SNDBUF). If setting <module> to <code>rpc</code>, it works for shuffle client, master or worker. If setting <module> to <code>data</code>, it works for shuffle client push and fetch data. If setting <module> to <code>push</code>, it works for worker receiving push data. If setting <module> to <code>replicate</code>, it works for replicate server or client of worker replicating data to peer worker. If setting <module> to <code>fetch</code>, it works for worker fetch server.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.&lt;module&gt;.io.serverThreads</td>
+<td>0</td>
+<td>Number of threads used in the server thread pool. Default to 0, which is 2x#cores. If setting <module> to <code>rpc</code>, it works for master or worker. If setting <module> to <code>push</code>, it works for worker receiving push data. If setting <module> to <code>replicate</code>, it works for replicate server of worker replicating data to peer worker. If setting <module> to <code>fetch</code>, it works for worker fetch server.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.&lt;module&gt;.push.timeoutCheck.interval</td>
+<td>5s</td>
+<td>Interval for checking push data timeout. If setting <module> to <code>data</code>, it works for shuffle client push data. If setting <module> to <code>push</code>, it works for Flink shuffle client push data. If setting <module> to <code>replicate</code>, it works for replicate client of worker replicating data to peer worker.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.&lt;module&gt;.push.timeoutCheck.threads</td>
+<td>4</td>
+<td>Threads num for checking push data timeout. If setting <module> to <code>data</code>, it works for shuffle client push data. If setting <module> to <code>push</code>, it works for Flink shuffle client push data. If setting <module> to <code>replicate</code>, it works for replicate client of worker replicating data to peer worker.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.&lt;role&gt;.rpc.dispatcher.threads</td>
+<td>&lt;value of celeborn.rpc.dispatcher.threads&gt;</td>
+<td>Threads number of message dispatcher event loop for roles</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.io.maxDefaultNettyThreads</td>
+<td>64</td>
+<td>Max default netty threads</td>
+<td>0.3.2</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.network.bind.preferIpAddress</td>
+<td>true</td>
+<td>When <code>ture</code>, prefer to use IP address, otherwise FQDN. This configuration only takes effects when the bind hostname is not set explicitly, in such case, Celeborn will find the first non-loopback address to bind.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.network.connect.timeout</td>
+<td>10s</td>
+<td>Default socket connect timeout.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.network.memory.allocator.numArenas</td>
+<td>&lt;undefined&gt;</td>
+<td>Number of arenas for pooled memory allocator. Default value is Runtime.getRuntime.availableProcessors, min value is 2.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.network.memory.allocator.verbose.metric</td>
+<td>false</td>
+<td>Whether to enable verbose metric for pooled allocator.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.network.timeout</td>
+<td>240s</td>
+<td>Default timeout for network operations.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.port.maxRetries</td>
+<td>1</td>
+<td>When port is occupied, we will retry for max retry times.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.rpc.askTimeout</td>
+<td>60s</td>
+<td>Timeout for RPC ask operations. It's recommended to set at least <code>240s</code> when <code>HDFS</code> is enabled in <code>celeborn.storage.activeTypes</code></td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.rpc.connect.threads</td>
+<td>64</td>
+<td></td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.rpc.dispatcher.threads</td>
+<td>0</td>
+<td>Threads number of message dispatcher event loop. Default to 0, which is availableCore.</td>
+<td>0.3.0</td>
+<td>celeborn.rpc.dispatcher.numThreads</td>
+</tr>
+<tr>
+<td>celeborn.rpc.io.threads</td>
+<td>&lt;undefined&gt;</td>
+<td>Netty IO thread number of NettyRpcEnv to handle RPC request. The default threads number is the number of runtime available processors.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.rpc.lookupTimeout</td>
+<td>30s</td>
+<td>Timeout for RPC lookup operations.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.shuffle.io.maxChunksBeingTransferred</td>
+<td>&lt;undefined&gt;</td>
+<td>The max number of chunks allowed to be transferred at the same time on shuffle service. Note that new incoming connections will be closed when the max number is hit. The client will retry according to the shuffle retry configs (see <code>celeborn.&lt;module&gt;.io.maxRetries</code> and <code>celeborn.&lt;module&gt;.io.retryWait</code>), if those limits are reached the task will fail with fetch failure.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<!-- END INCLUDE -->
+
+<h3 id="columnar-shuffle">Columnar Shuffle</h3>
+<!-- BEGIN INCLUDE ./columnar-shuffle.md '&lt;!--begin-include--&gt;' '&lt;!--end-include--&gt;' -->
+
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default</th>
+<th>Description</th>
+<th>Since</th>
+<th>Deprecated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>celeborn.columnarShuffle.batch.size</td>
+<td>10000</td>
+<td>Vector batch size for columnar shuffle.</td>
+<td>0.3.0</td>
+<td>celeborn.columnar.shuffle.batch.size</td>
+</tr>
+<tr>
+<td>celeborn.columnarShuffle.codegen.enabled</td>
+<td>false</td>
+<td>Whether to use codegen for columnar-based shuffle.</td>
+<td>0.3.0</td>
+<td>celeborn.columnar.shuffle.codegen.enabled</td>
+</tr>
+<tr>
+<td>celeborn.columnarShuffle.enabled</td>
+<td>false</td>
+<td>Whether to enable columnar-based shuffle.</td>
+<td>0.2.0</td>
+<td>celeborn.columnar.shuffle.enabled</td>
+</tr>
+<tr>
+<td>celeborn.columnarShuffle.encoding.dictionary.enabled</td>
+<td>false</td>
+<td>Whether to use dictionary encoding for columnar-based shuffle data.</td>
+<td>0.3.0</td>
+<td>celeborn.columnar.shuffle.encoding.dictionary.enabled</td>
+</tr>
+<tr>
+<td>celeborn.columnarShuffle.encoding.dictionary.maxFactor</td>
+<td>0.3</td>
+<td>Max factor for dictionary size. The max dictionary size is <code>min(32.0 KiB, celeborn.columnarShuffle.batch.size * celeborn.columnar.shuffle.encoding.dictionary.maxFactor)</code>.</td>
+<td>0.3.0</td>
+<td>celeborn.columnar.shuffle.encoding.dictionary.maxFactor</td>
+</tr>
+<tr>
+<td>celeborn.columnarShuffle.offHeap.enabled</td>
+<td>false</td>
+<td>Whether to use off heap columnar vector.</td>
+<td>0.3.0</td>
+<td>celeborn.columnar.offHeap.enabled</td>
+</tr>
+</tbody>
+</table>
+<!-- END INCLUDE -->
+
+<h3 id="metrics">Metrics</h3>
+<p>Below metrics configuration both work for master and worker.</p>
+<!-- BEGIN INCLUDE ./metrics.md '&lt;!--begin-include--&gt;' '&lt;!--end-include--&gt;' -->
+
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default</th>
+<th>Description</th>
+<th>Since</th>
+<th>Deprecated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>celeborn.metrics.app.topDiskUsage.count</td>
+<td>50</td>
+<td>Size for top items about top disk usage applications list.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.metrics.app.topDiskUsage.interval</td>
+<td>10min</td>
+<td>Time length for a window about top disk usage application list.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.metrics.app.topDiskUsage.windowSize</td>
+<td>24</td>
+<td>Window size about top disk usage application list.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.metrics.capacity</td>
+<td>4096</td>
+<td>The maximum number of metrics which a source can use to generate output strings.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.metrics.collectPerfCritical.enabled</td>
+<td>false</td>
+<td>It controls whether to collect metrics which may affect performance. When enable, Celeborn collects them.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.metrics.conf</td>
+<td>&lt;undefined&gt;</td>
+<td>Custom metrics configuration file path. Default use <code>metrics.properties</code> in classpath.</td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.metrics.enabled</td>
+<td>true</td>
+<td>When true, enable metrics system.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.metrics.extraLabels</td>
+<td></td>
+<td>If default metric labels are not enough, extra metric labels can be customized. Labels' pattern is: <code>&lt;label1_key&gt;=&lt;label1_value&gt;[,&lt;label2_key&gt;=&lt;label2_value&gt;]*</code>; e.g. <code>env=prod,version=1</code></td>
+<td>0.3.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.metrics.json.path</td>
+<td>/metrics/json</td>
+<td>URI context path of json metrics HTTP server.</td>
+<td>0.4.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.metrics.json.pretty.enabled</td>
+<td>true</td>
+<td>When true, view metrics in json pretty format</td>
+<td>0.4.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.metrics.prometheus.path</td>
+<td>/metrics/prometheus</td>
+<td>URI context path of prometheus metrics HTTP server.</td>
+<td>0.4.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.metrics.sample.rate</td>
+<td>1.0</td>
+<td>It controls if Celeborn collect timer metrics for some operations. Its value should be in [0.0, 1.0].</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.metrics.timer.slidingWindow.size</td>
+<td>4096</td>
+<td>The sliding window size of timer metric.</td>
+<td>0.2.0</td>
+<td></td>
+</tr>
+<tr>
+<td>celeborn.metrics.worker.pauseSpentTime.forceAppend.threshold</td>
+<td>10</td>
+<td>Force append worker pause spent time even if worker still in pause serving state.Help user can find worker pause spent time increase, when worker always been pause state.</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<!-- END INCLUDE -->
+
+<h4 id="metricsproperties">metrics.properties</h4>
+<div class="highlight"><pre><span></span><code><span class="na">*.sink.csv.class</span><span class="o">=</span><span class="s">org.apache.celeborn.common.metrics.sink.CsvSink</span><span class="w"></span>
+<span class="na">*.sink.prometheusServlet.class</span><span class="o">=</span><span class="s">org.apache.celeborn.common.metrics.sink.PrometheusServlet</span><span class="w"></span>
+</code></pre></div>
+<h3 id="environment-variables_1">Environment Variables</h3>
+<p>Recommend configuring in <code>conf/celeborn-env.sh</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CELEBORN_HOME</code></td>
+<td><code>$(cd "`dirname "$0"`"/..; pwd)</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>CELEBORN_CONF_DIR</code></td>
+<td><code>${CELEBORN_CONF_DIR:-"${CELEBORN_HOME}/conf"}</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>CELEBORN_MASTER_MEMORY</code></td>
+<td>1 GB</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CELEBORN_WORKER_MEMORY</code></td>
+<td>1 GB</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CELEBORN_WORKER_OFFHEAP_MEMORY</code></td>
+<td>1 GB</td>
+<td></td>
+</tr>
+<tr>
+<td><code>CELEBORN_MASTER_JAVA_OPTS</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>CELEBORN_WORKER_JAVA_OPTS</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>CELEBORN_PID_DIR</code></td>
+<td><code>${CELEBORN_HOME}/pids</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>CELEBORN_LOG_DIR</code></td>
+<td><code>${CELEBORN_HOME}/logs</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>CELEBORN_SSH_OPTS</code></td>
+<td><code>-o StrictHostKeyChecking=no</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>CELEBORN_SLEEP</code></td>
+<td></td>
+<td>Waiting time for <code>start-all</code> and <code>stop-all</code> operations</td>
+</tr>
+<tr>
+<td><code>CELEBORN_PREFER_JEMALLOC</code></td>
+<td></td>
+<td>set <code>true</code> to enable jemalloc memory allocator</td>
+</tr>
+<tr>
+<td><code>CELEBORN_JEMALLOC_PATH</code></td>
+<td></td>
+<td>jemalloc library path</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tuning">Tuning</h2>
+<p>Assume we have a cluster described as below:
+5 Celeborn Workers with 20 GB off-heap memory and 10 disks.
+As we need to reserve 20% off-heap memory for netty,
+so we could assume 16 GB off-heap memory can be used for flush buffers.</p>
+<p>If <code>spark.celeborn.client.push.buffer.max.size</code> is 64 KB, we can have in-flight requests up to 1310720.
+If you have 8192 mapper tasks, you could set <code>spark.celeborn.client.push.maxReqsInFlight=160</code> to gain performance improvements.</p>
+<p>If <code>celeborn.worker.flusher.buffer.size</code> is 256 KB, we can have total slots up to 327680 slots.</p>
+<h2 id="rack-awareness">Rack Awareness</h2>
+<p>Celeborn can be rack-aware by setting <code>celeborn.client.reserveSlots.rackware.enabled</code> to <code>true</code> on client side.
+Shuffle partition block replica placement will use rack awareness for fault tolerance by placing one shuffle partition replica
+on a different rack. This provides data availability in the event of a network switch failure or partition within the cluster.</p>
+<p>Celeborn master daemons obtain the rack id of the cluster workers by invoking either an external script or Java class as specified by configuration files.
+Using either the Java class or external script for topology, output must adhere to the java <code>org.apache.hadoop.net.DNSToSwitchMapping</code> interface.
+The interface expects a one-to-one correspondence to be maintained and the topology information in the format of <code>/myrack/myhost</code>,
+where <code>/</code> is the topology delimiter, <code>myrack</code> is the rack identifier, and <code>myhost</code> is the individual host.
+Assuming a single <code>/24</code> subnet per rack, one could use the format of <code>/192.168.100.0/192.168.100.5</code> as a unique rack-host topology mapping.</p>
+<p>To use the Java class for topology mapping, the class name is specified by the <code>celeborn.hadoop.net.topology.node.switch.mapping.impl</code> parameter in the master configuration file.
+An example, <code>NetworkTopology.java</code>, is included with the Celeborn distribution and can be customized by the Celeborn administrator. 
+Using a Java class instead of an external script has a performance benefit in that Celeborn doesn't need to fork an external process when a new worker node registers itself.</p>
+<p>If implementing an external script, it will be specified with the <code>celeborn.hadoop.net.topology.script.file.name</code> parameter in the master side configuration files. 
+Unlike the Java class, the external topology script is not included with the Celeborn distribution and is provided by the administrator. 
+Celeborn will send multiple IP addresses to ARGV when forking the topology script. The number of IP addresses sent to the topology script 
+is controlled with <code>celeborn.hadoop.net.topology.script.number.args</code> and defaults to 100.
+If <code>celeborn.hadoop.net.topology.script.number.args</code> was changed to 1, a topology script would get forked for each IP submitted by workers.</p>
+<p>If <code>celeborn.hadoop.net.topology.script.file.name</code> or <code>celeborn.hadoop.net.topology.node.switch.mapping.impl</code> is not set, the rack id <code>/default-rack</code> is returned for any passed IP address.
+While this behavior appears desirable, it can cause issues with shuffle partition block replication as default behavior
+is to write one replicated block off rack and is unable to do so as there is only a single rack named <code>/default-rack</code>.</p>
+<p>Example can refer to <a href="https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/RackAwareness.html">Hadoop Rack Awareness</a> since Celeborn use hadoop's code about rack-aware.</p>
+<h2 id="worker-recover-status-after-restart">Worker Recover Status After Restart</h2>
+<p><code>ShuffleClient</code> records the shuffle partition location's host, service port, and filename,
+to support workers recovering reading existing shuffle data after worker restart,
+during worker shutdown, workers should store the meta about reading shuffle partition files in LevelDB,
+and restore the meta after restarting workers, also workers should keep a stable service port to support
+<code>ShuffleClient</code> retry reading data. Users should set <code>celeborn.worker.graceful.shutdown.enabled</code> to <code>true</code> and
+set below service port with stable port to support worker recover status.
+<div class="highlight"><pre><span></span><code>celeborn.worker.rpc.port
+celeborn.worker.fetch.port
+celeborn.worker.push.port
+celeborn.worker.replicate.port
+</code></pre></div></p>
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../cluster_planning/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Cluster Planning" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Cluster Planning
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../migration/" class="md-footer__link md-footer__link--next" aria-label="Next: Migration Guide" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Migration Guide
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <img src="https://www.apachecon.com/event-images/acna2022-wide-dark.png" style="height: 100px;" alt="ApacheCon North America"> <img src="https://incubator.apache.org/images/incubator_feather_egg_logo_bw_crop.png" style="height: 87px; margin: 0 0 10px 0;"> <br> Copyright © 2022 The Apache Software Foundation <a href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy Policy<a/><br> <br> Apache Celeborn™, Apache Incubator, Apache, the Apache feather logo, and the Apache Incubator project logo are trademarks or registered trademarks of The Apache Software Foundation.<br> <br> Apache Celeborn™ is an effort undergoing incubation at The Apache Software Foundation (ASF), sponsored by the Apache Incubator. Incubation is required of all newly accepted projects until a further review indicates that the infrastructure, communications, and decision making process have stabilized in a manner consistent with other successful ASF projects. While incubation status is not necessarily a reflection of the completeness or stability of the code, it does indicate that the project has yet to be fully endorsed by the ASF.<br> <br> Please visit <a href="https://www.apache.org/">Apache Software Foundation</a> for more details.<br> <br>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>
