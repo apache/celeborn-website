@@ -1,0 +1,1462 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../assets/logo/celeborn-2.svg">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Apache Celeborn™ 0.6.0 Release Notes - Apache Celeborn™</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#apache-celeborntm-060-release-notes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Apache Celeborn™" class="md-header__button md-logo" aria-label="Apache Celeborn™" data-md-component="logo">
+      
+  <img src="../../../assets/logo/celeborn-1.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Apache Celeborn™
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Apache Celeborn™ 0.6.0 Release Notes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://gitbox.apache.org/repos/asf/celeborn.git" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    apache/celeborn
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../download/" class="md-tabs__link">
+      Download
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="https://celeborn.apache.org/docs/latest/" class="md-tabs__link">
+      Documentation
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../user/" class="md-tabs__link">
+      Who's Using
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../maillist/" class="md-tabs__link">
+        Community
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../security/" class="md-tabs__link">
+      Security
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://www.apache.org/" target="_blank" class="md-tabs__link">
+        Apache Software Foundation
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Apache Celeborn™" class="md-nav__button md-logo" aria-label="Apache Celeborn™" data-md-component="logo">
+      
+  <img src="../../../assets/logo/celeborn-1.svg" alt="logo">
+
+    </a>
+    Apache Celeborn™
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://gitbox.apache.org/repos/asf/celeborn.git" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    apache/celeborn
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../download/" class="md-nav__link">
+        Download
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://celeborn.apache.org/docs/latest/" class="md-nav__link">
+        Documentation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../user/" class="md-nav__link">
+        Who's Using
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Community
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Community" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Community
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../maillist/" class="md-nav__link">
+        Join the Mailing Lists
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project_management_committee/" class="md-nav__link">
+        Project Management Committee
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../committer/" class="md-nav__link">
+        Become a Committer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pmc/" class="md-nav__link">
+        Become a PMC Member
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../news/" class="md-nav__link">
+        Latest News
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../release_guide/" class="md-nav__link">
+        Release Guide
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_7" type="checkbox" id="__nav_5_7" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_7">
+          Contributor Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Contributor Guide" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_7">
+          <span class="md-nav__icon md-icon"></span>
+          Contributor Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributor_guide/docs_and_website/" class="md-nav__link">
+        Docs and Website
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../security/" class="md-nav__link">
+        Security
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Apache Software Foundation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Apache Software Foundation" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Apache Software Foundation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.apache.org/" target="_blank" class="md-nav__link">
+        Foundation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.apache.org/licenses/" target="_blank" class="md-nav__link">
+        License
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.apache.org/events/current-event" target="_blank" class="md-nav__link">
+        Events
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.apache.org/foundation/sponsorship.html" target="_blank" class="md-nav__link">
+        Sponsorship
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.apache.org/foundation/thanks.html" target="_blank" class="md-nav__link">
+        Thanks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.apache.org/security/" target="_blank" class="md-nav__link">
+        Security
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://privacy.apache.org/policies/privacy-policy-public.html" target="_blank" class="md-nav__link">
+        Privacy
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#highlight" class="md-nav__link">
+    Highlight
+  </a>
+  
+    <nav class="md-nav" aria-label="Highlight">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#improvement" class="md-nav__link">
+    Improvement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flink-hybrid-shuffle" class="md-nav__link">
+    Flink hybrid shuffle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restful-api-and-cli" class="md-nav__link">
+    RESTful API and CLI
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring" class="md-nav__link">
+    Monitoring
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpp-client" class="md-nav__link">
+    CPP Client
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#helm-chart-optimization" class="md-nav__link">
+    HELM Chart Optimization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stability-and-bug-fix" class="md-nav__link">
+    Stability and Bug Fix
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build" class="md-nav__link">
+    Build
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    Documentation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    Dependencies
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    Credits
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="apache-celeborntm-060-release-notes">Apache Celeborn™ 0.6.0 Release Notes</h1>
+<h2 id="highlight">Highlight</h2>
+<ul>
+<li>Support Flink hybrid shuffle integration with Apache Celeborn</li>
+<li>Support Spark 4.0.0</li>
+<li>Support Flink 2.0</li>
+<li>Support HARD_SPLIT in PushMergedData</li>
+<li>Optimize skew partition logic for Reduce Mode to avoid sorting shuffle files</li>
+<li>Refine the celeborn RESTful APIs and introduce Celeborn CLI for automation</li>
+<li>Supporting worker Tags</li>
+<li>CongestionController supports control traffic by user/worker traffic speed</li>
+<li>Support read shuffle from S3</li>
+<li>Support CppClient in Celeborn</li>
+<li>HELM Chart Optimization</li>
+</ul>
+<h3 id="improvement">Improvement</h3>
+<ul>
+<li>[CELEBORN-2045] Add logger sinks to allow persist metrics data and avoid possible worker OOM</li>
+<li>[CELEBORN-2046] Specify extractionDir of AsyncProfilerLoader with celeborn.worker.jvmProfiler.localDir</li>
+<li>[CELEBORN-2027] Allow CelebornShuffleReader to decompress data on demand</li>
+<li>[CELEBORN-2003] Add retry mechanism when completing S3 multipart upload</li>
+<li>[CELEBORN-2018] Support min number of workers selected for shuffle</li>
+<li>[CELEBORN-2006] LifecycleManager should avoid parsing shufflePartitionType every time</li>
+<li>[CELEBORN-2007] Reduce PartitionLocation memory usage</li>
+<li>[CELEBORN-2008] SlotsAllocator should select disks randomly in RoundRobin mode</li>
+<li>[CELEBORN-1896] delete data from failed to fetch shuffles</li>
+<li>[CELEBORN-2004] Filter empty partition before createIntputStream</li>
+<li>[CELEBORN-2002][MASTER] Audit shuffle lifecycle in separate log file</li>
+<li>[CELEBORN-1993] CelebornConf introduces celeborn.<module>.io.threads to specify number of threads used in the client thread pool</li>
+<li>[CELEBORN-1995] Optimize memory usage for push failed batches</li>
+<li>[CELEBORN-1994] Introduce disruptor dependency to support asynchronous logging of log4j2</li>
+<li>[CELEBORN-1965] Rely on all default hadoop providers for S3 auth</li>
+<li>[CELEBORN-1982] Slot Selection Perf Improvements</li>
+<li>[CELEBORN-1961] Convert Resource.proto from Protocol Buffers version 2 to version 3</li>
+<li>[CELEBORN-1931] use gather API for local flusher to optimize write io pattern</li>
+<li>[CELEBORN-1916] Support Aliyun OSS Based on MPU Extension Interface</li>
+<li>[CELEBORN-1925] Support Flink 2.0</li>
+<li>[CELEBORN-1844][CIP-8] introduce tier writer proxy and simplify partition data writer</li>
+<li>[CELEBORN-1921] Broadcast large GetReducerFileGroupResponse to prevent Spark driver network exhausted</li>
+<li>[CELEBORN-1928][CIP-12] Support HARD_SPLIT in PushMergedData should support handle older worker success response</li>
+<li>[CELEBORN-1930][CIP-12] Support HARD_SPLIT in PushMergedData should handle congestion control NPE issue</li>
+<li>[CELEBORN-1577][PHASE2] QuotaManager should support interrupt shuffle</li>
+<li>[CELEBORN-1856] Support stage-rerun when read partition by chunkOffsets when enable optimize skew partition read</li>
+<li>[CELEBORN-1894] Allow skipping already read chunks during unreplicated shuffle read retried</li>
+<li>[CELEBORN-1909] Support pre-run static code blocks of TransportMessages to improve performance of protobuf serialization</li>
+<li>[CELEBORN-1911] Move multipart-uploader to multipart-uploader/multipart-uploader-s3 for extensibility</li>
+<li>[CELEBORN-1910] Remove redundant synchronized of isTerminated in ThreadUtils#sameThreadExecutorService</li>
+<li>[CELEBORN-1898] SparkOutOfMemoryError compatible with Spark 4.0 and 4.1</li>
+<li>[CELEBORN-1897] Avoid calling toString for too long messages</li>
+<li>[CELEBORN-1882] Support configuring the SSL handshake timeout for SSLHandler</li>
+<li>[CELEBORN-1883] Replace HashSet with ConcurrentHashMap.newKeySet for ShuffleFileGroups</li>
+<li>[CELEBORN-1858] Support DfsPartitionReader read partition by chunkOffsets when enable optimize skew partition read</li>
+<li>[CELEBORN-1879] Ignore invalid chunk range generated by splitSkewedPartitionLocations</li>
+<li>[CELEBORN-1857] Support LocalPartitionReader read partition by chunkOffsets when enable optimize skew partition read</li>
+<li>[CELEBORN-1876] Log remote address on RPC exception for TransportRequestHandler</li>
+<li>[CELEBORN-1865] Update master endpointRef when master leader is abnormal</li>
+<li>[CELEBORN-1319] Optimize skew partition logic for Reduce Mode to avoid sorting shuffle files</li>
+<li>[CELEBORN-1861] Support celeborn.worker.storage.baseDir.diskType option to specify disk type of base directory for worker</li>
+<li>[CELEBORN-1757] Add retry when sending RPC to LifecycleManager</li>
+<li>[CELEBORN-1859] DfsPartitionReader and LocalPartitionReader should reuse pbStreamHandlers get from BatchOpenStream request</li>
+<li>[CELEBORN-1843] Optimize roundrobin for more balanced disk slot allocation</li>
+<li>[CELEBORN-1854] Change receive revive request log level to debug</li>
+<li>[CELEBORN-1841] Support custom implementation of EventExecutorChooser to avoid deadlock when calling await in EventLoop thread</li>
+<li>[CELEBORN-1847][CIP-8] Introduce local and DFS tier writer</li>
+<li>[CELEBORN-1850] Setup worker endpoint after initalizing controller</li>
+<li>[CELEBORN-1838] Interrupt spark task should not report fetch failure</li>
+<li>[CELEBORN-1835][CIP-8] Add tier writer base and memory tier writer</li>
+<li>[CELEBORN-1829] Replace waitThreadPoll's thread pool with ScheduledExecutorService in Controller</li>
+<li>[CELEBORN-1720] Prevent stage re-run if another task attempt is running or successful</li>
+<li>[CELEBORN-1482][CIP-8] Add partition meta handler</li>
+<li>[CELEBORN-1812] Distinguish sorting-file from sort-tasks waiting to be submitted</li>
+<li>[CELEBORN-1737] Support build tez client package</li>
+<li>[CELEBORN-1802] Fail the celeborn master/worker start if CELEBORN_CONF_DIR is not directory</li>
+<li>[CELEBORN-1701][FOLLOWUP] Support stage rerun for shuffle data lost</li>
+<li>[CELEBORN-1413] Support Spark 4.0</li>
+<li>[CELEBORN-1753] Optimize the code for <code>exists</code> and <code>find</code> method</li>
+<li>[CELEBORN-1777] Add <code>java.security.jgss/sun.security.krb5</code> to DEFAULT_MODULE_OPTIONS</li>
+<li>[CELEBORN-1731] Support merged kv input for Tez</li>
+<li>[CELEBORN-1732] Support unordered kv input for Tez</li>
+<li>[CELEBORN-1733] Support ordered grouped kv input for Tez</li>
+<li>[CELEBORN-1721][CIP-12] Support HARD_SPLIT in PushMergedData</li>
+<li>[CELEBORN-1758] Remove the empty user resource consumption from worker heartbeat</li>
+<li>[CELEBORN-1729] Support ordered KV output for Tez</li>
+<li>[CELEBORN-1730] Support unordered KV output for Tez</li>
+<li>[CELEBORN-1612] Add a basic reader writer class to Tez</li>
+<li>[CELEBORN-1725] Optimize performance of handling <code>MapperEnd</code> RPC in <code>LifecycleManager</code></li>
+<li>[CELEBORN-1700] Flink supports fallback to vanilla Flink built-in shuffle implementation</li>
+<li>[CELEBORN-1621][CIP-11] Predefined worker tags expr via dynamic configs</li>
+<li>[CELEBORN-1545] Add Tez plugin skeleton and dag app master</li>
+<li>[CELEBORN-1530] support MPU for S3</li>
+<li>[CELEBORN-1618][CIP-11] Supporting tags via DB Config Service</li>
+<li>[CELEBORN-1726] Update WorkerInfo when transition worker state</li>
+<li>[CELEBORN-1715] RemoteShuffleMaster should check celeborn.client.push.replicate.enabled in constructor</li>
+<li>[CELEBORN-1714] Optimize handleApplicationLost</li>
+<li>[CELEBORN-1660] Cache available workers and only count the available workers device free capacity</li>
+<li>[CELEBORN-1619][CIP-11] Integrate tags manager with config service</li>
+<li>[CELEBORN-1071] Support stage rerun for shuffle data lost</li>
+<li>[CELEBORN-1697] Improve ThreadStackTrace for thread dump</li>
+<li>[CELEBORN-1671] CelebornShuffleReader will try replica if create client failed</li>
+<li>[CELEBORN-1682] Add java tools.jar into classpath for JVM quake</li>
+<li>[CELEBORN-1660] Using map for workers to find worker fast</li>
+<li>[CELEBORN-1673] Support retry create client</li>
+<li>[CELEBORN-1577][PHASE1] Storage quota should support interrupt shuffle</li>
+<li>[CELEBORN-1642][CIP-11] Support multiple worker tags</li>
+<li>[CELEBORN-1636] Client supports dynamic update of Worker resources on the server</li>
+<li>[CELEBORN-1651] Support ratio threshold of unhealthy disks for excluding worker</li>
+<li>[CELEBORN-1601] Support revise lost shuffles</li>
+<li>[CELEBORN-1487][PHASE2] CongestionController support dynamic config</li>
+<li>[CELEBORN-1648] Refine AppUniqueId with UUID suffix</li>
+<li>[CELEBORN-1490][CIP-6] Introduce tier consumer for hybrid shuffle</li>
+<li>[CELEBORN-1645] Introduce ShuffleFallbackPolicy to support custom implementation of shuffle fallback policy for CelebornShuffleFallbackPolicyRunner</li>
+<li>[CELEBORN-1620][CIP-11] Support passing worker tags via RequestSlots message</li>
+<li>[CELEBORN-1487][PHASE1] CongestionController support control traffic by user/worker traffic speed</li>
+<li>[CELEBORN-1637] Enhance config to bypass memory check for partition file sorter</li>
+<li>[CELEBORN-1638] Improve the slots allocator performance</li>
+<li>[CELEBORN-1617][CIP-11] Support workers tags in FS Config Service</li>
+<li>[CELEBORN-1615] Start the http server after all handlers added</li>
+<li>[CELEBORN-1574] Speed up unregister shuffle by batch processing</li>
+<li>[CELEBORN-1625] Add parameter <code>skipCompress</code> for pushOrMergeData</li>
+<li>[CELEBORN-1597][CIP-11] Implement TagsManager</li>
+<li>[CELEBORN-1490][CIP-6] Impl worker write process for Flink Hybrid Shuffle</li>
+<li>[CELEBORN-1602] do hard split for push merged data RPC with disk full</li>
+<li>[CELEBORN-1594] Refine dynamicConfig template and prevent NPE</li>
+<li>[CELEBORN-1513] Support wildcard bind in dual stack environments</li>
+<li>[CELEBORN-1587] Change to debug logging on client side for SortBasedPusher trigger push</li>
+<li>[CELEBORN-1496] Differentiate map results with only different stageAttemptId</li>
+<li>[CELEBORN-1583] MasterClient#sendMessageInner should throw Throwable for celeborn.masterClient.maxRetries is 0</li>
+<li>[CELEBORN-1578] Make Worker#timer have thread name and daemon</li>
+<li>[CELEBORN-1580] ReadBufferDispacther should notify exception to listener</li>
+<li>[CELEBORN-1575] TimeSlidingHub should remove expire node when reading</li>
+<li>[CELEBORN-1560] Remove usages of deprecated Files.createTempDir of Guava</li>
+<li>[CELEBORN-1567] Support throw FetchFailedException when Data corruption detected</li>
+<li>[CELEBORN-1568] Support worker retries in MiniCluster</li>
+<li>[CELEBORN-1563] Log networkLocation in WorkerInfo</li>
+<li>[CELEBORN-1531] Refactor self checks in master</li>
+<li>[CELEBORN-1550] Add support of providing custom dynamic store backend implementation</li>
+<li>[CELEBORN-1529] Read shuffle data from S3</li>
+<li>[CELEBORN-1518] Add support for Apache Spark barrier stages</li>
+<li>[CELEBORN-1542] Master supports to check the worker host pattern on worker registration</li>
+<li>[CELEBORN-1535] Support to disable master workerUnavailableInfo expiration</li>
+<li>[CELEBORN-1511] Add support for custom master endpoint resolver</li>
+<li>[CELEBORN-1541] Enhance the readable address for internal port</li>
+<li>[CELEBORN-1533] Log location when CelebornInputStream#fillBuffer fails</li>
+<li>[CELEBORN-1524] Support IPv6 hostnames for Apache Ratis</li>
+<li>[CELEBORN-1519] Do not update estimated partition size if it is unchanged</li>
+<li>[CELEBORN-1521] Introduce celeborn-spi module for authentication extensions</li>
+<li>[CELEBORN-1469] Support writing shuffle data to OSS(S3 only)</li>
+<li>[CELEBORN-1446] Enable chunk prefetch when initialize CelebornInputStream</li>
+<li>[CELEBORN-1509] Reply response without holding a lock</li>
+<li>[CELEBORN-1543] Support Flink 1.20</li>
+<li>[CELEBORN-1504] Support for Apache Flink 1.16</li>
+<li>[CELEBORN-1500] Filter out empty InputStreams</li>
+<li>[CELEBORN-1495] CelebornColumnDictionary supports dictionary of float and double column type</li>
+<li>[CELEBORN-1494] Support IPv6 addresses in PbSerDeUtils.fromPackedPartitionLocations</li>
+<li>[CELEBORN-1483] Add storage policy</li>
+<li>[CELEBORN-1479] Report register shuffle failed reason in exception</li>
+<li>[CELEBORN-1489] Update Flink support with authentication support</li>
+<li>[CELEBORN-1485] Refactor addCounter, addGauge and addTimer of AbstractSource to reduce CPU utilization</li>
+<li>[CELEBORN-1472] Reduce CongestionController#userBufferStatuses call times</li>
+<li>[CELEBORN-1471] CelebornScalaObjectMapper supports configuring FAIL_ON_UNKNOWN_PROPERTIES to false</li>
+</ul>
+<h3 id="flink-hybrid-shuffle">Flink hybrid shuffle</h3>
+<ul>
+<li>[CELEBORN-1867][FLINK] Fix flink client memory leak of TransportResponseHandler#outstandingRpcs for handling addCredit and notifyRequiredSegment response</li>
+<li>[CELEBORN-1866][FLINK] Fix CelebornChannelBufferReader request more buffers than needed</li>
+<li>[CELEBORN-1490][CIP-6] Support process large buffer in flink hybrid shuffle</li>
+<li>[CELEBORN-1490][CIP-6] Add Flink hybrid shuffle doc</li>
+<li>[CELEBORN-1490][CIP-6] Impl worker read process in Flink Hybrid Shuffle</li>
+<li>[CELEBORN-1490][CIP-6] Introduce tier producer in celeborn flink client</li>
+<li>[CELEBORN-1490][CIP-6] Introduce tier factory and master agent in flink hybrid shuffle</li>
+<li>[CELEBORN-1490][CIP-6] Enrich register shuffle method</li>
+<li>[CELEBORN-1490][CIP-6] Extends FileMeta to support hybrid shuffle</li>
+<li>[CELEBORN-1490][CIP-6] Extends message to support hybrid shuffle</li>
+</ul>
+<h3 id="restful-api-and-cli">RESTful API and CLI</h3>
+<ul>
+<li>[CELEBORN-1056][FOLLOWUP] Support upsert and delete of dynamic configuration management</li>
+<li>[CELEBORN-2020] Support http authentication for Celeborn CLI</li>
+<li>[CELEBORN-1875] Support to get workers topology information with RESTful api</li>
+<li>[CELEBORN-1797] Support to adjust the logger level with RESTful API during runtime</li>
+<li>[CELEBORN-1750] Return struct worker resource consumption information with RESTful api</li>
+<li>[CELEBORN-1707] Audit all RESTful api calls and use separate restAuditFile</li>
+<li>[CELEBORN-1632] Support to apply ratis local raft_meta_conf command with RESTful api</li>
+<li>[CELEBORN-1599] Container Info REST API</li>
+<li>[CELEBORN-1630] Support to apply ratis peer operation with RESTful api</li>
+<li>[CELEBORN-1631] Support to apply ratis snapshot operation with RESTful api</li>
+<li>[CELEBORN-1633] Return more raft group information</li>
+<li>[CELEBORN-1629] Support to apply ratis election operation with RESTful api</li>
+<li>[CELEBORN-1609] Support SSL for celeborn RESTful service</li>
+<li>[CELEBORN-1608] Reduce redundant response for RESTful api</li>
+<li>[CELEBORN-1607] Enable <code>useEnumCaseInsensitive</code> for openapi-generator</li>
+<li>[CELEBORN-1589] Ensure master is leader for some POST request APIs</li>
+<li>[CELEBORN-1572] Celeborn CLI initial REST API support</li>
+<li>[CELEBORN-1553] Using the request base url as swagger server</li>
+<li>[CELEBORN-1537] Support to remove workers unavailable info with RESTful api</li>
+<li>[CELEBORN-1546] Support authorization on swagger UI</li>
+<li>[CELEBORN-1477] Using openapi-generator <code>apache-httpclient</code> library instead of <code>jersey2</code></li>
+<li>[CELEBORN-1493] Check admin privileges for http mutative requests</li>
+<li>[CELEBORN-1477][CIP-9] Refine the celeborn RESTful APIs</li>
+<li>[CELEBORN-1476] Enhance the RESTful response error msg</li>
+<li>[CELEBORN-1475] Fix unknownExcludedWorkers filter for /exclude request</li>
+<li>[CELEBORN-1318] Support celeborn http authentication</li>
+</ul>
+<h3 id="monitoring">Monitoring</h3>
+<ul>
+<li>[CELEBORN-2024] Publish commit files fail count metrics</li>
+<li>[CELEBORN-1892] Adding register with master fail count metric for worker</li>
+<li>[CELEBORN-2005] Introduce numBytesIn, numBytesOut, numBytesInPerSecond, numBytesOutPerSecond metrics for RemoteShuffleServiceFactory</li>
+<li>[CELEBORN-1800] Introduce ApplicationTotalCount and ApplicationFallbackCount metric to record the total and fallback count of application</li>
+<li>[CELEBORN-1974] ApplicationId as metrics label should be behind a config flag</li>
+<li>[CELEBORN-1968] Publish metric for unreleased partition location count when worker was gracefully shutdown</li>
+<li>[CELEBORN-1977] Add help/type on prometheus exposed metrics</li>
+<li>[CELEBORN-1831] Add ratis commitIndex metrics</li>
+<li>[CELEBORN-1817] add committed file size metrics</li>
+<li>[CELEBORN-1791] All NettyMemoryMetrics should register to source</li>
+<li>[CELEBORN-1804] Shuffle environment metrics of RemoteShuffleEnvironment should use Shuffle.Remote metric group</li>
+<li>[CELEBORN-1634][FOLLOWUP] Add rpc metrics into grafana dashboard</li>
+<li>[CELEBORN-1766] Add detail metrics about fetch chunk</li>
+<li>[CELEBORN-1756] Only gauge hdfs metrics if HDFS storage enabled to reduce metrics</li>
+<li>[CELEBORN-1634] Support queue time/processing time metrics for rpc framework</li>
+<li>[CELEBORN-1706] Use bytes(IEC) unit instead of bytes(SI) for size related metrics in prometheus dashboard</li>
+<li>[CELEBORN-1685] ShuffleFallbackPolicy supports ShuffleFallbackCount metric</li>
+<li>[CELEBORN-1680] Introduce ShuffleFallbackCount metrics</li>
+<li>[CELEBORN-1444][FOLLOWUP] Add IsDecommissioningWorker to celeborn dashboard</li>
+<li>[CELEBORN-1640] NettyMemoryMetrics supports numHeapArenas, numDirectArenas, tinyCacheSize, smallCacheSize, normalCacheSize, numThreadLocalCaches and chunkSize</li>
+<li>[CELEBORN-1656] Remove duplicate UserProduceSpeed metrics</li>
+<li>[CELEBORN-1627] Introduce <code>instance</code> variable for celeborn dashboard to filter metrics</li>
+<li>[CELEBORN-1582] Publish metric for unreleased shuffle count when worker was decommissioned</li>
+<li>[CELEBORN-1501] Introduce application dimension resource consumption metrics of Worker</li>
+<li>[CELEBORN-1586] Add available workers Metrics</li>
+<li>[CELEBORN-1581] Fix incorrect metrics of DeviceCelebornFreeBytes and DeviceCelebornTotalBytes</li>
+<li>[CELEBORN-1491] introduce flusher working queue size metric</li>
+</ul>
+<h3 id="cpp-client">CPP Client</h3>
+<ul>
+<li>[CELEBORN-1978][CIP-14] Add code style checking for cppClient</li>
+<li>[CELEBORN-1958][CIP-14] Add testsuite to test writing with javaClient and reading with cppClient</li>
+<li>[CELEBORN-1874][CIP-14] Add CICD procedure in github action for cppClient</li>
+<li>[CELEBORN-1932][CIP-14] Adapt java's serialization to support cpp serialization for GetReducerFileGroup/Response</li>
+<li>[CELEBORN-1915][CIP-14] Add reader's ShuffleClient to cppClient</li>
+<li>[CELEBORN-1906][CIP-14] Add CelebornInputStream to cppClient</li>
+<li>[CELEBORN-1881][CIP-14] Add WorkerPartitionReader to cppClient</li>
+<li>[CELEBORN-1871][CIP-14] Add NettyRpcEndpointRef to cppClient</li>
+<li>[CELEBORN-1863][CIP-14] Add TransportClient to cppClient</li>
+<li>[CELEBORN-1845][CIP-14] Add MessageDispatcher to cppClient</li>
+<li>[CELEBORN-1836][CIP-14] Add Message to cppClient</li>
+<li>[CELEBORN-1827][CIP-14] Add messageDecoder to cppClient</li>
+<li>[CELEBORN-1821][CIP-14] Add controlMessages to cppClient</li>
+<li>[CELEBORN-1819][CIP-14] Refactor cppClient with nested namespace</li>
+<li>[CELEBORN-1814][CIP-14] Add transportMessage to cppClient</li>
+<li>[CELEBORN-1809][CIP-14] Add partitionLocation to cppClient</li>
+<li>[CELEBORN-1799][CIP-14] Add celebornConf to cppClient</li>
+<li>[CELEBORN-1785][CIP-14] Add baseConf to cppClient</li>
+<li>[CELEBORN-1772][CIP-14] Add memory module to cppClient</li>
+<li>[CELEBORN-1761][CIP-14] Add cppProto to cppClient</li>
+<li>[CELEBORN-1754][CIP-14] Add exceptions and checking utils to cppClient</li>
+<li>[CELEBORN-1751][CIP-14] Add celebornException utils to cppClient</li>
+<li>[CELEBORN-1740][CIP-14] Add stackTrace utils to cppClient</li>
+<li>[CELEBORN-1741][CIP-14] Add processBase utils to cppClient</li>
+<li>[CELEBORN-1724][CIP-14] Add environment setup tools for CppClient development</li>
+</ul>
+<h3 id="helm-chart-optimization">HELM Chart Optimization</h3>
+<ul>
+<li>[CELEBORN-2017][HELM] Add namespace to the metadata</li>
+<li>[CELEBORN-1528][HELM] Use volume claim template to support various storage backend</li>
+<li>[CELEBORN-1996][HELM] Rename volumes.{master,worker} to {master,worker}.volumes and {master.worker}.volumeMounts</li>
+<li>[CELEBORN-1989][HELM] Split securityContext into master.podSecurityContext and worker.podSecurityContext</li>
+<li>[CELEBORN-1988][HELM] Split hostNetwork into master.hostNetwork and worker.hostNetwork</li>
+<li>[CELEBORN-1987][HELM] Split dnsPolicy into master.dnsPolicy and worker.dnsPolicy</li>
+<li>[CELEBORN-1981][HELM] Rename masterReplicas and workerReplicas to master.replicas and worker.replicas</li>
+<li>[CELEBORN-1985][HELM] Add new values master.envFrom and worker.envFrom</li>
+<li>[CELEBORN-1986][HELM] Rename priorityClass.{master,worker} to {master,worker}.priorityClass</li>
+<li>[CELEBORN-1980][HELM] Split environments into master.env and worker.env</li>
+<li>[CELEBORN-1972][HELM] Rename affinity.{master,worker} to {master,worker}.affinity</li>
+<li>[CELEBORN-1951][HELM] Rename resources.{master,worker} to {master,worker}.resoruces</li>
+<li>[CELEBORN-1962][HELM] Split tolerations into master.tolerations and worker.tolerations</li>
+<li>[CELEBORN-1955][HELM] Split nodeSelector into master.nodeSelector and worker.nodeSelector</li>
+<li>[CELEBORN-1953][HELM] Split podAnnotations into master.annotations and worker.annotations</li>
+<li>[CELEBORN-1954][HELM] Add a new value image.registry</li>
+<li>[CELEBORN-1952][HELM] Define template helpers for master/worker respectively</li>
+<li>[CELEBORN-1532][HELM] Read log4j2 and metrics configurations from file</li>
+<li>[CELEBORN-1830] Chart statefulset resources key duplicate</li>
+<li>[CELEBORN-1788] Add role and roleBinding helm charts</li>
+<li>[CELEBORN-1786] add serviceAccount helm chart</li>
+<li>[CELEBORN-1780] Add support for NodePort Service per Master replica</li>
+<li>[CELEBORN-1552] automatically support prometheus to scrape metrics for helm chart</li>
+</ul>
+<h3 id="stability-and-bug-fix">Stability and Bug Fix</h3>
+<ul>
+<li>[CELEBORN-1721][FOLLOWUP] Return softsplit if there is no hardsplit for pushMergeData</li>
+<li>[CELEBORN-2043] Fix IndexOutOfBoundsException exception in getEvictedFileWriter</li>
+<li>[CELEBORN-2040] Avoid throw FetchFailedException when GetReducerFileGroupResponse failed via broadcast</li>
+<li>[CELEBORN-2042] Fix FetchFailure handling when TaskSetManager is not found</li>
+<li>[CELEBORN-2033] updateProduceBytes should be called even if updateProduceBytes throws exception</li>
+<li>[CELEBORN-2025] RpcFailure Scala 2.13 serialization is incompatible</li>
+<li>[CELEBORN-2022] Spark4 Client should package commons-io</li>
+<li>[CELEBORN-2023] Spark4 Client incompatible with isLocalMaster method</li>
+<li>[CELEBORN-2009] Commit files request failure should exclude worker in LifecycleManager</li>
+<li>[CELEBORN-2015] Retry IOException failures for RPC requests</li>
+<li>[CELEBORN-1902] Read client throws PartitionConnectionException</li>
+<li>[CELEBORN-2000] Ignore the getReducerFileGroup timeout before shuffle stage end</li>
+<li>[CELEBORN-1960] Fix PauseSpentTime only append the interval check time</li>
+<li>[CELEBORN-1998] RemoteShuffleEnvironment should not register InputChannelMetrics repeatedly</li>
+<li>[CELEBORN-1999] OpenStreamTime should use requestId to record cost time</li>
+<li>[CELEBORN-1855] LifecycleManager return appshuffleId for non barrier stage when fetch fail has been reported</li>
+<li>[CELEBORN-1948] Fix the issue where replica may lose data when HARD_SPLIT occurs during handlePushMergeData</li>
+<li>[CELEBORN-1912] Client should send heartbeat to worker for processing heartbeat to avoid reading idleness of worker which enables heartbeat</li>
+<li>[CELEBORN-1992] Ensure hadoop FS are not closed by hadoop ShutdownHookManager</li>
+<li>[CELEBORN-1919] Hardsplit batch tracking should be disabled when pushing only a single replica</li>
+<li>[CELEBORN-1979] Change partition manager should respect the <code>celeborn.storage.availableTypes</code></li>
+<li>[CELEBORN-1983] Fix fetch fail not throw due to reach spark maxTaskFailures</li>
+<li>[CELEBORN-1976] CommitHandler should use celeborn.client.rpc.commitFiles.askTimeout for timeout of doParallelCommitFiles</li>
+<li>[CELEBORN-1966] Added fix to get userinfo in celeborn</li>
+<li>[CELEBORN-1969] Remove celeborn.client.shuffle.mapPartition.split.enabled to enable shuffle partition split at default for MapPartition</li>
+<li>[CELEBORN-1970] Use StatusCode.fromValue instead of Utils.toStatusCode</li>
+<li>[CELEBORN-1646][FOLLOWUP] DeviceMonitor should notifyObserversOnError with CRITICAL_ERROR disk status for input/ouput error</li>
+<li>[CELEBORN-1929] Avoid unnecessary buffer loss to get better buffer reusability</li>
+<li>[CELEBORN-1918] Add batchOpenStream time to fetch wait time</li>
+<li>[CELEBORN-1947] Reduce log for CelebornShuffleReader sleeping before inputStream ready</li>
+<li>[CELEBORN-1923] Correct Celeborn available slots calculation logic</li>
+<li>[CELEBORN-1914] incWriteTime when ShuffleWriter invoke pushGiantRecord</li>
+<li>[CELEBORN-1822] Respond to RegisterShuffle with max epoch PartitionLocation to avoid revive</li>
+<li>[CELEBORN-1899] Fix configuration bug in shuffle s3</li>
+<li>[CELEBORN-1885] Fix nullptr exceptions in FetchChunk after worker restart</li>
+<li>[CELEBORN-1889] Fix scala 2.13 complie error</li>
+<li>[CELEBORN-1846] Fix the StreamHandler usage in fetching chunk when task attempt is odd</li>
+<li>[CELEBORN-1792] MemoryManager resume should use pinnedDirectMemory instead of usedDirectMemory</li>
+<li>[CELEBORN-1832] MapPartitionData should create fixed thread pool with registration of ThreadPoolSource</li>
+<li>[CELEBORN-1820] Failing to write and flush StreamChunk data should be counted as FETCH_CHUNK_FAIL</li>
+<li>[CELEBORN-1818] Fix incorrect timeout exception when waiting on no pending writes</li>
+<li>[CELEBORN-1763] Fix DataPusher be blocked for a long time</li>
+<li>[CELEBORN-1783] Fix Pending task in commitThreadPool wont be canceled</li>
+<li>[CELEBORN-1782] Worker in congestion control should be in blacklist to avoid impact new shuffle</li>
+<li>[CELEBORN-1510] Partial task unable to switch to the replica</li>
+<li>[CELEBORN-1778] Fix commitInfo NPE and add assert in LifecycleManagerCommitFilesSuite</li>
+<li>[CELEBORN-1670] Avoid swallowing InterruptedException in ShuffleClientImpl
+  Revert "- [CELEBORN-1376] Push data failed should always release request body"</li>
+<li>[CELEBORN-1770] FlushNotifier should setException for all Throwables in Flusher</li>
+<li>[CELEBORN-1769] Fix packed partition location cause GetReducerFileGroupResponse lose location</li>
+<li>[CELEBORN-1767] Fix occasional errors in UT when creating workers</li>
+<li>[CELEBORN-1765] Fix NPE when removeFileInfo in StorageManager</li>
+<li>[CELEBORN-1760] OOM causes disk buffer unable to be released</li>
+<li>[CELEBORN-1743] Resolve the metrics data interruption and the job failure caused by locked resources</li>
+<li>[CELEBORN-1759] Fix reserve slots might lost partition location between 0.4 client and 0.5 server</li>
+<li>[CELEBORN-1749] Fix incorrect application diskBytesWritten metrics</li>
+<li>[CELEBORN-1713] RpcTimeoutException should include RPC address in message</li>
+<li>[CELEBORN-1728] Fix NPE when failing to connect to celeborn worker</li>
+<li>[CELEBORN-1727] Correct the calculation of worker diskInfo actualUsableSpace</li>
+<li>[CELEBORN-1718] Fix memory storage file won't hard split when memory file is full and worker has no disks</li>
+<li>[CELEBORN-1705] Fix disk buffer size is negative issue</li>
+<li>[CELEBORN-1686] Avoid return the same pushTaskQueue</li>
+<li>[CELEBORN-1696] StorageManager#cleanFile should remove file info</li>
+<li>[CELEBORN-1691] Fix the issue that upstream tasks don't rerun and the current task still retry when failed to decompress in flink</li>
+<li>[CELEBORN-1693] Fix storageFetcherPool concurrent problem</li>
+<li>[CELEBORN-1674] Fix reader thread name of MapPartitionData</li>
+<li>[CELEBORN-1668] Fix NPE when handle closed file writers</li>
+<li>[CELEBORN-1669] Fix NullPointerException for PartitionFilesSorter#updateSortedShuffleFiles after cleaning up expired shuffle key</li>
+<li>[CELEBORN-1667] Fix NPE &amp; LEAK occurring prior to worker registration</li>
+<li>[CELEBORN-1664] Fix secret fetch failures after LEADER master failover</li>
+<li>[CELEBORN-1665] CommitHandler should process CommitFilesResponse with COMMIT_FILE_EXCEPTION status</li>
+<li>[CELEBORN-1663] Only register appShuffleDeterminate if stage using celeborn for shuffle</li>
+<li>[CELEBORN-1661] Make sure that the sortedFilesDb is initialized successfully when worker enable graceful shutdown</li>
+<li>[CELEBORN-1662] Handle PUSH_DATA_FAIL_PARTITION_NOT_FOUND in getPushDataFailCause</li>
+<li>[CELEBORN-1655] Fix read buffer dispatcher thread terminate unexpectedly</li>
+<li>[CELEBORN-1646] Catch exception of Files#getFileStore for DeviceMonitor and StorageManager for input/ouput error</li>
+<li>[CELEBORN-1652] Throw TransportableError for failure of sending PbReadAddCredit to avoid flink task get stuck</li>
+<li>[CELEBORN-1643] DataPusher handle InterruptedException</li>
+<li>[CELEBORN-1579] Fix the memory leak of result partition</li>
+<li>[CELEBORN-1564] Fix actualUsableSpace of offerSlotsLoadAware condition on diskInfo</li>
+<li>[CELEBORN-1573] Change to debug logging on client side for reserve slots</li>
+<li>[CELEBORN-1557] Fix totalSpace of DiskInfo for Master in HA mode</li>
+<li>[CELEBORN-1549] Fix networkLocation persistence into Ratis</li>
+<li>[CELEBORN-1558] Fix the incorrect decrement of pendingWrites in handlePushMergeData</li>
+<li>[CELEBORN-1547] Worker#listTopDiskUseApps should return celeborn.metrics.app.topDiskUsage.count applications</li>
+<li>[CELEBORN-1544] ShuffleWriter needs to call close finally to avoid memory leaks</li>
+<li>[CELEBORN-1473] TransportClientFactory should register netty memory metric with source for shared pooled ByteBuf allocator</li>
+<li>[CELEBORN-1522] Fix applicationId extraction from shuffle key</li>
+<li>[CELEBORN-1516] DynamicConfigServiceFactory should support singleton</li>
+<li>[CELEBORN-1515] SparkShuffleManager should set lifecycleManager to null after stopping lifecycleManager in Spark 2</li>
+<li>[CELEBORN-1439] Fix revive logic bug which will casue data correctness issue and job failiure</li>
+<li>[CELEBORN-1507] Prevent invalid Filegroups from being used</li>
+<li>[CELEBORN-1478] Fix wrong use partitionId as shuffleId when readPartition</li>
+</ul>
+<h3 id="build">Build</h3>
+<ul>
+<li>[CELEBORN-2012] Add license for http5</li>
+<li>[CELEBORN-1801] Remove out-of-dated flink 1.14 and 1.15</li>
+<li>[CELEBORN-1746] Reduce the size of aws dependencies</li>
+<li>[CELEBORN-1677][BUILD] Update SCM information for SBT build configuration</li>
+<li>[CELEBORN-1649] Bumping up maven to 3.9.9</li>
+<li>[CELEBORN-1658] Add Git Commit Info and Build JDK Spec to sbt Manifest</li>
+<li>[CELEBORN-1659] Fix sbt make-distribution for cli</li>
+<li>[CELEBORN-1616] Shade com.google.thirdparty to prevent dependency conflicts</li>
+<li>[CELEBORN-1606] Generate dependencies-client-flink-1.16</li>
+<li>[CELEBORN-1600] Enable check server dependencies</li>
+<li>[CELEBORN-1556] Update Github actions to v4</li>
+<li>[CELEBORN-1559] Fix make distribution script failed to recognize specific profile</li>
+<li>[CELEBORN-1526] Fix MR plugin can not run on Hadoop 3.1.0</li>
+<li>[CELEBORN-1527] Error prone plugin should exclude target/generated-sources/java of module</li>
+<li>[CELEBORN-1505] Algin the celeborn server jackson dependency versions</li>
+</ul>
+<h3 id="documentation">Documentation</h3>
+<ul>
+<li>[CELEBORN-1870] Fix typos in in 'Developer' documents</li>
+<li>[CELEBORN-1860] Remove unused celeborn.<module>.io.enableVerboseMetrics option</li>
+<li>[CELEBORN-1823] Remove unused remote-shuffle.job.min.memory-per-partition and remote-shuffle.job.min.memory-per-gate</li>
+<li>[CELEBORN-1811] Update default value for <code>celeborn.master.slot.assign.extraSlots</code></li>
+<li>[CELEBORN-1789][DOC] Document on Java Columnar Shuffle</li>
+<li>[CELEBORN-1774] Update default value of celeborn.<module>.io.mode to whether epoll mode is available</li>
+<li>[CELEBORN-1622][CIP-11] Adding documentation for Worker Tags feature</li>
+<li>[CELEBORN-1755] Update doc to include S3 as one of storage layers</li>
+<li>[CELEBORN-1752] Migration guide for unexpected shuffle RESTful api change since 0.5.0</li>
+<li>[CELEBORN-1745] Remove application top disk usage code</li>
+<li>[CELEBORN-1719] Introduce celeborn.client.spark.stageRerun.enabled with alternative celeborn.client.spark.fetch.throwsFetchFailure to enable spark stage rerun</li>
+<li>[CELEBORN-1687] Highlight flink session cluster issue in doc</li>
+<li>[CELEBORN-1684] Fix ambiguous client jar expression of document</li>
+<li>[CELEBORN-1678] Add Celeborn CLI User guide in README</li>
+<li>[CELEBORN-1635] Introduce Blaze support document
+  [CLEBORN-1555] Replace deprecated config celeborn.storage.activeTypes in docs and tests</li>
+<li>[CELEBORN-1566] Update docs about using HDFS</li>
+<li>[CELEBORN-1551] Fix wrong link in quota_management.md</li>
+<li>[CELEBORN-1437][DOC] Merge METRICS.md into monitoring.md</li>
+<li>[CELEBORN-1436][DOC] Move Rest API out from monitoring.md to webapi.md</li>
+<li>[CELEBORN-1486] Introduce ClickHouse Backend in Gluten Support document</li>
+<li>[CELEBORN-1466] Add local command in celeborn_ratis_shell.md</li>
+</ul>
+<h3 id="dependencies">Dependencies</h3>
+<ul>
+<li>[CELEBORN-2030] Bump Spark from 3.5.5 to 3.5.6</li>
+<li>[CELEBORN-2013] Upgrade scala binary version of spark-3.3, spark-3.4, spark-3.5 profile to 2.13.8</li>
+<li>[CELEBORN-1895] Bump log4j2 version to 2.24.3</li>
+<li>[CELEBORN-1890] Bump Spark from 3.5.4 to 3.5.5</li>
+<li>[CELEBORN-1884] Bump rocksdbjni version from 9.5.2 to 9.10.0</li>
+<li>[CELEBORN-1877] Bump zstd-jni version from 1.5.2-1 to 1.5.7-1</li>
+<li>[CELEBORN-1872] Bump Flink from 1.19.1, 1.20.0 to 1.19.2, 1.20.1</li>
+<li>[CELEBORN-1864] Bump Netty version from 4.1.115.Final to 4.1.118.Final</li>
+<li>[CELEBORN-1862] Bump Ratis version from 3.1.2 to 3.1.3</li>
+<li>[CELEBORN-1842] Bump ap-loader version from 3.0-8 to 3.0-9</li>
+<li>[CELEBORN-1806] Bump Spark from 3.5.3 to 3.5.4</li>
+<li>[CELEBORN-1712] Bump Netty version from 4.1.109.Final to 4.1.115.Final</li>
+<li>[CELEBORN-1748] Deprecate identity provider configs tied with quota</li>
+<li>[CELEBORN-1702] Bump Ratis version from 3.1.1 to 3.1.2</li>
+<li>[CELEBORN-1708] Bump protobuf version from 3.21.7 to 3.25.5</li>
+<li>[CELEBORN-1709] Bump jetty version from 9.4.52.v20230823 to 9.4.56.v20240826</li>
+<li>[CELEBORN-1710] Bump commons-io version from 2.13.0 to 2.17.0</li>
+<li>[CELEBORN-1672] Bump Spark from 3.4.3 to 3.4.4</li>
+<li>[CELEBORN-1666] Bump scala-protoc from 1.0.6 to 1.0.7</li>
+<li>[CELEBORN-1525] Bump Ratis version from 3.1.0 to 3.1.1</li>
+<li>[CELEBORN-1613] Bump Spark from 3.5.2 to 3.5.3</li>
+<li>[CELEBORN-1605] Bump commons-lang3 version from 3.13.0 to 3.17.0</li>
+<li>[CELEBORN-1604] Bump rocksdbjni version from 8.11.3 to 9.5.2</li>
+<li>[CELEBORN-1562] Bump Spark from 3.5.1 to 3.5.2</li>
+<li>[CELEBORN-1512] Bump Flink from 1.19.0 to 1.19.1</li>
+<li>[CELEBORN-1499] Bump Ratis version from 3.0.1 to 3.1.0</li>
+</ul>
+<h2 id="credits">Credits</h2>
+<p>Thanks to the following contributors who helped to review and commit to Apache Celeborn 0.6.0 version:</p>
+<table>
+<thead>
+<tr>
+<th>Contributors</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aidar Bariev</td>
+<td>Amandeep Singh</td>
+<td>Aravind Patnam</td>
+<td>Arsen Gumin</td>
+<td>A Vishnusankar</td>
+<td>Biao Geng</td>
+</tr>
+<tr>
+<td>Binjie Yang</td>
+<td>Björn Boschman</td>
+<td>Bowen Liang</td>
+<td>Cheng Pan</td>
+<td>Chongchen Chen</td>
+<td>Erik Fang</td>
+</tr>
+<tr>
+<td>Fei Wang</td>
+<td>Fu Chen</td>
+<td>Guangwei Hong</td>
+<td>Haotian Cao</td>
+<td>He Zhao</td>
+<td>Jiaming Xie</td>
+</tr>
+<tr>
+<td>Jianfu Li</td>
+<td>Jiashu Xiong</td>
+<td>Jinqian Fan</td>
+<td>Kerwin Zhang</td>
+<td>Keyong Zhou</td>
+<td>Kun Wan</td>
+</tr>
+<tr>
+<td>Leo Li</td>
+<td>Lianne Li</td>
+<td>Madhukar</td>
+<td>Minchu Yang</td>
+<td>Mingxiao Feng</td>
+<td>Mridul Muralidharan</td>
+</tr>
+<tr>
+<td>Nan Zhu</td>
+<td>Nicholas Jiang</td>
+<td>Nicolas Fraison</td>
+<td>Pengqi Li</td>
+<td>Sanskar Modi</td>
+<td>Saurabh Dubey</td>
+</tr>
+<tr>
+<td>Shaoyun Chen</td>
+<td>Shengjie Wang</td>
+<td>Shlomi Uubul</td>
+<td>Veli Yang</td>
+<td>Weijie Guo</td>
+<td>Xianming Lei</td>
+</tr>
+<tr>
+<td>Xinyu Wang</td>
+<td>Xu Huang</td>
+<td>Yajun Gao</td>
+<td>Yanze Jiang</td>
+<td>Yi Chen</td>
+<td>Yi Zhu</td>
+</tr>
+<tr>
+<td>Yuting Wang</td>
+<td>Yuxin Tan</td>
+<td>Zhao Zhao</td>
+<td>Zhaohui Xu</td>
+<td>Zhengqi Zhang</td>
+<td>Zhentao Shuai</td>
+</tr>
+<tr>
+<td>Ziyi Wu</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <br> Copyright © 2022-2024 The Apache Software Foundation, Licensed under the Apache License, Version 2.0. <a href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy Policy<a/><br> <br> Apache Celeborn™, Apache, and the Apache feather logo are trademarks or registered trademarks of The Apache Software Foundation.<br> <br> Please visit <a href="https://www.apache.org/">Apache Software Foundation</a> for more details.<br> <br>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": "0.7.0-SNAPSHOT"}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>
